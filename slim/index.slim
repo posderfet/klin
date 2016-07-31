@@ -22,6 +22,7 @@ html lang="ru"
         .index-row
           a.index-link-square.index-choice-apartment href="" title="выбрать квартиру"
             .index-choice-apartment__ico.image-block
+              /! svg(svg/ico_key.svg)
               == inline_svg "ico_key.svg"
             .index-choice-apartment__lable
               |Выбрать
@@ -43,6 +44,7 @@ html lang="ru"
           a.index-link-square.index-webcam title="вебкамера"
             .index-webam__lable вебкамера
             .index-webcam__ico.image-block
+              /! svg(svg/ico_webcam.svg)
               == inline_svg "ico_webcam.svg"
         .index-row
           a.index-link-square.index-rent href="" title="аренда коммерческих помещений"
@@ -61,10 +63,12 @@ html lang="ru"
           .index-row__document-block
             .index-link-rect.index-guard
               .index-gurad__ico.image-block
+                /! svg(svg/ico_guard.svg)
                 == inline_svg "ico_guard.svg"
               .index-gurad__lable Работаем по 214-ФЗ
             a.index-link-rect.index-documents href=""
               .index-documents__lable Документация
+      / index background slider
       .index-slider-container.swiper-container
         .index-slider-wrapper.swiper-wrapper
           .index-slide.swiper-slide style="background-image: url(images/bg-index.jpg)"

@@ -1,15 +1,22 @@
 - def render(path) Slim::Template.new("slim/#{path}.slim").render end
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup floor building_2 section_2 (site/popups/building_2/gp2_section2.html)
 .popup-window.popup-floor data-popup-token="gp2_s2"
   .popup-window__risen.image-block
+    /! svg(svg/ico_risen.svg)
     == inline_svg "ico_risen.svg"
   .popup-window__close-button.close-this
     .popup-window__close-ico.image-block
+      /! svg(svg/ico_close.svg)
       == inline_svg "ico_close.svg"
   == render 'components/popup_floor_slide'
+  /! floor map
   .floor-map-wrapper
+    /! schema floor image
     img.img-floor-map src="images/building2_section2.png"
+    /! apartment svg(svg/building2_section2.svg)
     == inline_svg "building2_section2.svg", class:"svg-floor-map"
+  /! floor map legend
   .floor-map__legend
     .floor-map__legend-item data-legend-apartment="1p"
       span.floor-map__legend-marker.marker-apartment-1p

@@ -1,16 +1,21 @@
 - def render(path) Slim::Template.new("slim/#{path}.slim").render end
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! apartment popup
 .popup-window.popup-apartment
   .popup-window__close-button.close-this
     .popup-window__close-ico.image-block
+      /! svg(svg/ico_risen.svg)
       == inline_svg "ico_close.svg"
   == render 'components/popup_floor_slide'
+  /! apartment image block
   .apartment-map-block
     .img-apartment-wrapper
       img.img-apartment-map src="images/b1_s1_a2-2.png"
+  /! apartment popup menu
   .popup-apartment__menu
     .popup-apartment__item.price
       .popup-apartment__item-image.image-block
+        /! svg(svg/ico_price.svg)
         == inline_svg "ico_price.svg"
       .popup-apartment__item-lable
         |Следить 
@@ -18,6 +23,7 @@
         |за ценой
     .popup-apartment__item.planning
       .popup-apartment__item-image.image-block
+        /! svg(svg/ico_planning.svg)
         == inline_svg "ico_planning.svg"
       .popup-apartment__item-lable
         |Отправить детальную 
@@ -25,6 +31,7 @@
         |планировку на почту
     .popup-apartment__item.calc
       .popup-apartment__item-image.image-block
+        /! svg(svg/ico_calc.svg)
         == inline_svg "ico_calc.svg"
       .popup-apartment__item-lable
         |Ипотечный 
@@ -32,6 +39,7 @@
         |калькулятор
     .popup-apartment__item.reserv
       .popup-apartment__item-image.image-block
+        /! svg(svg/ico_reserv.svg)
         == inline_svg "ico_reserv.svg"
       .popup-apartment__item-lable
         |Заяка 
@@ -39,11 +47,13 @@
         |на бронь
     .popup-apartment__item.repair
       .popup-apartment__item-image.image-block
+        /! svg(svg/ico_repair.svg)
         == inline_svg "ico_repair.svg"
       .popup-apartment__item-lable
         |Варианты 
         br
         |ремонта
+  /! popup apartment info
   .popup-apartment__info
     .popup-apartment__info-item
       .popup-apartment__info-count 2

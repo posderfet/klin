@@ -1,9 +1,13 @@
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! site header (site/layouts/site_header.html)
 header.site-header
   .main-container
+    /! logotype klin block
     a.site-header__logo href="#" title="Микрорайон Новый Клин"
       span.site-header__logo-image.image-block
+        /! svg(svg/logo_klin.svg)
         == inline_svg "logo_klin.svg"
+    /! top menu
     .top-menu-wrapper
       button.top-menu__button title="открыть меню"
         span.top
@@ -50,11 +54,14 @@ header.site-header
                 a.top-menu__inner-link href="#" title="Документы" Документы
               li.top-menu__inner-item
                 a.top-menu__inner-link href="#" title="Контаткы" Контаткы
+    /! get call button
     button.header-get-call
       span.header-get-call__lable Заказать звонок
+    /! header phones number
     .header-phone
       .header-phone__ico-block
         .header-phone__ico.image-block
+          /! svg(svg/ico_phone.svg)
           == inline_svg "ico_phone.svg"
       .header-phone__list
         a.header-pnone__item href="tel:+78003333790"
@@ -67,6 +74,8 @@ header.site-header
       .header-social__item
         a.header-social__link.vk href="vk.com" title="мы вконтакте"
           span.header-social__ico.image-block
+            /! svg(svg/ico_vk.svg)
             == inline_svg "ico_vk.svg"
     .header-risen.image-block
+      /! svg(svg/ico_risen.svg)
       == inline_svg "ico_risen.svg"
