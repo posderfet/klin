@@ -97,7 +97,7 @@
 }
 
 .popup-window__close-ico {
-  widows: 95%;
+  width: 95%;
   height: 95%;
   position: absolute;
   top: 2.5%;
@@ -107,6 +107,7 @@
 
 .popup-window__risen {
   width: 4.56rem;
+  height: 4.8125rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -227,8 +228,13 @@
 
 
 // floor map popup style
-.floor-map-wrapper {
+.floor-map-block {
   display: block;
+  text-align: center;
+}
+
+.floor-map-wrapper {
+  display: inline-block;
   position: relative;
   text-align: center;
   height: 25.1875rem;
@@ -238,12 +244,11 @@
 
 .svg-floor-map {
   display: inline-block;
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
   height: 100%;
   z-index: 57;
-  margin: 0 auto;
+  top: 0;
+  left: 0;
 
   path {
     opacity: .4;
@@ -308,9 +313,9 @@
 
 .img-floor-map {
   display: inline-block;
-  position: absolute;
+  position: relative;
   height: 100%;
-  // height: auto;
+  top: 0;
   z-index: 56;
 }
 
@@ -383,7 +388,7 @@
   // background: red;
 }
 
-.popup-apartment__item {
+.popup-apartment__menu-item {
   text-align: center;
   margin-bottom: 2rem;
   transition: 250ms ease-out;
@@ -474,12 +479,13 @@
   }
 }
 
-.popup-apartment__item-image {
+.popup-apartment__menu-image {
   display: inline-block;
   width: 2.25rem;
+  height: 2.25rem;
 }
 
-.popup-apartment__item-lable {
+.popup-apartment__menu-lable {
   font-size: $font-size-top-menu;
   line-height: 1.2;
 }

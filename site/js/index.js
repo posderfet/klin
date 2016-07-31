@@ -1,1 +1,10 @@
-jQuery(function(){var e;return e=new Swiper(".index-slider-container",{pagination:".swiper-pagination",paginationClickable:!0,effect:"fade",autoplay:5e3,speed:2e3})});
+jQuery(function() {
+  var swiper;
+  return swiper = new Swiper(".index-slider-container", {
+    pagination: ".swiper-pagination",
+    paginationClickable: true,
+    effect: 'fade',
+    autoplay: 5000,
+    speed: 2000
+  });
+});

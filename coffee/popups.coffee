@@ -142,7 +142,6 @@ jQuery ->
     section = $(@).closest(".house-section").data("building-section")
     building = $(@).closest(".building-wrapper").data("building")
     popup_token = "gp"+building+"_s"+section
-    console.log popup_token
     $('[data-popup-token="'+popup_token+'"]').showPop()
 
   # popup apartment
@@ -154,29 +153,9 @@ jQuery ->
 
   # popup legend floor
   $("html").on 'mouseenter', ".floor-map__legend-item", ->
-    if $(@).attr("data-legend-apartment") == "1p"
-      $(".map-floor__apartment-1p").addClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "1s"
-      $(".map-floor__apartment-1s").addClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "2"
-      $(".map-floor__apartment-2").addClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "2p"
-      $(".map-floor__apartment-2p").addClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "3"
-      $(".map-floor__apartment-3").addClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "3p"
-      $(".map-floor__apartment-3p").addClass("map-show-apartment")
+    apartment_type = $(@).attr("data-legend-apartment")
+    $(".map-floor__apartment-"+apartment_type).addClass("map-show-apartment")
 
   $("html").on 'mouseleave', ".floor-map__legend-item", ->
-    if $(@).attr("data-legend-apartment") == "1p"
-      $(".map-floor__apartment-1p").removeClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "1s"
-      $(".map-floor__apartment-1s").removeClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "2"
-      $(".map-floor__apartment-2").removeClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "2p"
-      $(".map-floor__apartment-2p").removeClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "3"
-      $(".map-floor__apartment-3").removeClass("map-show-apartment")
-    if $(@).attr("data-legend-apartment") == "3p"
-      $(".map-floor__apartment-3p").removeClass("map-show-apartment")
+    apartment_type = $(@).attr("data-legend-apartment")
+    $(".map-floor__apartment-"+apartment_type).removeClass("map-show-apartment")

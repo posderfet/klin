@@ -253,7 +253,7 @@
         </div>
       </div><!--house canvas wrapper-->
       <div class="house-canvas-wrapper" style="display: none">
-        <img alt="" class="house-canvas__background-image" data-max-left="20" data-max-top="40" onload="window.onresize()" src="images/bg-house-1.jpg" style="width:100%;height:100%" /><!--building-1 sections (site/sections/house_one_section.html)-->
+        <!--house canvas background image, data-max-left - максимальное смещение картики в лево, data-max-top - вверх--><img alt="" class="house-canvas__background-image" data-max-left="20" data-max-top="40" onload="window.onresize()" src="images/bg-house-1.jpg" style="width:100%;height:100%" /><!--building-1 sections (site/sections/house_one_section.html)-->
         <section class="building-wrapper building-one" data-building="1" id="house-canvas" style="width: 100%; height: 100%;">
           <!--house one sections-->
           <div class="house-section house-one__section one-section" data-building-section="1">
@@ -986,9 +986,7 @@
           <div class="site-footer__address">
             Ленинградское шоссе, 65 км, г. Клин
           </div>
-          <a class="site-footer__maker image-block" href="http://owlit.ru/" target="blank" title="создание сайтов"><!--svg(svg/logo_owl.svg)--><?xml version="1.0" encoding="UTF-8" ?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <svg  width="600pt" height="107pt" viewBox="0 0 600 107" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <a class="site-footer__maker image-block" href="http://owlit.ru/" target="blank" title="создание сайтов"><!--svg(svg/logo_owl.svg)--><svg  width="600pt" height="107pt" viewBox="0 0 600 107" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="#54bf9aff">
             <path fill="#54bf9a" opacity="1.00" d=" M 46.44 0.00 L 48.42 0.00 C 59.86 0.23 71.34 4.35 79.76 12.22 C 90.20 21.66 95.56 36.02 94.86 49.98 C 94.40 64.06 87.92 78.04 76.75 86.77 C 64.74 96.43 47.86 99.11 33.24 94.62 C 23.72 91.72 15.21 85.65 9.41 77.55 C 3.46 69.42 0.39 59.40 0.00 49.38 L 0.00 45.99 C 0.47 34.05 5.14 22.17 13.68 13.70 C 22.22 4.99 34.32 0.27 46.44 0.00 M 38.48 9.66 C 31.53 11.28 25.02 14.92 20.12 20.12 C 9.28 31.41 6.92 49.06 12.32 63.45 C 15.53 72.08 21.84 79.61 30.04 83.87 C 41.80 90.09 56.93 89.45 68.02 82.06 C 89.40 68.25 91.49 33.35 71.78 17.19 C 62.72 9.52 49.93 7.03 38.48 9.66 Z" />
             <path fill="#54bf9a" opacity="1.00" d=" M 107.33 3.38 C 108.43 0.91 111.82 1.74 113.98 1.76 C 116.56 1.94 116.89 4.94 117.45 6.88 C 123.70 32.84 130.73 58.62 136.50 84.69 C 137.63 79.47 138.88 74.27 140.34 69.14 C 146.35 47.50 152.16 25.80 158.28 4.20 C 159.18 0.88 163.34 1.55 165.95 1.84 C 168.25 2.38 168.40 5.13 169.05 6.97 C 175.90 32.91 183.54 58.65 189.97 84.69 C 190.83 80.13 191.68 75.56 192.88 71.08 C 198.67 49.03 204.35 26.95 210.16 4.91 C 210.49 3.10 211.91 1.42 213.91 1.61 C 215.82 1.66 218.96 1.02 219.64 3.46 C 219.59 5.70 218.75 7.83 218.23 9.99 C 211.28 36.19 204.32 62.40 197.42 88.61 C 196.62 90.81 196.67 94.15 193.99 94.95 C 191.36 95.28 188.65 95.31 186.03 94.88 C 184.03 94.02 183.89 91.58 183.26 89.78 C 176.70 64.77 169.14 40.02 163.24 14.85 C 157.37 39.86 149.81 64.44 143.26 89.27 C 142.52 91.30 142.44 94.35 139.95 95.03 C 137.34 95.34 134.67 95.38 132.08 94.95 C 130.56 94.38 130.25 92.63 129.81 91.28 C 122.86 64.54 115.90 37.81 108.93 11.07 C 108.32 8.53 107.35 6.03 107.33 3.38 Z" />
@@ -1052,23 +1050,25 @@
             <span class="left"></span><span class="right"></span>
           </div>
         </div><!--floor map-->
-        <div class="floor-map-wrapper">
-          <!--schema floor image--><img class="img-floor-map" src="images/building1_section1.png" /><!--apartment svg(svg/building1_section1.svg)--><svg class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
-          	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 665 467.2"
-          	 xml:space="preserve">
-          <path data-apartment-token="b1_s1_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M609.9,360.1h16.5v23.4h-0.5c0-1-0.7-1.6-1.4-1.4c-0.1,0-0.3,0.1-0.4,0.1
-          	c-0.5,0.1-0.9,0.6-0.9,1.3h-13.4L609.9,360.1z M626.4,452.7h34.7V280.9h-34.7V452.7z M528.3,450.3h81.5V54.4h-81.5V450.3z
-          	 M345.9,450.3h182.4V280.1H345.9V450.3z M528.3,251h-99.6l-29.6,29.2l129.2,0V251z"/>
-          <path data-apartment-token="b1_s1_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M396,54.4V37.8h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4
-          	c0.1,0.5,0.6,0.9,1.3,0.9v13.4L396,54.4z M345.9,215.2H522V54.4H345.9V215.2z M399.5,215.2l30.3,30.1H522v-30.1L399.5,215.2z
-          	 M346.7,37.9h174.5V3.2H346.7V37.9z"/>
-          <path data-apartment-token="b1_s1_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M281.9,54.4V41c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4c0.2-0.7-0.4-1.4-1.4-1.4
-          	v-0.5h23.4v16.5L281.9,54.4z M91,215.5h249V54.4H91V215.5z M170.2,37.9h174.1V3.2H170.2V37.9z"/>
-          <path data-apartment-token="b1_s1_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M162.9,414.8v13.7c-0.7,0-1.2,0.5-1.3,1c-0.1,0.1-0.1,0.3-0.1,0.4
-          	c-0.2,0.7,0.4,1.4,1.4,1.4v0.5h-23.4v-16.9L162.9,414.8z M5.9,414.9h79.2V54.4H5.9V414.9z M199.4,221.4H85.1v193.4h114.3V221.4z
-          	 M77.6,454l12,9.3h99.1v-31.5H77.6V454z"/>
-          </svg>
-          
+        <div class="floor-map-block">
+          <div class="floor-map-wrapper">
+            <!--schema floor image--><img class="img-floor-map" src="images/building1_section1.png" /><!--apartment svg(svg/building1_section1.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
+            	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 665 467.2"
+            	 xml:space="preserve">
+            <path data-apartment-token="b1_s1_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M609.9,360.1h16.5v23.4h-0.5c0-1-0.7-1.6-1.4-1.4c-0.1,0-0.3,0.1-0.4,0.1
+            	c-0.5,0.1-0.9,0.6-0.9,1.3h-13.4L609.9,360.1z M626.4,452.7h34.7V280.9h-34.7V452.7z M528.3,450.3h81.5V54.4h-81.5V450.3z
+            	 M345.9,450.3h182.4V280.1H345.9V450.3z M528.3,251h-99.6l-29.6,29.2l129.2,0V251z"/>
+            <path data-apartment-token="b1_s1_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M396,54.4V37.8h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4
+            	c0.1,0.5,0.6,0.9,1.3,0.9v13.4L396,54.4z M345.9,215.2H522V54.4H345.9V215.2z M399.5,215.2l30.3,30.1H522v-30.1L399.5,215.2z
+            	 M346.7,37.9h174.5V3.2H346.7V37.9z"/>
+            <path data-apartment-token="b1_s1_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M281.9,54.4V41c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4c0.2-0.7-0.4-1.4-1.4-1.4
+            	v-0.5h23.4v16.5L281.9,54.4z M91,215.5h249V54.4H91V215.5z M170.2,37.9h174.1V3.2H170.2V37.9z"/>
+            <path data-apartment-token="b1_s1_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M162.9,414.8v13.7c-0.7,0-1.2,0.5-1.3,1c-0.1,0.1-0.1,0.3-0.1,0.4
+            	c-0.2,0.7,0.4,1.4,1.4,1.4v0.5h-23.4v-16.9L162.9,414.8z M5.9,414.9h79.2V54.4H5.9V414.9z M199.4,221.4H85.1v193.4h114.3V221.4z
+            	 M77.6,454l12,9.3h99.1v-31.5H77.6V454z"/>
+            </svg>
+            
+          </div>
         </div>
         <!--floor map legend-->
         <div class="floor-map__legend">
@@ -1118,23 +1118,25 @@
             <span class="left"></span><span class="right"></span>
           </div>
         </div><!--floor map-->
-        <div class="floor-map-wrapper">
-          <!--schema floor image--><img class="img-floor-map" src="images/building1_section2.png" /><!--apartment svg(svg/building1_section2.svg)--><svg class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
-          	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 627.6 467.2"
-          	 xml:space="preserve">
-          <path  data-apartment-token="b1_s2_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M487.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
-          	c-0.1-0.5-0.6-0.9-1.3-1v-13.7L487.7,415.1z M542.5,415.1h79.2V54.6h-79.2V415.1z M428.3,415.1h114.2V221.7H428.3V415.1z
-          	 M438.9,463.7h98.5l13-10.2V432H438.9V463.7z"/>
-          <path data-apartment-token="b1_s2_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" stroke="#BCD640" stroke-width="0.216" stroke-miterlimit="22.9256" d="M324.3,54.6V38.1
-          	h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4c0.1,0.5,0.6,0.9,1.3,0.9v13.4L324.3,54.6z M287.6,215.7h249V54.6h-249V215.7z
-          	 M282.1,38.1h174.1V3.4H282.1V38.1z"/>
-          <path data-apartment-token="b1_s2_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M213.8,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
-          	c0.2-0.7-0.4-1.4-1.4-1.4v-0.5h23.4v16.5L213.8,54.6z M105.6,215.7h176.1V54.6H105.6V215.7z M105.2,38.1h174.5V3.4H105.2V38.1z"/>
-          <path data-apartment-token="b1_s2_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M165.1,463.8H90L76.6,454v-22h88.5V463.8z M125.5,415.1V432h23.4v-0.5
-          	c-1,0-1.6-0.7-1.4-1.4c0-0.1,0.1-0.3,0.1-0.4c0.1-0.5,0.6-0.9,1.3-1V415L125.5,415.1z M99.7,280.4h79.2v-58.7H99.7V280.4z
-          	 M11.9,280.4h87.8V54.6H11.9V280.4z M11.9,415.1h269.9V280.4H11.9V415.1z M182,450.5h99.7v-35.5H182V450.5z"/>
-          </svg>
-          
+        <div class="floor-map-block">
+          <div class="floor-map-wrapper">
+            <!--schema floor image--><img class="img-floor-map" src="images/building1_section2.png" /><!--apartment svg(svg/building1_section2.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
+            	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 627.6 467.2"
+            	 xml:space="preserve">
+            <path  data-apartment-token="b1_s2_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M487.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
+            	c-0.1-0.5-0.6-0.9-1.3-1v-13.7L487.7,415.1z M542.5,415.1h79.2V54.6h-79.2V415.1z M428.3,415.1h114.2V221.7H428.3V415.1z
+            	 M438.9,463.7h98.5l13-10.2V432H438.9V463.7z"/>
+            <path data-apartment-token="b1_s2_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" stroke="#BCD640" stroke-width="0.216" stroke-miterlimit="22.9256" d="M324.3,54.6V38.1
+            	h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4c0.1,0.5,0.6,0.9,1.3,0.9v13.4L324.3,54.6z M287.6,215.7h249V54.6h-249V215.7z
+            	 M282.1,38.1h174.1V3.4H282.1V38.1z"/>
+            <path data-apartment-token="b1_s2_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M213.8,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
+            	c0.2-0.7-0.4-1.4-1.4-1.4v-0.5h23.4v16.5L213.8,54.6z M105.6,215.7h176.1V54.6H105.6V215.7z M105.2,38.1h174.5V3.4H105.2V38.1z"/>
+            <path data-apartment-token="b1_s2_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M165.1,463.8H90L76.6,454v-22h88.5V463.8z M125.5,415.1V432h23.4v-0.5
+            	c-1,0-1.6-0.7-1.4-1.4c0-0.1,0.1-0.3,0.1-0.4c0.1-0.5,0.6-0.9,1.3-1V415L125.5,415.1z M99.7,280.4h79.2v-58.7H99.7V280.4z
+            	 M11.9,280.4h87.8V54.6H11.9V280.4z M11.9,415.1h269.9V280.4H11.9V415.1z M182,450.5h99.7v-35.5H182V450.5z"/>
+            </svg>
+            
+          </div>
         </div>
         <!--floor map legend-->
         <div class="floor-map__legend">
@@ -1184,22 +1186,24 @@
             <span class="left"></span><span class="right"></span>
           </div>
         </div><!--floor map-->
-        <div class="floor-map-wrapper">
-          <!--schema floor image--><img class="img-floor-map" src="images/building1_section3.png" /><!--apartment svg(svg/building1_section3.svg)--><svg class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
-          	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 627.1 467.2"
-          	 xml:space="preserve">
-          <path data-apartment-token="b1_s3_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M501.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
-          	c-0.1-0.5-0.6-0.9-1.3-1V415L501.7,415.1z M462.5,463.8h75.2l13.4-9.8v-22h-88.5V463.8z M521.9,221.7h93.8v-167h-93.8V221.7z
-          	 M448.6,280.4h167v-58.7h-167V280.4z M345.8,450.5h99.7v-35.5h-99.7V450.5z M345.8,415.1h269.8V280.4H345.8V415.1z"/>
-          <path data-apartment-token="b1_s3_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M388.8,54.6V38.1h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4
-          	c0.1,0.5,0.6,0.9,1.3,0.9v13.4L388.8,54.6z M348.2,38.1h174.5V3.4H348.2V38.1z M345.8,215.7H516V54.6H345.8V215.7z"/>
-          <path data-apartment-token="b1_s3_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M281.9,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
-          	c0.2-0.7-0.4-1.4-1.4-1.4v-0.5h23.4v16.5L281.9,54.6z M171.7,38.1h174.5V3.4H171.7V38.1z M90.9,215.7h249V54.6h-249V215.7z"/>
-          <path data-apartment-token="b1_s3_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M166.9,415.1v13.2c-0.7,0-1.2,0.4-1.3,0.9c-0.1,0.1-0.1,0.3-0.1,0.4
-          	c-0.2,0.7,0.4,1.3,1.4,1.3v0.5h-23.4v-16.3L166.9,415.1z M188.6,431.4h-102v20.7l11.5,11.4l90.5-0.3V431.4z M85,415.1h114.2V221.7
-          	H85V415.1z M5.9,415.1H85V54.6H5.9V415.1z"/>
-          </svg>
-          
+        <div class="floor-map-block">
+          <div class="floor-map-wrapper">
+            <!--schema floor image--><img class="img-floor-map" src="images/building1_section3.png" /><!--apartment svg(svg/building1_section3.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
+            	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 627.1 467.2"
+            	 xml:space="preserve">
+            <path data-apartment-token="b1_s3_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M501.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
+            	c-0.1-0.5-0.6-0.9-1.3-1V415L501.7,415.1z M462.5,463.8h75.2l13.4-9.8v-22h-88.5V463.8z M521.9,221.7h93.8v-167h-93.8V221.7z
+            	 M448.6,280.4h167v-58.7h-167V280.4z M345.8,450.5h99.7v-35.5h-99.7V450.5z M345.8,415.1h269.8V280.4H345.8V415.1z"/>
+            <path data-apartment-token="b1_s3_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M388.8,54.6V38.1h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4
+            	c0.1,0.5,0.6,0.9,1.3,0.9v13.4L388.8,54.6z M348.2,38.1h174.5V3.4H348.2V38.1z M345.8,215.7H516V54.6H345.8V215.7z"/>
+            <path data-apartment-token="b1_s3_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M281.9,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
+            	c0.2-0.7-0.4-1.4-1.4-1.4v-0.5h23.4v16.5L281.9,54.6z M171.7,38.1h174.5V3.4H171.7V38.1z M90.9,215.7h249V54.6h-249V215.7z"/>
+            <path data-apartment-token="b1_s3_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M166.9,415.1v13.2c-0.7,0-1.2,0.4-1.3,0.9c-0.1,0.1-0.1,0.3-0.1,0.4
+            	c-0.2,0.7,0.4,1.3,1.4,1.3v0.5h-23.4v-16.3L166.9,415.1z M188.6,431.4h-102v20.7l11.5,11.4l90.5-0.3V431.4z M85,415.1h114.2V221.7
+            	H85V415.1z M5.9,415.1H85V54.6H5.9V415.1z"/>
+            </svg>
+            
+          </div>
         </div>
         <!--floor map legend-->
         <div class="floor-map__legend">
@@ -1249,22 +1253,24 @@
             <span class="left"></span><span class="right"></span>
           </div>
         </div><!--floor map-->
-        <div class="floor-map-wrapper">
-          <!--schema floor image--><img class="img-floor-map" src="images/building1_section4.png" /><!--apartment svg(svg/building1_section4.svg)--><svg class="svg-floor-map" version="1.2" baseProfile="tiny"
-          	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="36 187.7 668.3 467.2"
-          	 xml:space="preserve">
-          <path data-apartment-token="b1_s4_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill="#DEB9D8" d="M294.3,224.9h23.8v17.8h-23.8v-13.1c0.7,0,1.3-0.5,1.4-1.1c0.1-0.3,0.1-0.7,0-1c0-0.9-0.6-1.5-1.5-1.5v-1.1
-          	H294.3z M91.7,432.5H191v51.4H91.7V432.5z M273.4,242.6h93.7v160.7h-58.2l-29.3,29.8L273.4,242.6z M91.7,242.5h187.9v190.7H91.7
-          	V242.5z M183.7,191.2h174.6v34.7H183.7V191.2z"/>
-          <path data-apartment-token="b1_s4_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M564.3,597.5v22.4h-23.4v-0.6c1,0,1.6-0.9,1.4-1.8c0-0.2-0.1-0.4-0.1-0.5c-0.1-0.7-0.6-1.2-1.3-1.3v-18.2
-          	H564.3z M525.2,619.5h101.4v20.4l-11.4,11.5l-90-0.1V619.5z M513.6,409.5h119v193.4h-119V409.5z M619.1,242.5h79.2V603h-79.2V242.5z
-          	"/>
-          <path data-apartment-token="b1_s4_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M400.9,247.6v-22.4h23.6v0.6c-1,0-1.6,0.9-1.4,1.8c0,0.2,0.1,0.4,0.1,0.5c0.1,0.7,0.6,1.2,1.3,1.3v18.2
-          	L400.9,247.6z M361,225.8v-34.4h174.2v34.5L361,225.8z M372.9,403.1V242.5h240.3v161.1L372.9,403.1z"/>
-          <path data-apartment-token="b1_s4_a2-3" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M72.3,548.2h24.6v23.2H78.5c-0.4-0.8-1.3-1-2-0.6c-0.7-0.2-1.5-0.1-1.9,0.6h-2.3V548.2z M40,468.9h34.7
-          	v171.8H40V468.9z M197.2,490.2V439h81.2l29.9,29.2H367v170.2H91.7V490.2H197.2z"/>
-          </svg>
-          
+        <div class="floor-map-block">
+          <div class="floor-map-wrapper">
+            <!--schema floor image--><img class="img-floor-map" src="images/building1_section4.png" /><!--apartment svg(svg/building1_section4.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny"
+            	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="36 187.7 668.3 467.2"
+            	 xml:space="preserve">
+            <path data-apartment-token="b1_s4_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill="#DEB9D8" d="M294.3,224.9h23.8v17.8h-23.8v-13.1c0.7,0,1.3-0.5,1.4-1.1c0.1-0.3,0.1-0.7,0-1c0-0.9-0.6-1.5-1.5-1.5v-1.1
+            	H294.3z M91.7,432.5H191v51.4H91.7V432.5z M273.4,242.6h93.7v160.7h-58.2l-29.3,29.8L273.4,242.6z M91.7,242.5h187.9v190.7H91.7
+            	V242.5z M183.7,191.2h174.6v34.7H183.7V191.2z"/>
+            <path data-apartment-token="b1_s4_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M564.3,597.5v22.4h-23.4v-0.6c1,0,1.6-0.9,1.4-1.8c0-0.2-0.1-0.4-0.1-0.5c-0.1-0.7-0.6-1.2-1.3-1.3v-18.2
+            	H564.3z M525.2,619.5h101.4v20.4l-11.4,11.5l-90-0.1V619.5z M513.6,409.5h119v193.4h-119V409.5z M619.1,242.5h79.2V603h-79.2V242.5z
+            	"/>
+            <path data-apartment-token="b1_s4_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M400.9,247.6v-22.4h23.6v0.6c-1,0-1.6,0.9-1.4,1.8c0,0.2,0.1,0.4,0.1,0.5c0.1,0.7,0.6,1.2,1.3,1.3v18.2
+            	L400.9,247.6z M361,225.8v-34.4h174.2v34.5L361,225.8z M372.9,403.1V242.5h240.3v161.1L372.9,403.1z"/>
+            <path data-apartment-token="b1_s4_a2-3" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill="#BCD640" d="M72.3,548.2h24.6v23.2H78.5c-0.4-0.8-1.3-1-2-0.6c-0.7-0.2-1.5-0.1-1.9,0.6h-2.3V548.2z M40,468.9h34.7
+            	v171.8H40V468.9z M197.2,490.2V439h81.2l29.9,29.2H367v170.2H91.7V490.2H197.2z"/>
+            </svg>
+            
+          </div>
         </div>
         <!--floor map legend-->
         <div class="floor-map__legend">
@@ -1306,11 +1312,9 @@
         </div>
         <!--apartment popup menu-->
         <div class="popup-apartment__menu">
-          <div class="popup-apartment__item price">
-            <div class="popup-apartment__item-image image-block">
-              <!--svg(svg/ico_price.svg)--><?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div class="popup-apartment__menu-item price">
+            <div class="popup-apartment__menu-image image-block">
+              <!--svg(svg/ico_price.svg)--><svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
               <style type="text/css">
               	.st0{fill:#68A657;}
@@ -1326,15 +1330,13 @@
               </svg>
               
             </div>
-            <div class="popup-apartment__item-lable">
+            <div class="popup-apartment__menu-lable">
               Следить <br />за ценой
             </div>
           </div>
-          <div class="popup-apartment__item planning">
-            <div class="popup-apartment__item-image image-block">
-              <!--svg(svg/ico_planning.svg)--><?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div class="popup-apartment__menu-item planning">
+            <div class="popup-apartment__menu-image image-block">
+              <!--svg(svg/ico_planning.svg)--><svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
               <style type="text/css">
               	.st0{fill:#DA8F33;}
@@ -1349,15 +1351,13 @@
               </svg>
               
             </div>
-            <div class="popup-apartment__item-lable">
+            <div class="popup-apartment__menu-lable">
               Отправить детальную <br />планировку на почту
             </div>
           </div>
-          <div class="popup-apartment__item calc">
-            <div class="popup-apartment__item-image image-block">
-              <!--svg(svg/ico_calc.svg)--><?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div class="popup-apartment__menu-item calc">
+            <div class="popup-apartment__menu-image image-block">
+              <!--svg(svg/ico_calc.svg)--><svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 24 30" style="enable-background:new 0 0 24 30;" xml:space="preserve">
               <style type="text/css">
               	.st0{fill:#50AFDF;}
@@ -1367,15 +1367,13 @@
               </svg>
               
             </div>
-            <div class="popup-apartment__item-lable">
+            <div class="popup-apartment__menu-lable">
               Ипотечный <br />калькулятор
             </div>
           </div>
-          <div class="popup-apartment__item reserv">
-            <div class="popup-apartment__item-image image-block">
-              <!--svg(svg/ico_reserv.svg)--><?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div class="popup-apartment__menu-item reserv">
+            <div class="popup-apartment__menu-image image-block">
+              <!--svg(svg/ico_reserv.svg)--><svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
               <style type="text/css">
               	.st0{fill:#CC5E32;}
@@ -1396,15 +1394,13 @@
               </svg>
               
             </div>
-            <div class="popup-apartment__item-lable">
+            <div class="popup-apartment__menu-lable">
               Заяка <br />на бронь
             </div>
           </div>
-          <div class="popup-apartment__item repair">
-            <div class="popup-apartment__item-image image-block">
-              <!--svg(svg/ico_repair.svg)--><?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div class="popup-apartment__menu-item repair">
+            <div class="popup-apartment__menu-image image-block">
+              <!--svg(svg/ico_repair.svg)--><svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
               <style type="text/css">
               	.st0{fill:#125B39;}
@@ -1415,7 +1411,7 @@
               </svg>
               
             </div>
-            <div class="popup-apartment__item-lable">
+            <div class="popup-apartment__menu-lable">
               Варианты <br />ремонта
             </div>
           </div>
@@ -1449,6 +1445,7 @@
         </div>
       </div>
     </div>
+    <div class="popup-stack" style="display: none"></div>
     <!--блок появляющийся при неправильной ориетации экрана, должен быть на всех страницах (site/components/landscape_error.html)-->
     <div class="landscape-error">
       <div class="landscape-error-wrapper">
@@ -1525,9 +1522,7 @@
           Для дальнейшего просмотра переверните устройство
         </div>
         <div class="landscape-error__ico-landscape image-block">
-          <!--svg(svg/ico_landscape.svg)--><?xml version="1.0" encoding="UTF-8" ?>
-          <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-          <svg  width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <!--svg(svg/ico_landscape.svg)--><svg  width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <g id="#222222ff">
           <path fill="#222222" opacity="1.00" d=" M 24.51 44.37 C 30.30 31.91 42.90 21.81 57.02 21.72 C 111.98 21.75 166.94 21.76 221.90 21.72 C 242.28 20.44 261.31 39.68 259.85 60.03 C 259.81 124.07 259.84 188.11 259.83 252.15 C 323.87 252.14 387.91 252.17 451.95 252.14 C 472.31 250.59 491.53 269.71 490.28 290.05 C 490.19 341.72 490.27 393.39 490.24 445.06 C 490.13 451.68 490.94 458.56 488.57 464.90 C 484.67 475.75 475.73 484.68 464.88 488.58 C 458.84 490.85 452.29 490.17 445.98 490.25 C 375.31 490.23 304.63 490.26 233.96 490.24 C 212.97 490.72 191.99 490.00 170.99 490.26 C 133.00 490.21 95.00 490.27 57.00 490.23 C 47.30 490.39 38.21 485.25 31.72 478.32 C 26.04 472.32 21.93 464.41 21.74 456.03 C 21.74 325.03 21.74 194.03 21.74 63.03 C 21.53 56.72 21.66 50.15 24.51 44.37 M 53.33 29.18 C 47.32 30.20 41.62 33.04 37.49 37.57 C 30.46 43.89 28.10 53.82 28.66 62.97 C 28.71 190.65 28.68 318.34 28.67 446.02 C 28.69 451.01 28.34 456.09 29.68 460.96 C 32.76 474.02 45.74 483.58 59.07 483.32 C 114.06 483.30 169.05 483.34 224.04 483.30 C 237.82 482.90 251.00 472.05 252.36 458.06 C 252.37 325.73 252.36 193.40 252.36 61.06 C 252.38 56.45 252.82 51.63 250.77 47.34 C 246.62 36.44 235.51 29.02 223.95 28.69 C 168.65 28.65 113.34 28.71 58.04 28.67 C 56.46 28.71 54.88 28.87 53.33 29.18 M 259.71 259.71 C 259.54 264.21 259.52 268.72 259.74 273.23 C 318.73 273.48 377.72 273.17 436.71 273.39 C 437.34 274.05 437.97 274.72 438.61 275.39 C 438.60 338.96 438.65 402.54 438.60 466.10 C 439.01 468.64 435.99 469.36 434.07 469.47 C 374.57 469.45 315.07 469.39 255.57 469.50 C 254.33 471.85 253.10 474.29 251.08 476.09 C 249.07 478.25 245.92 479.89 245.79 483.20 C 314.52 483.49 383.26 483.19 452.00 483.36 C 456.63 483.36 461.35 482.65 465.58 480.66 C 475.98 476.15 483.19 465.27 483.31 453.93 C 483.32 402.31 483.33 350.68 483.31 299.06 C 483.16 292.72 484.01 286.18 481.96 280.05 C 478.47 268.57 467.37 258.95 455.02 259.58 C 389.92 259.72 324.81 259.46 259.71 259.71 M 260.00 280.00 C 260.00 340.67 259.99 401.33 260.01 462.00 C 317.34 462.00 374.67 462.00 432.00 462.00 C 432.00 401.33 432.00 340.67 432.00 280.00 C 374.67 280.00 317.33 280.00 260.00 280.00 Z" />
           <path fill="#222222" opacity="1.00" d=" M 277.79 51.14 C 277.67 48.94 279.77 47.14 281.92 47.39 C 304.53 47.43 327.54 49.42 348.93 57.19 C 365.07 62.99 379.92 72.99 390.22 86.83 C 400.57 100.56 406.40 117.16 409.63 133.91 C 412.11 147.47 413.36 161.26 413.31 175.05 C 420.81 175.83 428.38 174.98 435.90 175.47 C 438.93 175.82 440.14 179.97 437.92 182.03 C 420.83 198.90 403.95 216.01 386.91 232.92 C 385.40 234.78 382.54 234.67 381.05 232.85 C 364.04 215.89 347.02 198.92 330.10 181.88 C 327.84 179.96 329.11 175.80 332.04 175.47 C 339.51 175.12 347.00 175.56 354.48 175.25 C 354.00 157.32 350.17 138.03 337.23 124.73 C 324.33 111.26 304.94 106.92 286.94 106.35 C 283.55 106.36 277.42 106.99 277.71 101.92 C 277.82 85.00 277.64 68.06 277.79 51.14 M 285.43 55.09 C 285.38 69.56 285.37 84.04 285.45 98.51 C 298.15 99.20 311.05 100.93 322.73 106.27 C 335.75 111.89 346.71 122.17 353.01 134.90 C 359.92 148.50 362.10 163.98 362.18 179.08 C 362.23 180.85 360.90 182.79 359.03 182.85 C 353.35 183.13 347.65 182.79 341.95 182.94 C 355.93 197.00 369.99 210.97 383.99 225.00 C 398.00 210.97 412.07 197.00 426.03 182.93 C 420.09 182.79 414.13 183.26 408.21 182.73 C 406.17 182.10 405.72 179.79 405.76 177.94 C 405.55 153.71 403.59 128.74 393.53 106.38 C 386.45 90.31 373.77 76.79 358.01 68.99 C 335.64 57.78 310.10 55.32 285.43 55.09 Z" />

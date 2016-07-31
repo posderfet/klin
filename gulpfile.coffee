@@ -22,11 +22,11 @@ gulp.task 'default', ['coffee', 'sass', 'slim', 'watch']
 gulp.task 'coffee', ->
   gulp.src paths.coffee
   .pipe $.coffee(bare: true)
-  .pipe $.minify
-    noSource: true
-    ext:
-      src: '.full.js'
-      min: '.js'
+  # .pipe $.minify
+  #   noSource: true
+  #   ext:
+  #     src: '.full.js'
+  #     min: '.js'
   .pipe gulp.dest dests.coffee
 
 gulp.task 'slim', ->
