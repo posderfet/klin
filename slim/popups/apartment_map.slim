@@ -1,18 +1,10 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
 .popup-window.popup-apartment
   .popup-window__close-button.close-this
     .popup-window__close-ico.image-block
       == inline_svg "ico_close.svg"
-  .popup-slider
-    .popup-slider__up
-      span.left
-      span.right
-    .popup-slider__count
-      .popup-slider__count-number 5
-      .popup-slider__count-lable этаж
-    .popup-slider__down
-      span.left
-      span.right
+  == render 'components/popup_floor_slide'
   .apartment-map-block
     .img-apartment-wrapper
       img.img-apartment-map src="images/b1_s1_a2-2.png"

@@ -1,32 +1,32 @@
 <svg version="1.2" baseProfile="tiny" id="Слой_1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 846.7 570.5"
 	 xml:space="preserve">
-<path data-apartment-token="b3_s2_a1s-2" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__room-1s map-floor__room" data-room="1s" stroke="#ABE1FA" stroke-width="0.216" stroke-miterlimit="10" d="M426.5,49.3h92v217.6
+<path data-apartment-token="b3_s2_a1s-2" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" stroke="#ABE1FA" stroke-width="0.216" stroke-miterlimit="10" d="M426.5,49.3h92v217.6
 	L426.5,49.3z M461.8,49.3h20.9V39.2c-0.2,0-0.4-0.1-0.6-0.1c-0.1,0-0.2,0-0.2-0.1c-0.6-0.2-1-0.4-1-0.8l0,0v0c0-0.6,1-1,1.9-0.8
 	v-3.1h-20.9V49.3z M425.5,3.1v31.2h90.5L425.5,3.1z M515.9,34.3l-18-31.2h-72.5L515.9,34.3z M426.5,49.3v217.6h92L426.5,49.3z"/>
-<path data-apartment-token="b3_s2_a1s-1" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__room-1s map-floor__room" data-room="1s" d="M365.1,34.2H386v15.1h-20.9V38.9c0.6,0,1.2-0.2,1.5-0.6c0.3-0.3,0.4-0.4,0.4-0.8
+<path data-apartment-token="b3_s2_a1s-1" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" d="M365.1,34.2H386v15.1h-20.9V38.9c0.6,0,1.2-0.2,1.5-0.6c0.3-0.3,0.4-0.4,0.4-0.8
 	c0-0.7-1-1.1-1.9-0.9V34.2z M349.9,3.1l-18,31.1h90.5L349.9,3.1z M422.3,34.2V3.1h-72.5L422.3,34.2z M329.2,49.3v217.6h92
 	L329.2,49.3z M421.3,266.9V49.3h-92L421.3,266.9z"/>
-<path data-apartment-token="b3_s2_a1p-1" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__room-1p map-floor__room" data-room="1p" d="M324.1,266.9H167.5V97.3L324.1,266.9z M260.9,84.5c0.9-0.2,1.9,0.2,1.9,0.9
+<path data-apartment-token="b3_s2_a1p-1" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" d="M324.1,266.9H167.5V97.3L324.1,266.9z M260.9,84.5c0.9-0.2,1.9,0.2,1.9,0.9
 	c0,0.3-0.2,0.7-0.5,0.9c-0.2,0.2-0.4,0.3-0.7,0.4c-0.2,0.1-0.4,0.2-0.7,0.3v10.3h20.9V82.4h-20.9V84.5z M231.3,51.1v31.3h83
 	L231.3,51.1z M314.3,82.4V51.1h-83L314.3,82.4z M324.1,266.9V97.3H167.5L324.1,266.9z"/>
-<path data-apartment-token="b3_s2_a3p-1" fill-rule="evenodd" fill="#FBF394" class="map-floor__room-3p map-floor__room" data-room="3p" d="M711.5,482.8c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
+<path data-apartment-token="b3_s2_a3p-1" fill-rule="evenodd" fill="#FBF394" class="map-floor__apartment-3p map-floor__apartment" data-apartment-type="3p" d="M711.5,482.8c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
 	c-0.2-0.1-0.4-0.2-0.7-0.3v-10.2h20.9v14.8h-20.9V482.8z M685.6,118.7v150.2H842L685.6,118.7z M842,268.9V118.7H685.6L842,268.9z
 	 M685.7,268.9v58H842L685.7,268.9z M842,326.9v-58H685.7L842,326.9z M696.5,326.9v143.3H842L696.5,326.9z M842,470.2V326.9H696.5
 	L842,470.2z M706.3,484.9v31.3h60.4L706.3,484.9z M766.6,516.2v-31.3h-60.4L766.6,516.2z M758.5,72.5v31.3h84.6L758.5,72.5z
 	 M843.1,103.8V72.5h-84.6L843.1,103.8z"/>
-<path data-apartment-token="b3_s2_a1p-2" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__room-1p map-floor__room" data-room="1p" d="M587,84.4c-0.9-0.2-1.9,0.2-1.9,0.9c0,0.3,0.2,0.7,0.5,0.9c0.2,0.2,0.4,0.3,0.7,0.4
+<path data-apartment-token="b3_s2_a1p-2" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" d="M587,84.4c-0.9-0.2-1.9,0.2-1.9,0.9c0,0.3,0.2,0.7,0.5,0.9c0.2,0.2,0.4,0.3,0.7,0.4
 	c0.2,0.1,0.4,0.2,0.7,0.3v10.4h-20.9v-15H587V84.4z M533.5,51.1v31.2h83.2L533.5,51.1z M616.6,82.3V51.1h-83.2L616.6,82.3z
 	 M523.9,97.3v169.6h156.5L523.9,97.3z M680.3,266.9V97.3H523.9L680.3,266.9z"/>
-<path data-apartment-token="b3_s2_a3-1" fill-rule="evenodd" fill="#DEB9D8" stroke="#DEB9D8" class="map-floor__room-3 map-floor__room" data-room="3" stroke-width="0.216" stroke-miterlimit="10" d="M13.9,118.7h148.4V272
+<path data-apartment-token="b3_s2_a3-1" fill-rule="evenodd" fill="#DEB9D8" stroke="#DEB9D8" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" stroke-width="0.216" stroke-miterlimit="10" d="M13.9,118.7h148.4V272
 	L13.9,118.7z M133.7,484.9h21v-1.4c-0.5,0.1-1.1,0-1.4-0.3c-0.4-0.2-0.5-0.5-0.5-0.8c0-0.5,0.6-0.9,1.4-0.9h0.5v-11.6h-21V484.9z
 	 M13.9,118.7V272h148.4L13.9,118.7z M13.9,272.2V332h148.4L13.9,272.2z M162.3,332v-59.9H13.9L162.3,332z M13.9,332v137.9h155.8
 	L13.9,332z M169.6,469.9L169.5,332H13.9L169.6,469.9z M77.8,484.9v31.3h82.1L77.8,484.9z M159.9,516.2v-31.3H77.8L159.9,516.2z
 	 M3.7,72.5v31.3h85.9L3.7,72.5z M89.6,103.8V72.5H3.7L89.6,103.8z"/>
-<path data-apartment-token="b3_s2_a1p-4" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__room-1p map-floor__room" data-room="1p" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="10" d="M174.8,332H347v163.6
+<path data-apartment-token="b3_s2_a1p-4" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="10" d="M174.8,332H347v163.6
 	L174.8,332z M334.8,508.4c-0.9,0.2-1.9-0.2-1.9-0.9c0-0.3,0.2-0.7,0.5-0.9c0.2-0.2,0.4-0.3,0.7-0.4c0.2-0.1,0.4-0.2,0.7-0.3v-10.3
 	H314v14.9h20.9V508.4z M174.8,332v163.6H347L174.8,332z M259,510.5v56.9h78.2L259,510.5z M337.3,567.4v-56.9H259L337.3,567.4z"/>
-<path data-apartment-token="b3_s2_a1p-3" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__room-1p map-floor__room" data-room="1p" d="M531.8,508.4c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
+<path data-apartment-token="b3_s2_a1p-3" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" d="M531.8,508.4c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
 	c-0.2-0.1-0.4-0.2-0.7-0.3v-10.3h20.9v14.9h-20.9V508.4z M519.2,332v163.6h172.2L519.2,332z M691.4,495.6V332H519.2L691.4,495.6z
 	 M528.8,510.5v56.9h79.4L528.8,510.5z M608.2,567.4v-56.9h-79.4L608.2,567.4z"/>
 </svg>

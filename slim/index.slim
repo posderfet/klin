@@ -20,19 +20,19 @@ html lang="ru"
       == render "layouts/site_header"
       .main-container
         .index-row
-          a.index-link-square.index-choice-apartment title="выбрать квартиру"
+          a.index-link-square.index-choice-apartment href="" title="выбрать квартиру"
             .index-choice-apartment__ico.image-block
               == inline_svg "ico_key.svg"
             .index-choice-apartment__lable
               |Выбрать
               br
               |квартиру
-          a.index-link-square.index-hypothec title="ипотека с господдержкой"
+          a.index-link-square.index-hypothec href="" title="ипотека с господдержкой"
             .index--hypothec__lable
               .big Ипотека с
               .small господдеркой
         .index-row
-          a.index-link-square.index-apartment-price title="Квартиры от 1.3 млн рублей"
+          a.index-link-square.index-apartment-price href="" title="Квартиры от 1.3 млн рублей"
             .index-apartment-price__lable
               .line-1 Квартиры
               .line-2
@@ -45,25 +45,25 @@ html lang="ru"
             .index-webcam__ico.image-block
               == inline_svg "ico_webcam.svg"
         .index-row
-          a.index-link-square.index-rent title="аренда коммерческих помещений"
+          a.index-link-square.index-rent href="" title="аренда коммерческих помещений"
             .index-rent__lable
               .big Аренда
               .small
                 |коммерческих
                 br
                 |помещений
-          a.index-link-square.index-discount title="Скидки на квартиры"
+          a.index-link-square.index-discount href="" title="Скидки на квартиры"
             .index-discount__lable
               .line-1 Скидка
               .line-2 в мае
               .line-3 30 000
               .line-4 рублей
           .index-row__document-block
-            a.index-link-rect.index-guard
+            .index-link-rect.index-guard
               .index-gurad__ico.image-block
                 == inline_svg "ico_guard.svg"
               .index-gurad__lable Работаем по 214-ФЗ
-            a.index-link-rect.index-documents
+            a.index-link-rect.index-documents href=""
               .index-documents__lable Документация
       .index-slider-container.swiper-container
         .index-slider-wrapper.swiper-wrapper

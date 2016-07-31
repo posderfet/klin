@@ -146,33 +146,37 @@ jQuery ->
     $('[data-popup-token="'+popup_token+'"]').showPop()
 
   # popup apartment
-  $("html").on 'click', ".map-floor__room", ->
+  $("html").on 'click', ".map-floor__apartment", ->
     apartment_token = $(@).data("apartment-token")
     $(".img-apartment-map").attr("src", "images/"+apartment_token+".png")
     $(".popup-apartment").showPop()
 
 
-  # popup
+  # popup legend floor
   $("html").on 'mouseenter', ".floor-map__legend-item", ->
-    if $(@).attr("data-legend-room") == "1p"
-      $(".map-floor__room-1p").addClass("map-show-room")
-    if $(@).attr("data-legend-room") == "1s"
-      $(".map-floor__room-1s").addClass("map-show-room")
-    if $(@).attr("data-legend-room") == "2"
-      $(".map-floor__room-2").addClass("map-show-room")
-    if $(@).attr("data-legend-room") == "3"
-      $(".map-floor__room-3").addClass("map-show-room")
-    if $(@).attr("data-legend-room") == "3p"
-      $(".map-floor__room-3p").addClass("map-show-room")
+    if $(@).attr("data-legend-apartment") == "1p"
+      $(".map-floor__apartment-1p").addClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "1s"
+      $(".map-floor__apartment-1s").addClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "2"
+      $(".map-floor__apartment-2").addClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "2p"
+      $(".map-floor__apartment-2p").addClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "3"
+      $(".map-floor__apartment-3").addClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "3p"
+      $(".map-floor__apartment-3p").addClass("map-show-apartment")
 
   $("html").on 'mouseleave', ".floor-map__legend-item", ->
-    if $(@).attr("data-legend-room") == "1p"
-      $(".map-floor__room-1p").removeClass("map-show-room")
-    if $(@).attr("data-legend-room") == "1s"
-      $(".map-floor__room-1s").removeClass("map-show-room")
-    if $(@).attr("data-legend-room") == "2"
-      $(".map-floor__room-2").removeClass("map-show-room")
-    if $(@).attr("data-legend-room") == "3"
-      $(".map-floor__room-3").removeClass("map-show-room")
-    if $(@).attr("data-legend-room") == "3p"
-      $(".map-floor__room-3p").removeClass("map-show-room")
+    if $(@).attr("data-legend-apartment") == "1p"
+      $(".map-floor__apartment-1p").removeClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "1s"
+      $(".map-floor__apartment-1s").removeClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "2"
+      $(".map-floor__apartment-2").removeClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "2p"
+      $(".map-floor__apartment-2p").removeClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "3"
+      $(".map-floor__apartment-3").removeClass("map-show-apartment")
+    if $(@).attr("data-legend-apartment") == "3p"
+      $(".map-floor__apartment-3p").removeClass("map-show-apartment")

@@ -1,6 +1,6 @@
 - def render(path) Slim::Template.new("slim/#{path}.slim").render end
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
-.popup-window.popup-floor data-popup-token="gp2_s3"
+.popup-window.popup-floor data-popup-token="gp3_s3"
   .popup-window__risen.image-block
     == inline_svg "ico_risen.svg"
   .popup-window__close-button.close-this
@@ -8,8 +8,8 @@
       == inline_svg "ico_close.svg"
   == render 'components/popup_floor_slide'
   .floor-map-wrapper
-    img.img-floor-map src="images/building2_section3.png"
-    == inline_svg "building2_section3.svg", class:"svg-floor-map"
+    img.img-floor-map src="images/building3_section3.png"
+    == inline_svg "building3_section3.svg", class:"svg-floor-map"
   .floor-map__legend
     .floor-map__legend-item data-legend-apartment="1p"
       span.floor-map__legend-marker.marker-apartment-1p
@@ -17,6 +17,9 @@
     .floor-map__legend-item data-legend-apartment="1s"
       span.floor-map__legend-marker.marker-apartment-1s
       span.floor-map__legend-lable Квартиры-студии(1С)
-    .floor-map__legend-item data-legend-apartment="2"
-      span.floor-map__legend-marker.marker-apartment-2
-      span.floor-map__legend-lable Двухкомнатные(2)
+    .floor-map__legend-item data-legend-apartment="2p"
+      span.floor-map__legend-marker.marker-apartment-2p
+      span.floor-map__legend-lable Евродвушка(2П)
+    .floor-map__legend-item data-legend-apartment="3"
+      span.floor-map__legend-marker.marker-apartment-3
+      span.floor-map__legend-lable Трёхкомнатные(3)

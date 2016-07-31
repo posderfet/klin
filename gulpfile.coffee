@@ -33,6 +33,7 @@ gulp.task 'slim', ->
   gulp.src paths.slim
   .pipe $.slim
     pretty: true
+    sort_attrs: true
   .pipe gulp.dest 'site'
 
 gulp.task 'sass', ->

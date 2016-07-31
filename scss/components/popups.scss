@@ -117,8 +117,8 @@
 }
 
 
-// popup slider
-.popup-slider {
+// popup floor slider
+.popup-floor-slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -129,8 +129,8 @@
   background: $blue-base;
 }
 
-.popup-slider__up,
-.popup-slider__down {
+.popup-floor-slider__up,
+.popup-floor-slider__down {
   display: block;
   position: absolute;
   z-index: 20;
@@ -166,7 +166,7 @@
   }
 }
 
-.popup-slider__up {
+.popup-floor-slider__up {
   top: 0;
 
   .left,
@@ -185,7 +185,7 @@
   }
 }
 
-.popup-slider__down {
+.popup-floor-slider__down {
   bottom: 0;
 
   .left,
@@ -204,21 +204,21 @@
   }
 }
 
-.popup-slider__count {
+.popup-floor-slider__count {
   color: $white-base;
   widows: 100%;
   text-align: center;
   margin-top: 3rem;
 }
 
-.popup-slider__count-number {
+.popup-floor-slider__count-number {
   font-size: $font-size-extra-large;
   font-weight: bold;
   line-height: .8;
   margin-bottom: .2rem;
 }
 
-.popup-slider__count-lable {
+.popup-floor-slider__count-lable {
   font-size: $font-size-small;
   text-transform: uppercase;
   font-weight: bold;
@@ -252,47 +252,56 @@
   }
 }
 
-.map-floor__room-1p {
+.map-floor__apartment-1p {
   fill: #BCB4DA;
 
   &:hover,
-  &.map-show-room {
+  &.map-show-apartment {
     fill: darken(#BCB4DA, 30%);
   }
 }
 
-.map-floor__room-1s {
+.map-floor__apartment-1s {
   fill: #ABE1FA;
 
   &:hover,
-  &.map-show-room {
+  &.map-show-apartment {
     fill: darken(#ABE1FA, 30%);
   }
 }
 
-.map-floor__room-2 {
+.map-floor__apartment-2 {
   fill: #7DD073;
 
   &:hover,
-  &.map-show-room {
+  &.map-show-apartment {
     fill: darken(#7DD073, 30%);
   }
 }
 
-.map-floor__room-3 {
+.map-floor__apartment-2p {
+  fill: #FBB040;
+
+  &:hover,
+  &.map-show-apartment {
+    fill: #f88000;
+  }
+}
+
+.map-floor__apartment-3 {
   fill: #E5C2DE;
 
   &:hover,
-  &.map-show-room {
+  &.map-show-apartment {
     fill: darken(#E5C2DE, 30%);
   }
 }
 
-.map-floor__room-3p {
+.map-floor__apartment-3p {
   fill: #FBF394;
 
   &:hover,
-  &.map-show-room {
+  &.map-show-apartment {
     fill: darken(#FBF394, 30%);
   }
 }
@@ -334,11 +343,12 @@
   height: .625rem;
   margin-right: .5rem;
 
-  &.marker-room-1p { background: #BCB4DA; opacity: .6; }
-  &.marker-room-1s { background: #ABE1FA; opacity: .6; }
-  &.marker-room-2  { background: #7DD073; opacity: .6; }
-  &.marker-room-3  { background: #E5C2DE; opacity: .6; }
-  &.marker-room-3p  { background: #FBF394; opacity: .6; }
+  &.marker-apartment-1p { background: #BCB4DA; opacity: .6; }
+  &.marker-apartment-1s { background: #ABE1FA; opacity: .6; }
+  &.marker-apartment-2  { background: #7DD073; opacity: .6; }
+  &.marker-apartment-2p  { background: #FBB040; opacity: .6; }
+  &.marker-apartment-3  { background: #E5C2DE; opacity: .6; }
+  &.marker-apartment-3p  { background: #FBF394; opacity: .6; }
 }
 
 

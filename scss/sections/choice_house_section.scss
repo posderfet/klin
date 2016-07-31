@@ -16,11 +16,13 @@
 
 // choice house ago
 .choice-house__ago {
+  display: block;
   width: 100%;
   height: 3.125rem;
   background: rgba($white-base, .3);
   color: $gray-blue;
   transition: 250ms ease-out;
+  font-size: 0;
 
   &:hover {
     background: rgba($white-base, .5);
