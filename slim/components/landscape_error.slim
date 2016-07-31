@@ -1,0 +1,9 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+.landscape-error
+  .landscape-error-wrapper
+    .landscape-error__klin-logo.image-block
+      == inline_svg "logo_klin.svg"
+    .landscape-error__header Для дальнейшего просмотра переверните устройство
+    .landscape-error__ico-landscape.image-block
+      == inline_svg "ico_landscape.svg"

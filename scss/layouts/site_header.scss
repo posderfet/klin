@@ -1,0 +1,354 @@
+/***************************
+         Site Header
+****************************/
+
+
+
+.site-header {
+  padding-top: 1.25rem;
+  position: relative;
+  z-index: 50;
+  width: 100%;
+
+  .main-container {
+    position: relative;
+  }
+}
+
+
+
+// logo block
+.site-header__logo {
+  display: inline-block;
+  width: 9.375rem;
+  height: 9.375rem;
+  background: $white-base;
+  margin-top: 3.125rem;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: 180ms;
+
+  &:hover {
+    background: $brown-base;
+  }
+}
+
+.site-header__logo-image {
+  height: 7.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+// top menu
+.top-menu-wrapper {
+  width: auto;
+  height: 3.125rem;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+  z-index: 50;
+  perspective: 500px;
+
+  &.overflow-visible {
+    overflow: visible;
+  }
+}
+
+
+
+// top menu button
+.top-menu__button {
+  width: 3.125rem;
+  height: 100%;
+  background: $white-base;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: 250ms ease-out;
+  z-index: 50;
+
+  &:hover {
+    background: $green-lighten-1;
+
+    span {
+      background: $white-base !important;
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: .125rem;
+    background: $gray-base;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 250ms ease-out;
+  }
+
+  .top {
+    top: 1.15rem;
+    transform-origin: left top;
+  }
+
+  .middle {
+    top: 1.525rem;
+    transform-origin: center;
+  }
+
+  .bottom {
+    top: 1.9rem;
+    transform-origin: left bottom;
+  }
+}
+
+.open-top-menu .top-menu__button {
+
+  span {
+    background: $gray-lighten-1;
+  }
+
+  .middle {
+    width: 0;
+  }
+
+  .top {
+    transform: translateY(-1px) translateX(4px) rotate(45deg);
+  }
+
+  .bottom {
+    transform: translateX(4px) rotate(-45deg);
+  }
+}
+
+
+
+// top menu list
+.top-menu {
+  width: 45.1875rem;
+  background: $white-base;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  transform: scaleX(0) rotateY(180deg);
+  opacity: 0;
+  transition: 400ms ease-out;
+  position: relative;
+  z-index: 45;
+  transform-origin: left;
+}
+
+.open-top-menu .top-menu {
+  transform: scaleX(1) rotateY(0);
+  opacity: 1;
+}
+
+.top-menu__list {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 45;
+}
+
+.top-menu__item {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  font-size: $font-size-top-menu;
+  text-transform: uppercase;
+  color: $gray-lighten-1;
+  width: 20%;
+  text-align: left;
+  padding-left: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  // transition: 80ms ease-out;
+  z-index: 45;
+
+  &:hover {
+    background: $green-base;
+    color: $white-base;
+  }
+}
+
+.top-menu__item:hover>.top-menu__inner-list {
+  display: block;
+}
+
+.top-menu__inner-list {
+  position: absolute;
+  top: 3.125rem;
+  width: 100%;
+  background: $green-accent;
+  left: 0;
+  display: none;
+  z-index: 50;
+}
+
+.top-menu__inner-item {
+  padding: 1rem 1.25rem;
+  transition: 150ms ease-out;
+
+  &:hover {
+    background: $green-lighten-2;
+  }
+}
+
+.top-menu__inner-link {
+  color: $white-base;
+  text-decoration: none;
+  font-size: $font-size-extra-small;
+}
+
+
+
+// get call button
+.header-get-call {
+  display: inline-block;
+  width: 10.4375rem;
+  height: 2.6rem;
+  background: $green-accent;
+  line-height: 2.5rem;
+  color: $white-base;
+  font-size: $font-size-small;
+  margin-top: 3.125rem;
+  text-align: center;
+  transition: 250ms ease-out;
+
+  &:hover {
+    background: $green-lighten-2;
+  }
+}
+
+.header-get-call__lable {
+  border-bottom: 1px dashed $white-base;
+}
+
+
+
+// header phone
+.header-phone {
+  width: 11.875rem;
+  height: 3.125rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $white-base;
+}
+
+.header-phone__ico-block {
+  width: 3.125rem;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+
+  path {
+    fill: $green-lighten-1;
+  }
+}
+
+.header-phone__ico {
+  width: 1.3125rem;
+  height: 1.3125rem;
+  margin: .906rem 0 0 .906rem;
+}
+
+.header-phone__list {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: .28rem;
+}
+
+.header-pnone__item {
+  font-size: $font-size-small;
+  text-decoration: none;
+  display: block;
+  transition: 250ms ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:first-of-type {
+    margin-bottom: .1rem;
+  }
+
+  .green {
+    color: $green-lighten-1;
+  }
+  .gray {
+    color: $gray-base;
+  }
+}
+
+
+
+// header social
+.header-social {
+  height: 2.5rem;
+  position: absolute;
+  left: 70.17rem;
+  top: 5.725rem;
+
+}
+
+.header-social__item {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: .25rem;
+}
+
+.header-social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 1px;
+  transition: 250ms ease-out;
+
+  &.vk {
+    background: #2579bf;
+
+    &:hover {
+      background: $color-vk;
+    }
+  }
+}
+
+.header-social__ico {
+  display: block;
+  width: 75%;
+  height: 75%;
+  margin: 20% auto 0;
+  
+  path {
+    fill: $white-base;
+  }
+}
+
+
+
+// risen image
+.header-risen {
+  position: absolute;
+  width: 8.4375rem;
+  top: 9.375rem;
+  right: 0;
+  z-index: 10;
+
+  path {
+    fill: $white-base;
+  }
+}
+
+.index-wrapper .header-risen {
+  display: none;
+}

@@ -1,0 +1,72 @@
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+header.site-header
+  .main-container
+    a.site-header__logo href="#" title="Микрорайон Новый Клин"
+      span.site-header__logo-image.image-block
+        == inline_svg "logo_klin.svg"
+    .top-menu-wrapper
+      button.top-menu__button title="открыть меню"
+        span.top
+        span.middle
+        span.bottom
+      nav.top-menu
+        ul.top-menu__list
+          li.top-menu__item
+            .top-menu__item-title Микрорайон
+            ul.top-menu__inner-list
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="О проекте" О проекте
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Веб камеры" Веб камеры
+          li.top-menu__item
+            .top-menu__item-title Квартиры
+            ul.top-menu__inner-list
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Выбор квартиры" Выбор квартиры
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Качество" Качество
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Рассрочка" Рассрочка
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Ипотека" Ипотека
+          li.top-menu__item
+            .top-menu__item-title Новости
+            ul.top-menu__inner-list
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Ход строительства" Ход строительства
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Новости" Новости
+          li.top-menu__item
+            .top-menu__item-title Видео
+            ul.top-menu__inner-list
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Видео 1" Видео 1
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Видео 2" Видео 2
+          li.top-menu__item
+            .top-menu__item-title О нас
+            ul.top-menu__inner-list
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Документы" Документы
+              li.top-menu__inner-item
+                a.top-menu__inner-link href="#" title="Контаткы" Контаткы
+    button.header-get-call
+      span.header-get-call__lable Заказать звонок
+    .header-phone
+      .header-phone__ico-block
+        .header-phone__ico.image-block
+          == inline_svg "ico_phone.svg"
+      .header-phone__list
+        a.header-pnone__item href="tel:+78003333790"
+          span.green 8 (800) 
+          span.gray 333-37-90
+        a.header-pnone__item href="tel:+74992816837"
+          span.green 8 (499) 
+          span.gray 281-68-37
+    .header-social
+      .header-social__item
+        a.header-social__link.vk href="vk.com" title="мы вконтакте"
+          span.header-social__ico.image-block
+            == inline_svg "ico_vk.svg"
+    .header-risen.image-block
+      == inline_svg "ico_risen.svg"

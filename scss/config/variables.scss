@@ -1,0 +1,76 @@
+/***************************
+        Variables
+****************************/
+
+
+
+// color
+$black-base: #000000 !default;
+$white-base: #ffffff !default;
+
+
+$gray-blue: #95a5a6 !default;
+$night-blue: #34495e !default;
+
+
+$gray-lighten-2: #959595 !default;
+$gray-lighten-1: #707070 !default;
+$gray-base: #3b3b3b !default;
+
+
+$green-lighten-2: #69CE4F !default;
+$green-lighten-1: #6fc45b !default;
+$green-base: #0e5b39 !default;
+$green-darken-1: #05582e !default;
+$green-accent: #50bb34 !default;
+
+
+$blue-base: #40c2f5 !default;
+
+
+$orange-base: #ff6000 !default;
+
+
+$yellow-base: #f7941e !default;
+
+
+$brown-base: #241511 !default;
+
+
+$color-vk: #597da3 !default;
+$color-fb: #3B5998 !default;
+$color-ok: #F2720C !default;
+$color-gp: #DB4437 !default;
+$color-tw: #55ACEE !default;
+$color-mr: #168DE2 !default;
+$color-yt: #E62117 !default;
+
+
+
+// typography
+$font-family-sans-serif:  "Open Sans", "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+$font-size-top-menu:      .8125rem !default; // ~13px
+
+$font-size-base:          16px !default;
+$font-size-large:         1.3125rem !default; // ~21px
+$font-size-small:         .875rem !default; // ~14px
+$font-size-extra-small:   .6875rem !default; // ~11px
+$font-size-extra-large:   2.25rem !default; // ~36px
+$font-size-huge:          3rem !default; // ~48px
+
+$font-size-h1:            36px !default;
+$font-size-h2:            24px !default;
+$font-size-h3:            ceil(($font-size-base * 1.25)) !default;
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default;
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$headings-font-family:    $font-family-sans-serif !default;
+$headings-font-weight:    300 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+$line-height-base:        1.428571429 !default;
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default;

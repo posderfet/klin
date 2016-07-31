@@ -1,0 +1,54 @@
+/***************************
+          Utilites
+****************************/
+
+
+
+// floats
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+
+
+// toggle content
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+
+
+// text uppercase
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+
+// image wrapper
+.image-block img,
+.image-block svg {
+  display: block;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+}

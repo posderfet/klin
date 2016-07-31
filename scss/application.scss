@@ -1,0 +1,54 @@
+/***************************
+       Aplication File
+****************************/
+
+
+
+// config scss import
+@import 'config/variables.scss';
+@import 'config/utilities.scss';
+
+
+
+// base style import
+@import 'base/global.scss';
+@import 'base/grid.scss';
+@import 'base/normalize.scss';
+@import 'base/typography.scss';
+
+
+
+// animation
+@import 'animations/popup_open.scss'; 
+
+
+
+// components style
+@import "components/popups.scss";
+@import "components/landscape_error.scss";
+
+
+
+// layouts style import
+@import 'layouts/site_footer.scss';
+@import 'layouts/site_header.scss';
+
+
+
+// sections style import
+@import 'sections/house_sections.scss';
+@import 'sections/choice_house_section.scss';
+
+
+
+// pages style import
+@import 'pages/house_pages.scss';
+@import 'pages/index.scss';
+
+
+// vendor style
+@import 'vendor/swiper.scss';
+
+
+// testing style
+@import 'common.scss';

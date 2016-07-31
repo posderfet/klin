@@ -1,0 +1,27 @@
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+.popup-window.popup-floor data-popup-token="gp1_s4"
+  .popup-window__risen.image-block
+    == inline_svg "ico_risen.svg"
+  .popup-window__close-button.close-this
+    .popup-window__close-ico.image-block
+      == inline_svg "ico_close.svg"
+  .popup-slider
+    .popup-slider__up
+      span.left
+      span.right
+    .popup-slider__count
+      .popup-slider__count-number 5
+      .popup-slider__count-lable этаж
+    .popup-slider__down
+      span.left
+      span.right
+  .floor-map-wrapper
+    img.img-floor-map src="images/building1_section4.png"
+    == inline_svg "building1_section4.svg", class:"svg-floor-map"
+  .floor-map__legend
+    .floor-map__legend-item data-legend-room="2"
+      span.floor-map__legend-marker.marker-room-2
+      span.floor-map__legend-lable Двухкомнатные(2)
+    .floor-map__legend-item data-legend-room="3"
+      span.floor-map__legend-marker.marker-room-3
+      span.floor-map__legend-lable Трёхкомнатные(3)

@@ -1,0 +1,19 @@
+/***************************
+   Animations Open Popups
+****************************/
+
+
+
+@keyframes popup_open {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

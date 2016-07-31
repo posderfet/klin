@@ -1,0 +1,31 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1300" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    script type="text/javascript" src="js/popups.js"
+    script type="text/javascript" src="js/vendor/device.js"
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+
+  body
+    .house-page-wrapper.page-wrapper
+      == render "layouts/site_header"
+      == render "sections/choice_house_section"
+      .house-canvas-wrapper style="display: none"
+        img.house-canvas__background-image src="images/bg-house-1.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="20" data-max-top="40"
+        == render "sections/house_one_section"
+      == render "layouts/site_footer"
+    == render 'layouts/popups'
+    .static_popups style="display: none"
+      == render "popups/building_1/gp1_section1"
+      == render "popups/building_1/gp1_section2"
+      == render "popups/building_1/gp1_section3"
+      == render "popups/building_1/gp1_section4"
+      == render "popups/apartment_map"
+    == render "components/landscape_error"

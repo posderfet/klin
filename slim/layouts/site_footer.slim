@@ -1,0 +1,9 @@
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+footer.site-footer
+  .main-container
+    .site-footer__copy
+      |© ООО «Новый Клин», 2015
+    .site-footer__address
+      |Ленинградское шоссе, 65 км, г. Клин
+    a.site-footer__maker.image-block href="http://owlit.ru/" target="blank" title="создание сайтов"
+      == inline_svg "logo_owl.svg"

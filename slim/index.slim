@@ -1,0 +1,78 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1300" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    script type="text/javascript" src="js/popups.js"
+    script type="text/javascript" src="js/vendor/swiper.min.js"
+    script type="text/javascript" src="js/index.js"
+    script type="text/javascript" src="js/vendor/device.js"
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+
+  body
+    .house-page-wrapper.index-wrapper.page-wrapper
+      == render "layouts/site_header"
+      .main-container
+        .index-row
+          a.index-link-square.index-choice-apartment title="выбрать квартиру"
+            .index-choice-apartment__ico.image-block
+              == inline_svg "ico_key.svg"
+            .index-choice-apartment__lable
+              |Выбрать
+              br
+              |квартиру
+          a.index-link-square.index-hypothec title="ипотека с господдержкой"
+            .index--hypothec__lable
+              .big Ипотека с
+              .small господдеркой
+        .index-row
+          a.index-link-square.index-apartment-price title="Квартиры от 1.3 млн рублей"
+            .index-apartment-price__lable
+              .line-1 Квартиры
+              .line-2
+                |от 
+                span 1.3 
+                |млн
+              .line-3 рублей
+          a.index-link-square.index-webcam title="вебкамера"
+            .index-webam__lable вебкамера
+            .index-webcam__ico.image-block
+              == inline_svg "ico_webcam.svg"
+        .index-row
+          a.index-link-square.index-rent title="аренда коммерческих помещений"
+            .index-rent__lable
+              .big Аренда
+              .small
+                |коммерческих
+                br
+                |помещений
+          a.index-link-square.index-discount title="Скидки на квартиры"
+            .index-discount__lable
+              .line-1 Скидка
+              .line-2 в мае
+              .line-3 30 000
+              .line-4 рублей
+          .index-row__document-block
+            a.index-link-rect.index-guard
+              .index-gurad__ico.image-block
+                == inline_svg "ico_guard.svg"
+              .index-gurad__lable Работаем по 214-ФЗ
+            a.index-link-rect.index-documents
+              .index-documents__lable Документация
+      .index-slider-container.swiper-container
+        .index-slider-wrapper.swiper-wrapper
+          .index-slide.swiper-slide style="background-image: url(images/bg-index.jpg)"
+          .index-slide.swiper-slide style="background-image: url(images/bg-house-1.jpg)"
+          .index-slide.swiper-slide style="background-image: url(images/bg-house-2.jpg)"
+          .index-slide.swiper-slide style="background-image: url(images/bg-house-3.jpg)"
+        .index-slider__pagination.swiper-pagination
+      / .house-canvas-wrapper style="display: none"
+      /   img.house-canvas__background-image src="images/bg-index.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="20" data-max-top="40"
+      == render "layouts/site_footer"
+    == render "components/landscape_error"

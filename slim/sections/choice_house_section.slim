@@ -1,0 +1,32 @@
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+.choice-house-section
+  button.choice-house__ago
+    .choice-house__ago-ico-side
+      .choice-house__ago-ico.image-block
+        == inline_svg "ico_left_arrow.svg"
+    .choice-house__ago-lable назад
+  .choice-house__number-house
+    |гп 
+    span 1
+  button.choice-house__apartment
+    .choice-house__ico.slider-ico
+      .left
+        .circle
+      .center
+        .circle
+      .right
+        .circle
+    .choice-house__lable
+      |подбор
+      br
+      |квартиры
+  .choice-house__section-slide style="display:none;"
+    .slide-prev
+      span.top
+      span.bottom
+    .slide-count
+      .slide-count__number 1
+      .slide-count__lable секция
+    .slide-next
+      span.top
+      span.bottom
