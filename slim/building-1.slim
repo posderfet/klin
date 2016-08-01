@@ -11,6 +11,8 @@ html lang="ru"
     script type="text/javascript" src="js/application.js"
     script type="text/javascript" src="js/popups.js"
     script type="text/javascript" src="js/vendor/device.js"
+    / script type="text/javascript" src="js/vendor/jquery.scrollbar.js"
+    / script type="text/javascript" src="js/vendor/nouislider.js"
     link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
 
   body
@@ -31,5 +33,6 @@ html lang="ru"
       == render "popups/building_1/gp1_section3"
       == render "popups/building_1/gp1_section4"
       == render "popups/apartment_map"
+      / == render "popups/choice_apartment"
     .popup-stack style="display: none"
     == render "components/landscape_error"

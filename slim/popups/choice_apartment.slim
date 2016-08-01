@@ -1,0 +1,43 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup choice apartment (site/popups/choice_apartment.html)
+.popup-window.popup-choice-apartment.popup-test
+  .popup-window__close-button.close-this
+    .popup-window__close-ico.image-block
+      /! svg(svg/ico_close.svg)
+      == inline_svg "ico_close.svg"
+  .popup-window__header
+    .popup-window__header-ico.image-block
+      /! svg(svg/ico_choice.svg)
+      == inline_svg "ico_choice.svg"
+    .popup-window__header-title Подбор квартиры
+  .popup-widow__body
+    /! choice aprtment calc block
+    .choice-apartment__calc-block
+      form.choice-apartment__calc-form action=""
+        .choice-apartment__calc-item
+          input#input-room-slider type="text"
+          #choice-apartment__room-slider
+        .choice-apartment__calc-item
+        .choice-apartment__calc-item
+        .choice-apartment__calc-item
+    /! choice apartment table list
+    .choice-apartment__table-block
+      .choice-apartment__table-header
+        .choice-apartment__table-row
+          .choice-apartment__table-column.building Дом
+          .choice-apartment__table-column.floor Этаж
+          .choice-apartment__table-column.room Комнат
+          .choice-apartment__table-column.area
+            |Площадь, м
+            sup 2
+          .choice-apartment__table-column.price Стоимость, руб
+      .choice-apartment__table-body-wrapper.scrollbar-outer
+        .choice-apartment__table-body.scrollbar-outer
+          - 25.times do
+            .choice-apartment__table-row
+              .choice-apartment__table-column.building ГП 1
+              .choice-apartment__table-column.floor 2
+              .choice-apartment__table-column.room 2
+              .choice-apartment__table-column.area 40,25
+              .choice-apartment__table-column.price 5 420 000

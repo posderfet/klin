@@ -68,7 +68,7 @@
   box-shadow: 1px 0 11px rgba(0, 0, 0, 0.4);
   padding-bottom: 3.125rem;
   padding-top: 1px;
-  animation: popup_open 500ms ease-out;
+  animation: popup_open 400ms ease-out;
 }
 
 .popup-window__close-button {
@@ -103,6 +103,26 @@
   top: 2.5%;
   left: 2.5%;
   z-index: -1;
+}
+.popup-window__header {
+  padding: 1.25rem;
+}
+
+.popup-window__header-ico,
+.popup-window__header-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.popup-window__header-ico {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.popup-window__header-title {
+  font-size: $font-size-popup-header;
+  line-height: .8;
+  margin-left: .3rem;
 }
 
 .popup-window__risen {
@@ -638,4 +658,100 @@
 
 .popup-apartment__info-lable {
   font-size: $font-size-extra-small;
+}
+
+
+
+// choice apartment popup
+.popup-choice-apartment {
+
+  .popup-window__header-ico {
+    path {
+      fill: #4ea338;
+    }
+  }
+
+  .popup-window__header-title {
+    color: #4ea338;
+  }
+
+  .popup-widow__body {
+    text-align: center;
+  }
+}
+
+.choice-apartment__calc-block {
+  width: 21.375rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.875rem;
+}
+
+.choice-apartment__table-block {
+  width: 32.3125rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.choice-apartment__table-header {
+  width: 31.3125rem;
+
+  .choice-apartment__table-column {
+    font-size: $font-size-small;
+    color: $night-blue;
+  }
+}
+
+.choice-apartment__table-row {
+  width: 100%;
+  padding: .5rem;
+  font-size: 0;
+}
+
+.choice-apartment__table-column {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  
+  &.building,
+  &.floor,
+  &.room {
+    width: 16%;
+  }
+
+  &.area {
+    width: 22%;
+  }
+
+  &.price {
+    width: 30%;
+  }
+}
+
+.choice-apartment__table-body-wrapper {
+  height: 22.3rem;
+  overflow: hidden;
+  margin-top: .2rem;
+  position: relative;
+  width: 103.5%;
+  left: 0;
+}
+
+.choice-apartment__table-body {
+  width: 31.3125rem;
+
+  .choice-apartment__table-row {
+    cursor: pointer;
+    padding: .3rem .5rem;
+    color: $yellow-base;
+
+    &:hover {
+      background: $yellow-base;
+      color: $white-base;
+    }
+  }
+
+  .choice-apartment__table-column {
+    font-size: $font-size-popup-header;
+  }
 }

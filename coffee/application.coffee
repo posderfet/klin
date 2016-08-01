@@ -124,7 +124,7 @@ jQuery ->
 
     
 
-   # top menu toggle
+  # top menu toggle
   $("body").off "click", ".top-menu__button"
   $("body").on "click", ".top-menu__button", -> 
     $(".top-menu-wrapper").toggleClass("open-top-menu")
@@ -136,3 +136,6 @@ jQuery ->
     else
       $(".top-menu-wrapper").removeClass("overflow-visible")
       $(@).attr("title", "открыть меню")
+
+  # scrollbar
+  # $(".scrollbar-outer").scrollbar()
