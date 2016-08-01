@@ -1,3 +1,4 @@
+require('es6-promise').polyfill()
 gulp = require 'gulp'
 loadPlugins = require 'gulp-load-plugins'
 $ = loadPlugins()
@@ -39,8 +40,8 @@ gulp.task 'slim', ->
 gulp.task 'sass', ->
   gulp.src paths.sass
   .pipe $.sass()
-  # .pipe $.autoprefixer
-  #   browsers: ['last 10 versions']
+  .pipe $.autoprefixer
+    browsers: ['last 10 versions']
   .pipe $.csso()
   .pipe gulp.dest dests.sass
 
