@@ -36,22 +36,63 @@
   </div><!--floor map-->
   <div class="floor-map-block">
     <div class="floor-map-wrapper">
-      <!--schema floor image--><img class="img-floor-map" src="images/building1_section2.png" /><!--apartment svg(svg/building1_section2.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny" id="Слой_1"
+      <!--schema floor image--><img class="img-floor-map" src="images/building1_section2.png" /><!--apartment svg(svg/building1_section2.svg)--><svg  class="svg-floor-map" version="1.2" baseProfile="tiny"
       	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 627.6 467.2"
       	 xml:space="preserve">
-      <path  data-apartment-token="b1_s2_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" d="M487.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
+      <path  data-apartment-token="b1_s2_a2-2" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" data-apartment-room="2" data-apartment-area="57,99" data-apartment-price="5 280 000" fill-rule="evenodd" fill="#BCD640" d="M487.7,415.1V432h-23.4v-0.5c1,0,1.6-0.7,1.4-1.4c0-0.1-0.1-0.3-0.1-0.4
       	c-0.1-0.5-0.6-0.9-1.3-1v-13.7L487.7,415.1z M542.5,415.1h79.2V54.6h-79.2V415.1z M428.3,415.1h114.2V221.7H428.3V415.1z
       	 M438.9,463.7h98.5l13-10.2V432H438.9V463.7z"/>
-      <path data-apartment-token="b1_s2_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" fill-rule="evenodd" fill="#BCD640" stroke="#BCD640" stroke-width="0.216" stroke-miterlimit="22.9256" d="M324.3,54.6V38.1
+      <path data-apartment-token="b1_s2_a2-1" class="map-floor__apartment-2 map-floor__apartment" data-apartment-type="2" data-apartment-room="2" data-apartment-area="46,74" data-apartment-price="2 150 000" fill-rule="evenodd" fill="#BCD640" stroke="#BCD640" stroke-width="0.216" stroke-miterlimit="22.9256" d="M324.3,54.6V38.1
       	h23.4v0.5c-1,0-1.6,0.7-1.4,1.4c0,0.1,0.1,0.3,0.1,0.4c0.1,0.5,0.6,0.9,1.3,0.9v13.4L324.3,54.6z M287.6,215.7h249V54.6h-249V215.7z
       	 M282.1,38.1h174.1V3.4H282.1V38.1z"/>
-      <path data-apartment-token="b1_s2_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" fill-rule="evenodd" fill="#B0ACD5" d="M213.8,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
+      <path data-apartment-token="b1_s2_a1p-1" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="33,62" data-apartment-price="1 320 000" fill-rule="evenodd" fill="#B0ACD5" d="M213.8,54.6V41.2c0.7,0,1.2-0.4,1.3-0.9c0.1-0.1,0.1-0.3,0.1-0.4
       	c0.2-0.7-0.4-1.4-1.4-1.4v-0.5h23.4v16.5L213.8,54.6z M105.6,215.7h176.1V54.6H105.6V215.7z M105.2,38.1h174.5V3.4H105.2V38.1z"/>
-      <path data-apartment-token="b1_s2_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" fill-rule="evenodd" fill="#DEB9D8" d="M165.1,463.8H90L76.6,454v-22h88.5V463.8z M125.5,415.1V432h23.4v-0.5
+      <path data-apartment-token="b1_s2_a3-1" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" data-apartment-room="3" data-apartment-area="73,13" data-apartment-price="5 340 000" fill-rule="evenodd" fill="#DEB9D8" d="M165.1,463.8H90L76.6,454v-22h88.5V463.8z M125.5,415.1V432h23.4v-0.5
       	c-1,0-1.6-0.7-1.4-1.4c0-0.1,0.1-0.3,0.1-0.4c0.1-0.5,0.6-0.9,1.3-1V415L125.5,415.1z M99.7,280.4h79.2v-58.7H99.7V280.4z
       	 M11.9,280.4h87.8V54.6H11.9V280.4z M11.9,415.1h269.9V280.4H11.9V415.1z M182,450.5h99.7v-35.5H182V450.5z"/>
       </svg>
       
+    </div>
+    <!--floor map tooltip (site/components/floor_map_tooltip.html)-->
+    <div class="floor-map__tooltip" style="display:none;">
+      <div class="floor-map__tooltip-ico image-block">
+        <!--svg(svg/ico_zoom_search.svg)--><svg  width="128pt" height="128pt" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g id="#010101ff">
+        <path fill="#010101" opacity="1.00" d=" M 48.44 0.00 L 53.57 0.00 C 67.49 0.74 81.07 7.23 90.06 17.93 C 100.94 30.45 105.03 48.47 100.61 64.45 C 98.72 71.75 94.96 78.42 90.28 84.28 C 100.02 94.03 109.76 103.77 119.51 113.52 C 122.29 116.19 124.75 119.23 128.00 121.39 L 128.00 122.82 C 125.70 123.91 123.91 125.70 122.83 128.00 L 121.39 128.00 C 119.86 125.75 117.97 123.81 115.99 121.97 C 105.41 111.42 94.87 100.83 84.30 90.28 C 74.49 98.31 61.80 103.03 49.06 102.27 C 33.39 101.77 18.24 93.47 9.32 80.60 C 3.70 72.74 0.63 63.25 0.00 53.64 L 0.00 48.46 C 0.79 36.23 5.85 24.27 14.48 15.52 C 23.32 6.29 35.73 0.81 48.44 0.00 M 41.47 9.63 C 26.49 12.99 13.94 25.12 10.03 39.96 C 6.32 53.38 9.67 68.55 18.91 79.02 C 26.36 87.75 37.49 93.23 48.97 93.73 C 62.09 94.57 75.33 88.69 83.74 78.64 C 91.29 69.76 95.00 57.70 93.48 46.11 C 91.93 31.54 82.12 18.24 68.73 12.32 C 60.28 8.41 50.52 7.58 41.47 9.63 Z" />
+        <path fill="#010101" opacity="1.00" d=" M 46.90 29.83 C 49.74 29.80 52.58 29.81 55.43 29.86 C 55.43 35.54 55.45 41.21 55.46 46.89 C 61.17 46.97 66.88 46.85 72.58 46.96 C 72.53 49.78 72.51 52.60 72.50 55.42 C 66.81 55.48 61.12 55.44 55.43 55.43 C 55.44 61.12 55.48 66.80 55.42 72.48 C 52.56 72.53 49.69 72.52 46.83 72.44 C 46.99 66.79 46.90 61.13 46.91 55.48 C 41.22 55.42 35.53 55.47 29.83 55.40 C 29.81 52.56 29.80 49.73 29.83 46.90 C 35.53 46.83 41.22 46.97 46.91 46.91 C 46.97 41.21 46.83 35.52 46.90 29.83 Z" />
+        </g>
+        </svg>
+        
+      </div>
+      <div class="floor-map__tooltip-info">
+        <div class="floor-map__tooltip-item floor-map__tooltip-room">
+          <div class="count tooltip-room__count">
+            2
+          </div>
+          <div class="lable">
+            комнаты
+          </div>
+        </div>
+        <div class="floor-map__tooltip-item floor-map__tooltip-area">
+          <div class="count tooltip-area__count">
+            75,56
+          </div>
+          <div class="lable">
+            площадь,м<sup>2</sup>
+          </div>
+        </div>
+        <div class="floor-map__tooltip-item floor-map__tooltip-price">
+          <div class="count tooltip-price__count">
+            1 300 000
+          </div>
+          <div class="lable">
+            стоимость, руб.
+          </div>
+        </div>
+      </div>
+      <div class="floor-map__tooltip-sold">
+        Продана
+      </div>
     </div>
   </div>
   <!--floor map legend-->

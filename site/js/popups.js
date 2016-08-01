@@ -218,10 +218,42 @@ jQuery(function() {
     return $('[data-popup-token="' + popup_token + '"]').showPop();
   });
   $("html").on('click', ".map-floor__apartment", function() {
-    var apartment_token;
+    var apartment_info, apartment_token, area, price, room;
     apartment_token = $(this).data("apartment-token");
-    $(".img-apartment-map").attr("src", "images/" + apartment_token + ".png");
-    return $(".popup-apartment").showPop();
+    room = $(this).data("apartment-room");
+    area = $(this).data("apartment-area");
+    price = $(this).data("apartment-price");
+    apartment_info = $(".popup-apartment__info");
+    if ($(this).hasClass("sold")) {
+
+    } else {
+      $(".img-apartment-map").attr("src", "images/" + apartment_token + ".png");
+      apartment_info.find(".room-count").html(room);
+      apartment_info.find(".area-count").html(area);
+      apartment_info.find(".price-count").html(price);
+      return $(".popup-apartment").showPop();
+    }
+  });
+  $("html").on('mousemove', ".map-floor__apartment", function(e) {
+    var area, client_x, client_y, price, room, tooltip;
+    tooltip = $(".floor-map__tooltip");
+    room = $(this).data("apartment-room");
+    area = $(this).data("apartment-area");
+    price = $(this).data("apartment-price");
+    client_x = e.clientX;
+    client_y = e.clientY;
+    if ($(this).hasClass("sold")) {
+      tooltip.addClass("sold");
+    } else {
+      tooltip.find(".tooltip-room__count").html(room);
+      tooltip.find(".tooltip-area__count").html(area);
+      tooltip.find(".tooltip-price__count").html(price);
+      tooltip.removeClass("sold");
+    }
+    tooltip.css("top", client_y - 50).css("left", client_x - 15).show();
+  });
+  $("html").on('mouseout', ".map-floor__apartment", function() {
+    return $(".floor-map__tooltip").hide();
   });
   $("html").on('mouseenter', ".floor-map__legend-item", function() {
     var apartment_type;

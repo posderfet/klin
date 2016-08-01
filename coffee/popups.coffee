@@ -147,9 +147,38 @@ jQuery ->
   # popup apartment
   $("html").on 'click', ".map-floor__apartment", ->
     apartment_token = $(@).data("apartment-token")
-    $(".img-apartment-map").attr("src", "images/"+apartment_token+".png")
-    $(".popup-apartment").showPop()
+    room = $(@).data("apartment-room")
+    area = $(@).data("apartment-area")
+    price = $(@).data("apartment-price")
+    apartment_info = $(".popup-apartment__info")
+    if $(@).hasClass("sold")
+      return
+    else
+      $(".img-apartment-map").attr("src", "images/"+apartment_token+".png")
+      apartment_info.find(".room-count").html(room)
+      apartment_info.find(".area-count").html(area)
+      apartment_info.find(".price-count").html(price)
+      $(".popup-apartment").showPop()
 
+  # apartment tooltip
+  $("html").on 'mousemove', ".map-floor__apartment", (e) ->
+    tooltip = $(".floor-map__tooltip")
+    room = $(@).data("apartment-room")
+    area = $(@).data("apartment-area")
+    price = $(@).data("apartment-price")
+    client_x = e.clientX
+    client_y = e.clientY
+    if $(@).hasClass("sold")
+      tooltip.addClass("sold")
+    else
+      tooltip.find(".tooltip-room__count").html(room)
+      tooltip.find(".tooltip-area__count").html(area)
+      tooltip.find(".tooltip-price__count").html(price)
+      tooltip.removeClass("sold")
+    tooltip.css( "top", client_y - 50 ).css( "left", client_x - 15 ).show()
+    return
+  $("html").on 'mouseout', ".map-floor__apartment", ->
+    $(".floor-map__tooltip").hide()
 
   # popup legend floor
   $("html").on 'mouseenter', ".floor-map__legend-item", ->

@@ -227,6 +227,126 @@
 
 
 
+// floor map tooltop
+.floor-map__tooltip {
+  position: fixed;
+  width: 21.4rem;
+  font-size: $font-size-small;
+  background: $white-base;
+  height: 2.5rem;
+  z-index: 2000;
+  font-size: 0;
+  box-shadow: 0 2px 2px rgba($gray-base, 0.3);
+  filter: drop-shadow(0 2px 2px rgba($gray-base, 0.3));
+
+  &.sold {
+    width: 8rem;
+
+    .floor-map__tooltip-ico {
+      display: none;
+    }
+
+    .floor-map__tooltip-info {
+      display: none;
+    }
+
+    .floor-map__tooltip-sold {
+      display: block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: .8rem;
+        bottom: -.35rem;
+        border-top: .4375rem solid $white-base;
+        border-left: .4375rem solid transparent;
+        border-right: .4375rem solid transparent;
+      }
+    }
+  }
+}
+
+.floor-map__tooltip-ico {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #eee;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  path {
+    fill: $gray-lighten-2;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: .8rem;
+    bottom: -.35rem;
+    border-top: .4375rem solid #eee;
+    border-left: .4375rem solid transparent;
+    border-right: .4375rem solid transparent;
+  }
+
+  svg {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 25% 0 0 25%;
+  }
+}
+
+.floor-map__tooltip-info {
+  display: inline-block;
+  width: 18.9rem;
+  height: 2.5rem;
+  vertical-align: top;
+  text-align: center;
+}
+
+.floor-map__tooltip-item {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: .9;
+  margin-right: 1.2rem;
+  margin-top: .25rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .count {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+
+  .lable {
+    font-size: .75rem;
+    // text-transfo: ;rm: uppercase;
+  }
+}
+
+.floor-map__tooltip-room,
+.floor-map__tooltip-area {
+  color: $blue-base;
+}
+
+.floor-map__tooltip-price {
+  color: $yellow-base;
+}
+
+.floor-map__tooltip-sold {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: $font-size-large;
+  font-weight: bold;
+  color: $gray-lighten-2;
+  display: none;
+}
+
+
+
 // floor map popup style
 .floor-map-block {
   display: block;
@@ -309,6 +429,11 @@
   &.map-show-apartment {
     fill: darken(#FBF394, 30%);
   }
+}
+
+.map-floor__apartment.sold {
+  fill: #6a6d6d;
+  cursor: default;
 }
 
 .img-floor-map {
