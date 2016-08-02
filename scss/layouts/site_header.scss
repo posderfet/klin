@@ -95,17 +95,17 @@
     transition: 250ms ease-out;
   }
 
-  .top {
+  .menu-button-top {
     top: 1.15rem;
     transform-origin: left top;
   }
 
-  .middle {
+  .menu-button-middle {
     top: 1.525rem;
     transform-origin: center;
   }
 
-  .bottom {
+  .menu-button-bottom {
     top: 1.9rem;
     transform-origin: left bottom;
   }
@@ -117,15 +117,15 @@
     background: $gray-lighten-1;
   }
 
-  .middle {
+  .menu-button-middle {
     width: 0;
   }
 
-  .top {
+  .menu-button-top {
     transform: translateY(-1px) translateX(4px) rotate(45deg);
   }
 
-  .bottom {
+  .menu-button-bottom {
     transform: translateX(4px) rotate(-45deg);
   }
 }

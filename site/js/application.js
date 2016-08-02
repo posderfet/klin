@@ -150,13 +150,13 @@ jQuery(function() {
   return $("body").on("click", ".top-menu__button", function() {
     $(".top-menu-wrapper").toggleClass("open-top-menu");
     if ($(".top-menu-wrapper").hasClass("open-top-menu")) {
-      $(this).attr("title", "свернуть меню");
+      $(this).attr("title", "Свернуть меню");
       return setTimeout(function() {
         return $(".top-menu-wrapper").addClass("overflow-visible");
       }, 800);
     } else {
       $(".top-menu-wrapper").removeClass("overflow-visible");
-      return $(this).attr("title", "открыть меню");
+      return $(this).attr("title", "Открыть меню");
     }
   });
 });

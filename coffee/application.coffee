@@ -129,13 +129,13 @@ jQuery ->
   $("body").on "click", ".top-menu__button", -> 
     $(".top-menu-wrapper").toggleClass("open-top-menu")
     if $(".top-menu-wrapper").hasClass("open-top-menu")
-      $(@).attr("title", "свернуть меню")
+      $(@).attr("title", "Свернуть меню")
       setTimeout ->
         $(".top-menu-wrapper").addClass("overflow-visible")
       , 800
     else
       $(".top-menu-wrapper").removeClass("overflow-visible")
-      $(@).attr("title", "открыть меню")
+      $(@).attr("title", "Открыть меню")
 
   # scrollbar
   # $(".scrollbar-outer").scrollbar()

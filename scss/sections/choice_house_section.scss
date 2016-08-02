@@ -127,9 +127,9 @@
 .slider-ico {
   position: relative;
 
-  .left,
-  .center,
-  .right {
+  .slider-ico__left,
+  .slider-ico__center,
+  .slider-ico__right {
     position: absolute;
     width: .2rem;
     border-radius: .18rem;
@@ -138,7 +138,7 @@
     height: 100%;
   }
 
-  .circle {
+  .slider-ico__circle {
     width: .6rem;
     height: .6rem;
     position: absolute;
@@ -149,28 +149,28 @@
     transition: 250ms ease-out;
   }
 
-  .left {
+  .slider-ico__left {
     left: 10%;
 
-    .circle {
+    .slider-ico__circle {
       top: 10%;
     }
   }
 
-  .center {
+  .slider-ico__center {
     left: 0;
     right: 0;
     margin: auto;
 
-    .circle {
+    .slider-ico__circle {
       top: 60%;
     }
   }
 
-  .right {
+  .slider-ico__right {
     right: 10%;
 
-    .circle {
+    .slider-ico__circle {
       top: 25%;
     }
   }
@@ -178,19 +178,19 @@
 
 .choice-house__apartment:hover {
   
-  .circle {
+  .slider-ico__circle {
     background: #8DCA81;
   }
 
-  .left .circle {
+  .slider-ico__left .slider-ico__circle {
     top: 40%;
   }
 
-  .center .circle {
+  .slider-ico__center .slider-ico__circle {
     top: 10%;
   }
 
-  .right .circle {
+  .slider-ico__right .slider-ico__circle {
     top: 45%;
   }
 }
@@ -224,8 +224,8 @@
   top: 0;
   cursor: pointer;
 
-  .top,
-  .bottom {
+  .slide__top,
+  .slide__bottom {
     position: absolute;
     width: 67%;
     height: 2px;
@@ -240,17 +240,17 @@
 .slide-prev {
   left: 0;
 
-  .top,
-  .bottom {
+  .slide__top,
+  .slide__bottom {
     left: 30%;
     transform-origin: left;
   }
 
-  .top {
+  .slide__top {
     transform: rotate(-62deg)
   }
 
-  .bottom {
+  .slide__bottom {
     transform: rotate(62deg)
   }
 }
@@ -258,17 +258,17 @@
 .slide-next {
   right: 0;
 
-  .top,
-  .bottom {
+  .slide__top,
+  .slide__bottom {
     right: 30%;
     transform-origin: right;
   }
 
-  .top {
+  .slide__top {
     transform: rotate(-62deg)
   }
 
-  .bottom {
+  .slide__bottom {
     transform: rotate(62deg)
   }
 }
@@ -276,8 +276,8 @@
 .slide-next:hover,
 .slide-prev:hover {
 
-  .top,
-  .bottom {
+  .slide__top,
+  .slide__bottom {
     box-shadow: 0 0 8px rgba($white-base, .8);
   }
 }
@@ -285,16 +285,16 @@
 .slide-next:active,
 .slide-prev:active {
 
-  .top,
-  .bottom {
+  .slide__top,
+  .slide__bottom {
     transition: 150ms ease-in;
   }
 
-  .top {
+  .slide__top {
     transform: rotate(-56deg)
   }
 
-  .bottom {
+  .slide__bottom {
     transform: rotate(56deg)
   }
 }
