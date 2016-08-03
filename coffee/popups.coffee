@@ -166,6 +166,7 @@ jQuery ->
     room = $(@).data("apartment-room")
     area = $(@).data("apartment-area")
     price = $(@).data("apartment-price")
+    color = $(@).css("fill")
     client_x = e.clientX
     client_y = e.clientY
     if $(@).hasClass("sold")
@@ -174,9 +175,10 @@ jQuery ->
       tooltip.find(".tooltip-room__count").html(room)
       tooltip.find(".tooltip-area__count").html(area)
       tooltip.find(".tooltip-price__count").html(price)
+      # tooltip.find(".floor-map__tooltip-ico").css("background-color", color)
       tooltip.removeClass("sold")
     tooltip.css( "top", client_y - 50 ).css( "left", client_x - 15 ).show()
-    return
+    console.log color
   $("html").on 'mouseout', ".map-floor__apartment", ->
     $(".floor-map__tooltip").hide()
 

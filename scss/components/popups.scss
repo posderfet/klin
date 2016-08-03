@@ -394,65 +394,79 @@
     opacity: .4;
     transition: 250ms ease-out;
     cursor: pointer;
+    stroke-width: 0;
   }
 }
 
 .map-floor__apartment-1p {
   fill: #BCB4DA;
+  stroke: #BCB4DA;
 
   &:hover,
   &.map-show-apartment {
     fill: darken(#BCB4DA, 30%);
+    stroke: darken(#BCB4DA, 30%);
   }
 }
 
 .map-floor__apartment-1s {
   fill: #ABE1FA;
+  stroke: #ABE1FA;
 
   &:hover,
   &.map-show-apartment {
     fill: darken(#ABE1FA, 30%);
+    stroke: darken(#ABE1FA, 30%);
   }
 }
 
 .map-floor__apartment-2 {
   fill: #7DD073;
+  stroke: #7DD073;
 
   &:hover,
   &.map-show-apartment {
     fill: darken(#7DD073, 30%);
+    stroke: darken(#7DD073, 30%);
   }
 }
 
 .map-floor__apartment-2p {
   fill: #FBB040;
+  stroke: #FBB040;
 
   &:hover,
   &.map-show-apartment {
     fill: #f88000;
+    stroke: #f88000;
   }
 }
 
 .map-floor__apartment-3 {
   fill: #E5C2DE;
+  stroke: #E5C2DE;
 
   &:hover,
   &.map-show-apartment {
     fill: darken(#E5C2DE, 30%);
+    stroke: darken(#E5C2DE, 30%);
   }
 }
 
 .map-floor__apartment-3p {
   fill: #FBF394;
+  stroke: #FBF394;
 
   &:hover,
   &.map-show-apartment {
     fill: darken(#FBF394, 30%);
+    stroke: darken(#FBF394, 30%);
   }
 }
 
 .map-floor__apartment.sold {
   fill: #6a6d6d;
+  stroke: #6a6d6d;;
   cursor: default;
 }
 

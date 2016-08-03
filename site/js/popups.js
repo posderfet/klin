@@ -235,11 +235,12 @@ jQuery(function() {
     }
   });
   $("html").on('mousemove', ".map-floor__apartment", function(e) {
-    var area, client_x, client_y, price, room, tooltip;
+    var area, client_x, client_y, color, price, room, tooltip;
     tooltip = $(".floor-map__tooltip");
     room = $(this).data("apartment-room");
     area = $(this).data("apartment-area");
     price = $(this).data("apartment-price");
+    color = $(this).css("fill");
     client_x = e.clientX;
     client_y = e.clientY;
     if ($(this).hasClass("sold")) {
@@ -251,6 +252,7 @@ jQuery(function() {
       tooltip.removeClass("sold");
     }
     tooltip.css("top", client_y - 50).css("left", client_x - 15).show();
+    return console.log(color);
   });
   $("html").on('mouseout', ".map-floor__apartment", function() {
     return $(".floor-map__tooltip").hide();
