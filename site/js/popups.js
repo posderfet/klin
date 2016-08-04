@@ -26,12 +26,18 @@ jQuery(function() {
         padright = this.scrollbarWidth;
       }
       this.body().css("padding-right", padright).css("overflow", "hidden");
+      if ($(".house-page-wrapper").length >= 1) {
+        $(".house-page-wrapper").css("padding-right", padright);
+      }
       return this.wrapper().show();
     };
 
     PopupBackground.prototype.bg_off = function() {
       this.background().css('opacity', 0).hide();
       this.body().css("padding-right", 0).css("overflow", "auto");
+      if ($(".house-page-wrapper").length >= 1) {
+        $(".house-page-wrapper").css("padding-right", 0);
+      }
       return this.wrapper().hide();
     };
 
@@ -215,7 +221,16 @@ jQuery(function() {
     section = $(this).closest(".house-section").data("building-section");
     building = $(this).closest(".building-wrapper").data("building");
     popup_token = "gp" + building + "_s" + section;
-    return $('[data-popup-token="' + popup_token + '"]').showPop();
+    if ($(this).hasClass("bind-hover")) {
+      $('[data-popup-token="' + popup_token + '"]').showPop();
+    }
+    $(".house-floor").removeClass("bind-hover");
+    if ($("html").hasClass("no-touchevents")) {
+      $('[data-popup-token="' + popup_token + '"]').showPop();
+    }
+    if ($("html").hasClass("touchevents")) {
+      return $(this).addClass("bind-hover");
+    }
   });
   $("html").on('click', ".map-floor__apartment", function() {
     var apartment_info, apartment_token, area, price, room;
@@ -256,6 +271,10 @@ jQuery(function() {
   });
   $("html").on('mouseout', ".map-floor__apartment", function() {
     return $(".floor-map__tooltip").hide();
+  });
+  $("html").on('click', ".map-floor__apartment", function() {
+    $(".floor-map__tooltip").hide();
+    return console.log("123");
   });
   $("html").on('mouseenter', ".floor-map__legend-item", function() {
     var apartment_type;

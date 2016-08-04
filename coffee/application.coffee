@@ -8,10 +8,9 @@ window.onresize= ->
   MIN_HEIGHT||=parseInt $(".house-page-wrapper").css("min-height").replace("px", "")
   MIN_WIDTH||=parseInt $(".house-page-wrapper").css("min-width").replace("px", "")
   
-
   
   width = $(window).width()
-  height = $(window).height()
+  height = $(document).height()
   width = MIN_WIDTH if width < MIN_WIDTH
   height= MIN_HEIGHT if height < MIN_HEIGHT
   
@@ -63,8 +62,17 @@ window.onresize= ->
   wrapper.show()
 
 jQuery ->
-  $(window).resize onresize
+  window.addEventListener "resize", ->
+    $(window).resize onresize
   img = $(".house-canvas__background-image")[0]
+
+
+  # body popup fix
+  if $(".house-page-wrapper").length >= 1
+    $("body").height( $(".house-page-wrapper").height() )
+  $(window).resize ->
+    if $(".house-page-wrapper").length >= 1
+      $("body").height( $(".house-page-wrapper").height() )
 
 
   # choice house section and position
@@ -122,7 +130,6 @@ jQuery ->
     $(".choice-house__section-slide").hide()
     $(".choice-house__apartment").show()
 
-    
 
   # top menu toggle
   $("body").off "click", ".top-menu__button"
@@ -132,10 +139,11 @@ jQuery ->
       $(@).attr("title", "Свернуть меню")
       setTimeout ->
         $(".top-menu-wrapper").addClass("overflow-visible")
-      , 800
+      , 600
     else
       $(".top-menu-wrapper").removeClass("overflow-visible")
       $(@).attr("title", "Открыть меню")
+
 
   # scrollbar
   # $(".scrollbar-outer").scrollbar()

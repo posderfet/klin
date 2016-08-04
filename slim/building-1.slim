@@ -5,10 +5,11 @@ html lang="ru"
   head
     meta charset="utf-8"
     title Клин
-    meta content="width=1300" name="viewport"
+    meta content="width=1344" name="viewport"
     link href='css/application.css' rel='stylesheet' type='text/css'
     script type="text/javascript" src="js/vendor/device.js"
     script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/vendor/modernizr.js"
     script type="text/javascript" src="js/application.js"
     script type="text/javascript" src="js/popups.js"
     / script type="text/javascript" src="js/vendor/jquery.scrollbar.js"
@@ -22,7 +23,7 @@ html lang="ru"
       /! house canvas wrapper
       .house-canvas-wrapper style="display: none"
         /! house canvas background image, data-max-left - максимальное смещение картики в лево, data-max-top - вверх
-        img.house-canvas__background-image src="images/bg-house-1.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="20" data-max-top="40"
+        img.house-canvas__background-image src="images/bg-house-1.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="10" data-max-top="0"
         == render "sections/house_one_section"
       == render "layouts/site_footer"
     == render 'layouts/popups'

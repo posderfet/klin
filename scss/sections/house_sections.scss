@@ -228,7 +228,8 @@
 .selected .house-floor {
   display: block;
 
-  &:hover {
+  &:hover,
+  &.bind-hover {
     overflow: visible;
     opacity: 1;
   }

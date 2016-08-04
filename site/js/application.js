@@ -13,7 +13,7 @@ window.onresize = function() {
   MIN_HEIGHT || (MIN_HEIGHT = parseInt($(".house-page-wrapper").css("min-height").replace("px", "")));
   MIN_WIDTH || (MIN_WIDTH = parseInt($(".house-page-wrapper").css("min-width").replace("px", "")));
   width = $(window).width();
-  height = $(window).height();
+  height = $(document).height();
   if (width < MIN_WIDTH) {
     width = MIN_WIDTH;
   }
@@ -88,8 +88,18 @@ window.onresize = function() {
 
 jQuery(function() {
   var close_section, img, open_section;
-  $(window).resize(onresize);
+  window.addEventListener("resize", function() {
+    return $(window).resize(onresize);
+  });
   img = $(".house-canvas__background-image")[0];
+  if ($(".house-page-wrapper").length >= 1) {
+    $("body").height($(".house-page-wrapper").height());
+  }
+  $(window).resize(function() {
+    if ($(".house-page-wrapper").length >= 1) {
+      return $("body").height($(".house-page-wrapper").height());
+    }
+  });
   $(".choice-house-section").css("left", $(".site-header__logo").offset().left);
   $(window).resize(function() {
     return $(".choice-house-section").css("left", $(".site-header__logo").offset().left);
@@ -153,7 +163,7 @@ jQuery(function() {
       $(this).attr("title", "Свернуть меню");
       return setTimeout(function() {
         return $(".top-menu-wrapper").addClass("overflow-visible");
-      }, 800);
+      }, 600);
     } else {
       $(".top-menu-wrapper").removeClass("overflow-visible");
       return $(this).attr("title", "Открыть меню");

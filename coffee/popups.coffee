@@ -10,11 +10,15 @@ jQuery ->
       padright = 0
       padright = @scrollbarWidth if @body().height() > $(window).height() #@body.hasScrollBar()
       @body().css("padding-right", padright).css("overflow", "hidden")
+      if $(".house-page-wrapper").length >= 1
+        $(".house-page-wrapper").css("padding-right", padright)
       @wrapper().show()
 
     bg_off: ->
       @background().css('opacity',0).hide()
       @body().css("padding-right", 0).css("overflow", "auto")
+      if $(".house-page-wrapper").length >= 1
+        $(".house-page-wrapper").css("padding-right", 0)
       @wrapper().hide()
 
     is_bg_on: -> @background().is(':visible')
@@ -142,7 +146,13 @@ jQuery ->
     section = $(@).closest(".house-section").data("building-section")
     building = $(@).closest(".building-wrapper").data("building")
     popup_token = "gp"+building+"_s"+section
-    $('[data-popup-token="'+popup_token+'"]').showPop()
+    if $(@).hasClass("bind-hover")
+      $('[data-popup-token="'+popup_token+'"]').showPop()
+    $(".house-floor").removeClass("bind-hover")
+    if $("html").hasClass("no-touchevents")
+      $('[data-popup-token="'+popup_token+'"]').showPop()
+    if $("html").hasClass("touchevents")
+      $(@).addClass("bind-hover")
 
   # popup apartment
   $("html").on 'click', ".map-floor__apartment", ->
@@ -181,6 +191,9 @@ jQuery ->
     console.log color
   $("html").on 'mouseout', ".map-floor__apartment", ->
     $(".floor-map__tooltip").hide()
+  $("html").on 'click', ".map-floor__apartment", ->
+    $(".floor-map__tooltip").hide()
+    console.log "123"
 
   # popup legend floor
   $("html").on 'mouseenter', ".floor-map__legend-item", ->
