@@ -10,7 +10,7 @@ window.onresize= ->
   
   
   width = $(window).width()
-  height = $(document).height()
+  height = $(window).height()
   width = MIN_WIDTH if width < MIN_WIDTH
   height= MIN_HEIGHT if height < MIN_HEIGHT
   
@@ -62,8 +62,7 @@ window.onresize= ->
   wrapper.show()
 
 jQuery ->
-  window.addEventListener "resize", ->
-    $(window).resize onresize
+  $(window).resize onresize
   img = $(".house-canvas__background-image")[0]
 
 
@@ -143,6 +142,13 @@ jQuery ->
     else
       $(".top-menu-wrapper").removeClass("overflow-visible")
       $(@).attr("title", "Открыть меню")
+
+
+  # mobile detect
+  md = new MobileDetect(window.navigator.userAgent)
+  if md.mobile()
+    $("html").addClass("mobile")
+    # alert "я мобильный телефон"
 
 
   # scrollbar

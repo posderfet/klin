@@ -13,7 +13,7 @@ window.onresize = function() {
   MIN_HEIGHT || (MIN_HEIGHT = parseInt($(".house-page-wrapper").css("min-height").replace("px", "")));
   MIN_WIDTH || (MIN_WIDTH = parseInt($(".house-page-wrapper").css("min-width").replace("px", "")));
   width = $(window).width();
-  height = $(document).height();
+  height = $(window).height();
   if (width < MIN_WIDTH) {
     width = MIN_WIDTH;
   }
@@ -87,10 +87,8 @@ window.onresize = function() {
 };
 
 jQuery(function() {
-  var close_section, img, open_section;
-  window.addEventListener("resize", function() {
-    return $(window).resize(onresize);
-  });
+  var close_section, img, md, open_section;
+  $(window).resize(onresize);
   img = $(".house-canvas__background-image")[0];
   if ($(".house-page-wrapper").length >= 1) {
     $("body").height($(".house-page-wrapper").height());
@@ -157,7 +155,7 @@ jQuery(function() {
     return $(".choice-house__apartment").show();
   });
   $("body").off("click", ".top-menu__button");
-  return $("body").on("click", ".top-menu__button", function() {
+  $("body").on("click", ".top-menu__button", function() {
     $(".top-menu-wrapper").toggleClass("open-top-menu");
     if ($(".top-menu-wrapper").hasClass("open-top-menu")) {
       $(this).attr("title", "Свернуть меню");
@@ -169,4 +167,8 @@ jQuery(function() {
       return $(this).attr("title", "Открыть меню");
     }
   });
+  md = new MobileDetect(window.navigator.userAgent);
+  if (md.mobile()) {
+    return $("html").addClass("mobile");
+  }
 });
