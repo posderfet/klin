@@ -164,7 +164,7 @@
   display: table-cell;
   height: 100%;
   vertical-align: middle;
-  font-size: $font-size-extra-small;
+  font-size: $font-size-top-menu;
   text-transform: uppercase;
   color: $gray-lighten-1;
   // width: 20%;
@@ -207,7 +207,6 @@
 }
 
 .top-menu__inner-item {
-  padding: 1rem 1rem;
   transition: 150ms ease-out;
 
   &:hover {
@@ -216,9 +215,13 @@
 }
 
 .top-menu__inner-link {
+  padding: .65rem 1rem;
+  display: block;
+  width: 100%;
   color: $white-base;
   text-decoration: none;
   font-size: $font-size-extra-small;
+  line-height: 1;
 }
 
 
