@@ -69,6 +69,11 @@
   padding-bottom: 3.125rem;
   padding-top: 1px;
   animation: popup_open 400ms ease-out;
+  color: $night-blue;
+
+  &.popup-service {
+    padding-bottom: 1.25rem;
+  }
 }
 
 .popup-window__close-button {
@@ -91,7 +96,7 @@
 
   &:active .popup-window__close-ico {
     // transition: 150ms ease-out;
-    // transform: rotate(20deg);
+    // transform: rotate(60deg);
     // filter: blur(3px);
   }
 }
@@ -106,6 +111,15 @@
 }
 .popup-window__header {
   padding: 1.25rem;
+
+  &.center-header {
+    text-align: center;
+
+    .popup-window__header-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
 }
 
 .popup-window__header-ico,
@@ -136,6 +150,16 @@
     fill: $gray-blue;
   }
 }
+
+ .popup-window__small-body {
+  width: 21.25rem;
+  margin: 1.1rem auto 0;
+  text-align: center;
+ }
+
+ .popup-window__form  {
+  display: block;
+ }
 
 
 // popup floor slider
@@ -678,6 +702,7 @@
 
 // choice apartment popup
 .popup-choice-apartment {
+  z-index: 500;
 
   .popup-window__header-ico {
     path {
@@ -691,6 +716,7 @@
 
   .popup-widow__body {
     text-align: center;
+    padding-left: 2.5rem
   }
 }
 
@@ -702,13 +728,14 @@
 }
 
 .choice-apartment__table-block {
-  width: 32.3125rem;
+  width: 32.3rem;
   display: inline-block;
   vertical-align: top;
 }
 
 .choice-apartment__table-header {
-  width: 31.3125rem;
+  width: 100%;
+  padding-right: 1.05rem;
 
   .choice-apartment__table-column {
     font-size: $font-size-small;
@@ -744,18 +771,21 @@
 
 .choice-apartment__table-body-wrapper {
   height: 22.3rem;
-  overflow: hidden;
   margin-top: .2rem;
-  position: relative;
-  width: 103.5%;
+  width: 100%;
   left: 0;
 }
 
 .choice-apartment__table-body {
-  width: 31.3125rem;
+  width: 100%;
+  padding-right: 1.05rem;
+  position: relative;
+  overflow: hidden;
+  height: 22.3rem;
 
   .choice-apartment__table-row {
     cursor: pointer;
+    width: 31.25rem;
     padding: .3rem .5rem;
     color: $yellow-base;
 
@@ -767,5 +797,38 @@
 
   .choice-apartment__table-column {
     font-size: $font-size-popup-header;
+  }
+}
+
+
+
+// track price popup
+.popup-window.popup-track-price {
+  width: 32.5rem;
+
+  .popup-window__header {
+    color: $green-lighten-1;
+  }
+}
+
+.track-price__count-block {
+  margin-bottom: .8rem;
+}
+
+.track-price__count-input-wrapper {
+  width: 9rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 .6875rem;
+}
+
+.popup-service-info {
+  margin-bottom: .7rem;
+  margin-top: .8rem;
+
+  .popup-apartment__info-item {
+    display: inline-block;
+    padding: 0 .9rem;
+    color: $blue-base;
   }
 }

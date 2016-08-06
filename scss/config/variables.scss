@@ -46,6 +46,11 @@ $color-mr: #168DE2 !default;
 $color-yt: #E62117 !default;
 
 
+$color-form-border: #d2d2d2 !default;
+$placeholder-color: #898989 !default;
+$color-green-button: #2ecc71 !default;
+
+
 
 // typography
 $font-family-sans-serif:  "Open Sans", "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -53,6 +58,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 
 $font-size-top-menu:      .8125rem !default; // ~13px
 $font-size-popup-header:  1.125rem !default; // ~18px
+$font-size-placeholder:   .75rem !default; // ~12px
 
 $font-size-base:          1rem !default;
 $font-size-large:         1.3125rem !default; // ~21px
@@ -60,13 +66,6 @@ $font-size-small:         .875rem !default; // ~14px
 $font-size-extra-small:   .6875rem !default; // ~11px
 $font-size-extra-large:   2.25rem !default; // ~36px
 $font-size-huge:          3rem !default; // ~48px
-
-$font-size-h1:            36px !default;
-$font-size-h2:            24px !default;
-$font-size-h3:            ceil(($font-size-base * 1.25)) !default;
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default;
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $headings-font-family:    $font-family-sans-serif !default;
 $headings-font-weight:    300 !default;

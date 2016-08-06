@@ -197,7 +197,6 @@ jQuery(function() {
   });
   $("html").on('click', ".popup-wrapper .close-this", function() {
     $(this).parents(".popup-window").hidePop();
-    $(this).parents(".popup-window").addClass("qwerty");
     return false;
   });
   $("html").on('click', ".popup-wrapper", function(e) {
@@ -281,9 +280,13 @@ jQuery(function() {
     apartment_type = $(this).attr("data-legend-apartment");
     return $(".map-floor__apartment-" + apartment_type).addClass("map-show-apartment");
   });
-  return $("html").on('mouseleave', ".floor-map__legend-item", function() {
+  $("html").on('mouseleave', ".floor-map__legend-item", function() {
     var apartment_type;
     apartment_type = $(this).attr("data-legend-apartment");
     return $(".map-floor__apartment-" + apartment_type).removeClass("map-show-apartment");
+  });
+  return $("html").on('click', "#choice-house-button", function() {
+    $(".popup-choice-apartment").showPop();
+    return $(".popup__tablescroll-block").perfectScrollbar();
   });
 });

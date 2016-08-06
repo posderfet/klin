@@ -1,0 +1,43 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup track price (site/popups/track_price.html)
+.popup-window.popup-service.popup-track-price.popup-test
+  .popup-window__close-button.close-this
+    .popup-window__close-ico.image-block
+      /! svg(svg/ico_close.svg)
+      == inline_svg "ico_close.svg"
+  .popup-window__header.center-header
+    .popup-window__header-title Узнать о снижении цены
+  .popup-window__small-body
+    form.popup-window__form action=""
+      .track-price__count-block
+        |Ожидаемая цена
+        span.track-price__count-input-wrapper
+          input.text-input type="text" placeholder="Введите цену"
+        |руб.
+      .input-field.track-price__checkbox-block
+        label.checkbox-lable
+          input.checkbox-lable__input type="checkbox"
+          span.checkbox-lable__checkbox.image-block
+            /! svg(svg/ico_ok.svg)
+            == inline_svg "ico_ok.svg"
+          span.checkbox-lable__lable Заранее узнать о планируемом повышении цен
+      .popup-apartment__info.popup-service-info
+        .popup-apartment__info-item.building
+          .popup-apartment__info-count.room-count ГП-2
+          .popup-apartment__info-lable дом
+        .popup-apartment__info-item.section
+          .popup-apartment__info-count.room-count 2
+          .popup-apartment__info-lable секция
+        .popup-apartment__info-item.floor
+          .popup-apartment__info-count.room-count 4
+          .popup-apartment__info-lable этаж
+        .popup-apartment__info-item.area
+          .popup-apartment__info-count.area-count 56,33
+          .popup-apartment__info-lable
+            |площадь, м
+            sup 2
+      .input-field
+        input.text-input type="text" placeholder="Введите ваш email"
+      .form-button-wrapper
+        input.form-button type="submit" value="Отправить"

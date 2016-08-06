@@ -63,6 +63,8 @@ jQuery ->
       @layer().width orphan_box.innerWidth()
 
     hidePop: (box)->
+      # if $(box).hasClass("popup-with-scroll")
+      #   $(box).find(".scrollbar-inner").scrollbar("destroy")
       replace= $(box).attr "data-replace"
       onclose = $(box).attr "data-onclose"
       eval(onclose) if onclose
@@ -124,7 +126,6 @@ jQuery ->
 
   $("html").on 'click', ".popup-wrapper .close-this", ->
     $(@).parents(".popup-window").hidePop()
-    $(@).parents(".popup-window").addClass("qwerty")
     false
 
 
@@ -203,3 +204,11 @@ jQuery ->
   $("html").on 'mouseleave', ".floor-map__legend-item", ->
     apartment_type = $(@).attr("data-legend-apartment")
     $(".map-floor__apartment-"+apartment_type).removeClass("map-show-apartment")
+
+  # choice apartment
+
+  $("html").on 'click', "#choice-house-button", ->
+    $(".popup-choice-apartment").showPop()
+    $(".popup__tablescroll-block").perfectScrollbar()
+  # $("html").on 'click', ".popup-choice-apartment .close-this", ->
+  #   $(".popup__tablescroll-block.scrollbar-inner").scrollbar("destroy")

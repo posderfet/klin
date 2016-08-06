@@ -26,6 +26,7 @@
 // components style
 @import "components/popups.scss";
 @import "components/landscape_error.scss";
+@import "components/forms.scss";
 
 
 
@@ -48,8 +49,12 @@
 
 // vendor style
 @import 'vendor/swiper.scss';
-// @import 'vendor/jquery.scrollbar.scss';
+@import 'vendor/perfect-scrollbar';
 // @import 'vendor/nouislider.scss';
+
+
+// theme styles
+@import 'theme/scrollbar.scss';
 
 
 // testing style
