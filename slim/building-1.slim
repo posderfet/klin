@@ -5,15 +5,20 @@ html lang="ru"
   head
     meta charset="utf-8"
     title Клин
-    meta content="width=1344" name="viewport"
+    meta content="width=1080" name="viewport"
     link href='css/application.css' rel='stylesheet' type='text/css'
     script type="text/javascript" src="js/vendor/mobile-detect.js"
     script type="text/javascript" src="js/jquery.min.js"
     script type="text/javascript" src="js/vendor/modernizr.js"
     script type="text/javascript" src="js/application.js"
+    script type="text/javascript" src="js/house_pages.js"
     script type="text/javascript" src="js/popups.js"
     script type="text/javascript" src="js/vendor/perfect-scrollbar.js"
-    / script type="text/javascript" src="js/vendor/nouislider.js"
+    script type="text/javascript" src="js/vendor/nouislider.js"
+    script type="text/javascript" src="js/vendor/wnumb.js"
+    script type="text/javascript" src="js/vendor/jquery.validate.js"
+    script type="text/javascript" src="js/vendor/messages_ru.js"
+    script type="text/javascript" src="js/vendor/jquery.maskedinput.js"
     link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
 
   body
@@ -23,7 +28,7 @@ html lang="ru"
       /! house canvas wrapper
       .house-canvas-wrapper style="display: none"
         /! house canvas background image, data-max-left - максимальное смещение картики в лево, data-max-top - вверх
-        img.house-canvas__background-image src="images/bg-house-1.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="10" data-max-top="0"
+        img.house-canvas__background-image src="images/bg-house-1.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="10" data-max-top="180"
         == render "sections/house_one_section"
       == render "layouts/site_footer"
     == render 'layouts/popups'
@@ -35,6 +40,10 @@ html lang="ru"
       == render "popups/building_1/gp1_section4"
       == render "popups/apartment_map"
       == render "popups/choice_apartment"
+      == render "popups/hypothec_calc"
+      == render "popups/reserv_request"
+      == render "popups/track_price"
+      == render "popups/get_planing"
+      == render "popups/repair_option"
     .popup-stack style="display: none"
-    / == render "popups/track_price"
     == render "components/landscape_error"

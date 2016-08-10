@@ -1,0 +1,8 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup track price (site/popups/reserv_request_success.html)
+.popup-window.popup-success
+  .popup-success__body
+    |Ваша заявка принята, менеджер свяжется с вами в ближайшее время для уточнения деталей.
+    .form-button-wrapper
+      button.form-button.close-this Закрыть окно

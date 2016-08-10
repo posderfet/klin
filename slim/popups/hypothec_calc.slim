@@ -1,0 +1,99 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup choice apartment (site/popups/hypothec_calc.html)
+.popup-window.popup-hypothec-calc
+  .popup-window__close-button.close-this
+    .popup-window__close-ico.image-block
+      /! svg(svg/ico_close.svg)
+      == inline_svg "ico_close.svg"
+  .hypothec-calc__side-wrapper.clearfix
+    .hypothec-calc__left-side
+      .popup-window__header
+        .popup-window__header-ico.image-block
+          /! svg(svg/ico_calc.svg)
+          == inline_svg "ico_calc.svg"
+        .popup-window__header-title Ипотечный калькулятор
+        form#hypothec_calc_form.hypothec-calc__form action="" method="post"
+          .hypothec-calc__item
+            .hypothec-calc__lable
+              |Стоимость квартиры:
+              span.hypothec-calc__input-wrapper.input-price-wrapper
+                input#hc-input-price.text-input.hypothec-calc__input.input-price-slider type="text"
+            #hc-price-slider
+            .hypothec-calc__pips-block
+              .hypothec-calc__pip-left от 1.3 млн. руб.
+              .hypothec-calc__pip-right до 5.05 млн. руб
+          .hypothec-calc__item
+            .hypothec-calc__lable
+              |Первоначальный взнос:
+              span.hypothec-calc__input-wrapper.input-deposit-wrapper
+                input#hc-input-deposit.text-input.hypothec-calc__input.input-deposit-slider type="text" value=""
+              span#hypothec_calc_deposit_total.hypothec-calc__deposit-count 5 000 000
+              | руб.
+            #hc-deposit-slider
+            .hypothec-calc__pips-block
+              .hypothec-calc__pip-left от 20%
+              .hypothec-calc__pip-right до 99%
+          .hypothec-calc__item
+            .hypothec-calc__lable
+              |Срок:
+              span.hypothec-calc__input-wrapper.input-period-wrapper
+                input#hc-input-period.text-input.hypothec-calc__input.input-period-slider type="text" value=""
+              |мес.
+            #hc-period-slider
+            .hypothec-calc__pips-block
+              .hypothec-calc__pip-left от 12 мес.
+              .hypothec-calc__pip-right до 360 мес.
+          .input-field.hypothec-calc__input-field
+            input.text-input type="text" name="email"
+            .input-placeholder Введите ваш email
+          .form-button-wrapper
+            input.form-button type="submit" value="Отправить расчёт на email"
+    .hypothec-calc__right-side
+      .hypothec_calc__bank-header
+        |Оцените размер ежемесячного
+        br
+        |платежа в различных банках
+      .hypothec-calc__bank-list
+        .hypothec-calc__list-header
+          .hypothec-calc__list-header-item
+            |Ставка,
+            br
+            |% годовых
+          .hypothec-calc__list-header-item
+            |Сумма,
+            br
+            |ежемесячного
+            br
+            |платежа, руб.
+        .hypothec-calc__list-body
+          .hypothec-calc__list-body-item.dkb-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_dkb.png"
+            .hypothec-calc__list-body-percent 11.5%
+            .hypothec-calc__list-body-payment 56 458
+          .hypothec-calc__list-body-item.vtb-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_vtb24.png"
+            .hypothec-calc__list-body-percent 11.9%
+            .hypothec-calc__list-body-payment 56 458
+          .hypothec-calc__list-body-item.sber-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_sberbank.png"
+            .hypothec-calc__list-body-percent 11.9%
+            .hypothec-calc__list-body-payment 56 458
+          .hypothec-calc__list-body-item.bankm-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_bankm.png"
+            .hypothec-calc__list-body-percent 11.9%
+            .hypothec-calc__list-body-payment 56 458
+          .hypothec-calc__list-body-item.mib-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_mib.png"
+            .hypothec-calc__list-body-percent 11.99%
+            .hypothec-calc__list-body-payment 56 458
+          .hypothec-calc__list-body-item.rsb-bank-item
+            .hypothec-calc__list-body-image
+              img src="images/logo_rsb.png"
+            .hypothec-calc__list-body-percent 11.9%
+            .hypothec-calc__list-body-payment 56 458

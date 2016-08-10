@@ -50,11 +50,12 @@
 // vendor style
 @import 'vendor/swiper.scss';
 @import 'vendor/perfect-scrollbar';
-// @import 'vendor/nouislider.scss';
+@import 'vendor/nouislider.scss';
 
 
 // theme styles
 @import 'theme/scrollbar.scss';
+@import 'theme/nouislider.scss';
 
 
 // testing style

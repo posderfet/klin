@@ -6,13 +6,17 @@
 
 .house-page-wrapper {
   width: 100%;
-  min-width: 80rem;
+  min-width: 84rem;
   min-height: 52rem;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
+
+  @media screen and (max-height: 742px) {
+    min-height: 49rem;
+  }
 }
 
 .house-canvas-wrapper {

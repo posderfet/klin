@@ -1,0 +1,38 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! popup track price (site/popups/get_planing.html)
+.popup-window.popup-service.popup-get-planing
+  .popup-window__close-button.close-this
+    .popup-window__close-ico.image-block
+      /! svg(svg/ico_close.svg)
+      == inline_svg "ico_close.svg"
+  .popup-window__header.center-header
+    .popup-window__header-title Отправить детальную планировку на почту
+  .popup-window__small-body
+    form#get-planing-form.popup_form.popup-window__form action="/php/form_test.php" method="post"
+      .popup-apartment__info.popup-service-info
+        .popup-apartment__info-item.building
+          .popup-apartment__info-count.building-count ГП-2
+          .popup-apartment__info-lable дом
+        .popup-apartment__info-item.section
+          .popup-apartment__info-count.section-count 2
+          .popup-apartment__info-lable секция
+        .popup-apartment__info-item.floor
+          .popup-apartment__info-count.floor-count 4
+          .popup-apartment__info-lable этаж
+        .popup-apartment__info-item.area
+          .popup-apartment__info-count.area-count 56,33
+          .popup-apartment__info-lable
+            |площадь, м
+            sup 2
+      .input-field
+        input.text-input type="text"
+        .input-placeholder Имя
+      .input-field
+        input.text-input.get-planing__input-phone type="text"
+        .input-placeholder Телефон
+      .input-field
+        input.text-input type="text" name="email"
+        .input-placeholder Введите ваш email
+      .form-button-wrapper
+        input.form-button type="submit" value="Отправить"

@@ -265,6 +265,9 @@
   display: inline-block;
   vertical-align: top;
   background: $white-base;
+  position: absolute;
+  top: 0;
+  right: 2rem;
 }
 
 .header-phone__ico-block {

@@ -1,0 +1,72 @@
+<!--popup track price (site/popups/get_planing.html)-->
+<div class="popup-window popup-service popup-get-planing">
+  <div class="popup-window__close-button close-this">
+    <div class="popup-window__close-ico image-block">
+      <!--svg(svg/ico_close.svg)--><svg  enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M501.5,512c-2.7,0-5.4-1-7.5-3.1L3.1,18C-1,13.9-1,7.2,3.1,3.1C7.2-1,13.9-1,18,3.1L508.9,494   c4.1,4.1,4.1,10.8,0,14.9C506.9,511,504.2,512,501.5,512z" fill="#6A6E7C"/><path d="M10.5,512c-2.7,0-5.4-1-7.5-3.1c-4.1-4.1-4.1-10.8,0-14.9L494,3.1c4.1-4.1,10.8-4.1,14.9,0   c4.1,4.1,4.1,10.8,0,14.9L18,508.9C15.9,511,13.2,512,10.5,512z" fill="#6A6E7C"/></g></svg>
+    </div>
+  </div>
+  <div class="popup-window__header center-header">
+    <div class="popup-window__header-title">
+      Отправить детальную планировку на почту
+    </div>
+  </div>
+  <div class="popup-window__small-body">
+    <form action="/php/form_test.php" class="popup_form popup-window__form" id="get-planing-form" method="post">
+      <div class="popup-apartment__info popup-service-info">
+        <div class="popup-apartment__info-item building">
+          <div class="popup-apartment__info-count building-count">
+            ГП-2
+          </div>
+          <div class="popup-apartment__info-lable">
+            дом
+          </div>
+        </div>
+        <div class="popup-apartment__info-item section">
+          <div class="popup-apartment__info-count section-count">
+            2
+          </div>
+          <div class="popup-apartment__info-lable">
+            секция
+          </div>
+        </div>
+        <div class="popup-apartment__info-item floor">
+          <div class="popup-apartment__info-count floor-count">
+            4
+          </div>
+          <div class="popup-apartment__info-lable">
+            этаж
+          </div>
+        </div>
+        <div class="popup-apartment__info-item area">
+          <div class="popup-apartment__info-count area-count">
+            56,33
+          </div>
+          <div class="popup-apartment__info-lable">
+            площадь, м<sup>2</sup>
+          </div>
+        </div>
+      </div>
+      <div class="input-field">
+        <input class="text-input" type="text" />
+        <div class="input-placeholder">
+          Имя
+        </div>
+      </div>
+      <div class="input-field">
+        <input class="text-input get-planing__input-phone" type="text" />
+        <div class="input-placeholder">
+          Телефон
+        </div>
+      </div>
+      <div class="input-field">
+        <input class="text-input" name="email" type="text" />
+        <div class="input-placeholder">
+          Введите ваш email
+        </div>
+      </div>
+      <div class="form-button-wrapper">
+        <input class="form-button" type="submit" value="Отправить" />
+      </div>
+    </form>
+  </div>
+</div>

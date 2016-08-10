@@ -702,8 +702,7 @@
 
 // choice apartment popup
 .popup-choice-apartment {
-  z-index: 500;
-
+  padding-bottom: 0;
   .popup-window__header-ico {
     path {
       fill: #4ea338;
@@ -725,6 +724,69 @@
   display: inline-block;
   vertical-align: top;
   margin-right: 1.875rem;
+}
+
+.choice-apartment__calc-item {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.choice-apartment__calc-lable {
+  font-size: $font-size-base;
+  text-align: left;
+  margin-bottom: .9375rem;
+}
+
+.choice-apartment__calc-input-wrapper {
+  display: inline-block;
+  // vertical-align: middle;
+  margin: 0 .625rem;
+
+  &.input-room-wrapper,
+  &.input-floor-wrapper {
+    width: 2.5rem;
+  }
+
+  &.input-area-wrapper {
+    width: 5rem;
+  }
+
+  &.input-price-wrapper {
+    width: 7rem;
+    margin: 0 .5rem;
+  }
+}
+
+.choice-apartment__calc-input {
+  text-align: center;
+}
+
+.choice-apartment__calc-pips-block {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  left: 0;
+  top: 100%;
+  font-size: 0;
+  padding-top: .55rem;
+}
+
+.choice-apartment__calc-pip-left,
+.choice-apartment__calc-pip-right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: $font-size-small;
+}
+
+.choice-apartment__calc-pip-left {
+  text-align: left;
+}
+
+.choice-apartment__calc-pip-right {
+  text-align: right;
 }
 
 .choice-apartment__table-block {
@@ -788,6 +850,7 @@
     width: 31.25rem;
     padding: .3rem .5rem;
     color: $yellow-base;
+    height: 2.23rem;
 
     &:hover {
       background: $yellow-base;
@@ -798,6 +861,154 @@
   .choice-apartment__table-column {
     font-size: $font-size-popup-header;
   }
+}
+
+
+
+// hypothec calc popup
+.popup-hypothec-calc {
+  padding-bottom: 0;
+
+  .popup-window__header-ico {
+    path {
+      fill: $blue-base;
+    }
+  }
+
+  .popup-window__header-title {
+    color: $blue-base;
+  }
+}
+
+.hypothec-calc__left-side,
+.hypothec-calc__right-side {
+  width: 29.3rem;
+}
+
+.hypothec-calc__left-side {
+  float: left;
+}
+
+.hypothec-calc__right-side {
+  float: right;
+  padding: .8rem 0 0 1rem;
+}
+
+
+.hypothec-calc__form {
+  display: block;
+  padding: 1.875rem 2.1875rem 0 1.5625rem;
+}
+
+.hypothec-calc__item {
+  @extend .choice-apartment__calc-item;
+}
+
+.hypothec-calc__lable {
+  @extend .choice-apartment__calc-lable;
+}
+
+.hypothec-calc__input-wrapper {
+  @extend .choice-apartment__calc-input-wrapper;
+
+  &.input-deposit-wrapper {
+    width: 3.1rem;
+    margin: 0 .35rem;
+
+    .input-deposit-slider {
+      padding-right: .25rem;
+      padding-left: .25rem;
+    }
+  }
+
+  &.input-period-wrapper {
+    width: 3.5rem;
+  }
+}
+
+.hypothec-calc__input {
+  @extend .choice-apartment__calc-input;
+}
+
+.hypothec-calc__pips-block {
+  @extend .choice-apartment__calc-pips-block;
+}
+
+.hypothec-calc__pip-left {
+  @extend .choice-apartment__calc-pip-left;
+}
+
+.hypothec-calc__pip-right {
+  @extend .choice-apartment__calc-pip-right;
+}
+
+.hypothec-calc__deposit-count {
+  display: inline-block;
+  // vertical-align: middle;
+  margin-right: .5rem;
+  color: $yellow-base;
+}
+
+.hypothec_calc__bank-header {
+  font-size: $font-size-popup-header;
+  line-height: 1;
+}
+
+.hypothec-calc__bank-list {
+  margin-top: 1rem;
+}
+
+.hypothec-calc__list-header {
+  text-align: right;
+  padding: 0 4.5rem 0;
+}
+
+.hypothec-calc__list-header-item {
+  width: 6.25rem;
+  font-size: $font-size-small;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1.2;
+  margin-left: 1rem;
+}
+
+.hypothec-calc__list-body {
+  margin-top: 1rem;
+}
+
+.hypothec-calc__list-body-item {
+  height: 2.875rem;
+  margin-bottom: .5rem;
+}
+
+.hypothec-calc__list-body-image,
+.hypothec-calc__list-body-percent,
+.hypothec-calc__list-body-payment {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hypothec-calc__list-body-image {
+  width: 8.9rem;
+  img {
+    display: block;
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+    }
+    @media screen and (max-height: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.hypothec-calc__list-body-percent,
+.hypothec-calc__list-body-payment {
+  width: 6.25rem;
+  text-align: center;
+  margin-left: 1rem;
+  font-size: 1.125rem;
+  color: $yellow-base;
 }
 
 
@@ -818,8 +1029,9 @@
 .track-price__count-input-wrapper {
   width: 9rem;
   display: inline-block;
-  vertical-align: middle;
-  margin: 0 .6875rem;
+  vertical-align: top;
+  margin: -.1rem .6875rem 0;
+  position: relative;
 }
 
 .popup-service-info {
@@ -831,4 +1043,125 @@
     padding: 0 .9rem;
     color: $blue-base;
   }
+}
+
+
+
+// get planing popup
+.popup-window.popup-get-planing {
+  width: 48.75rem;
+  padding-bottom: 2rem;
+
+  .popup-window__header {
+    color: $yellow-base;
+  }
+}
+
+
+
+// resrv request popup
+.popup-window.popup-reserv-request {
+  width: 38.75rem;
+
+  .popup-window__header {
+    color: $orange-base;
+  }
+}
+
+
+
+// repair option popup
+.popup-repair-option {
+  padding-bottom: 1.25rem;
+
+  .popup-window__header-ico {
+    path {
+      fill: $green-base;
+    }
+  }
+
+  .popup-window__header-title {
+    color: $green-base;
+  }
+}
+
+.repair-option__photo-wrapper {
+  padding-top: .875rem;
+  font-size: 0;
+}
+
+.repair-option__big-photo-wrapper,
+.repair-option__photo-list {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.repair-option__big-photo-wrapper {
+  width: 38.75rem;
+  padding: 1.25rem 0 1.25rem 1.25rem;
+  height: 44.375rem;
+}
+
+.repair-option__big-photo-block {
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.repair-option__big-photo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+}
+
+.repair-option__photo-list {
+  width: 20rem;
+  padding: 0 1.25rem;
+}
+
+.repair-option__photo-item {
+  width: 100%;
+  height: 10.625rem;
+  margin-bottom: .625rem;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: 250ms ease-out;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    border-color: $green-base;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.repair-option__photo-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+// success popup
+.popup-window.popup-success {
+  width: 25rem;
+  z-index: 500;
+  padding: 2rem 2rem;
+}
+
+.popup-success__body {
+  font-size: $font-size-large;
+  text-align: center;
 }

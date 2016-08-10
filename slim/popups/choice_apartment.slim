@@ -1,7 +1,7 @@
 - def render(path) Slim::Template.new("slim/#{path}.slim").render end
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
 /! popup choice apartment (site/popups/choice_apartment.html)
-.popup-window.popup-choice-apartment.popup-with-scroll
+.popup-window.popup-choice-apartment.popup-with-sroll
   .popup-window__close-button.close-this
     .popup-window__close-ico.image-block
       /! svg(svg/ico_close.svg)
@@ -16,11 +16,56 @@
     .choice-apartment__calc-block
       form.choice-apartment__calc-form action=""
         .choice-apartment__calc-item
-          input#input-room-slider type="text"
-          #choice-apartment__room-slider
+          .choice-apartment__calc-lable
+            |Количество комнат:
+            span.choice-apartment__calc-input-wrapper.input-room-wrapper
+              input#ca-input-room-low.text-input.choice-apartment__calc-input.input-room-slider type="text" value=""
+            |-
+            span.choice-apartment__calc-input-wrapper.input-room-wrapper
+              input#ca-input-room-up.text-input.choice-apartment__calc-input.input-room-slider type="text" value=""
+          #ca-room-slider
+          .choice-apartment__calc-pips-block
+            .choice-apartment__calc-pip-left 1
+            .choice-apartment__calc-pip-right 4
         .choice-apartment__calc-item
+          .choice-apartment__calc-lable
+            |Этаж:
+            span.choice-apartment__calc-input-wrapper.input-floor-wrapper
+              input#ca-input-floor-low.text-input.choice-apartment__calc-input.input-floor-slider type="text" value=""
+            |-
+            span.choice-apartment__calc-input-wrapper.input-floor-wrapper
+              input#ca-input-floor-up.text-input.choice-apartment__calc-input.input-floor-slider type="text" value=""
+          #ca-floor-slider
+          .choice-apartment__calc-pips-block
+            .choice-apartment__calc-pip-left 2
+            .choice-apartment__calc-pip-right 15
         .choice-apartment__calc-item
+          .choice-apartment__calc-lable
+            |Площадь:
+            span.choice-apartment__calc-input-wrapper.input-area-wrapper
+              input#ca-input-area-low.text-input.choice-apartment__calc-input.input-area-slider type="text" value=""
+            |-
+            span.choice-apartment__calc-input-wrapper.input-area-wrapper
+              input#ca-input-area-up.text-input.choice-apartment__calc-input.input-area-slider type="text" value=""
+            |м
+            sup 2
+          #ca-area-slider
+          .choice-apartment__calc-pips-block
+            .choice-apartment__calc-pip-left 29,1
+            .choice-apartment__calc-pip-right 79,9
         .choice-apartment__calc-item
+          .choice-apartment__calc-lable
+            |Цена:
+            span.choice-apartment__calc-input-wrapper.input-price-wrapper
+              input#ca-input-price-low.text-input.choice-apartment__calc-input.input-price-slider type="text" value=""
+            |-
+            span.choice-apartment__calc-input-wrapper.input-price-wrapper
+              input#ca-input-price-up.text-input.choice-apartment__calc-input.input-price-slider type="text" value=""
+            |руб.
+          #ca-price-slider
+          .choice-apartment__calc-pips-block
+            .choice-apartment__calc-pip-left 1 300 000
+            .choice-apartment__calc-pip-right 5 000 000
     /! choice apartment table list
     .choice-apartment__table-block
       .choice-apartment__table-header
@@ -33,7 +78,7 @@
             sup 2
           .choice-apartment__table-column.price Стоимость, руб
       .choice-apartment__table-body-wrapper
-        .choice-apartment__table-body.popup__tablescroll-block
+        .choice-apartment__table-body.popup__scroll-block
           - 25.times do
             .choice-apartment__table-row
               .choice-apartment__table-column.building ГП 1

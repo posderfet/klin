@@ -1,0 +1,67 @@
+/***************************
+       Nouislider Theme
+****************************/
+
+
+
+.noUi-target {
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  background: #00bd19;
+  height: .125rem;
+
+  .noUi-handle {
+    border: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    box-shadow: none;
+    border-radius: none;
+    background: #00bd19;
+    top: -.5625rem;
+    left: -.625rem;
+    transition: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .noUi-origin.noUi-connect {
+    background: #00bd19;
+  }
+
+  .noUi-background {
+    background: $color-form-border;
+  }
+
+  .noUi-active {
+    background: $yellow-base !important;
+  }
+
+  &#ca-floor-slider,
+  &#ca-room-slider,
+  &#ca-area-slider,
+  &#ca-price-slider {
+    background: $color-form-border;
+  }
+}
+
+// .noUi-pips {
+//   padding: .55rem .2rem;
+
+//   .noUi-marker {
+//     display: none;
+//   }
+
+//   .noUi-value {
+//     transform: translate3d(0, 0, 0px);
+//     font-size: $font-size-small;
+//     color: $night-blue;
+
+//     &:last-of-type {
+//       transform: translate3d(-100%, 0, 0px);
+//     }
+//   }
+// }
