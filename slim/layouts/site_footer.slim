@@ -1,4 +1,12 @@
 - def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! 
+  **
+  **
+  **
+  ** site footer start
+  **
+  **
+  **
 /! site footer (site/layouts/site_footer.html)
 footer.site-footer
   .main-container
@@ -9,3 +17,11 @@ footer.site-footer
     a.site-footer__maker.image-block href="http://owlit.ru/" target="blank"
       /! svg(svg/logo_owl.svg)
       == inline_svg "logo_owl.svg"
+/! 
+  **
+  **
+  **
+  ** site footer end
+  **
+  **
+  **
