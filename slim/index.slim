@@ -7,12 +7,14 @@ html lang="ru"
     title Клин
     meta content="width=1080" name="viewport"
     link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
     script type="text/javascript" src="js/vendor/mobile-detect.js"
     script type="text/javascript" src="js/jquery.min.js"
     script type="text/javascript" src="js/application.js"
+    /! index page scripts
     script type="text/javascript" src="js/vendor/swiper.min.js"
     script type="text/javascript" src="js/index.js"
-    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
 
   body
     .house-page-wrapper.index-wrapper.page-wrapper
@@ -67,7 +69,7 @@ html lang="ru"
               .index-gurad__lable Работаем по 214-ФЗ
             a.index-link-rect.index-documents href=""
               .index-documents__lable Документация
-      / index background slider
+      /! index background slider
       .index-slider-container.swiper-container
         .index-slider-wrapper.swiper-wrapper
           .index-slide.swiper-slide style="background-image: url(images/bg-index.jpg)"
@@ -75,7 +77,5 @@ html lang="ru"
           .index-slide.swiper-slide style="background-image: url(images/bg-house-2.jpg)"
           .index-slide.swiper-slide style="background-image: url(images/bg-house-3.jpg)"
         .index-slider__pagination.swiper-pagination
-      / .house-canvas-wrapper style="display: none"
-      /   img.house-canvas__background-image src="images/bg-index.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="20" data-max-top="40"
       == render "layouts/site_footer"
     == render "components/landscape_error"
