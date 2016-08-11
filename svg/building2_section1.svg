@@ -8,7 +8,7 @@
 	c0,0.6,0.3,1,0.7,1.2c0.2,0.1,0.4,0.1,0.6,0.1c0.4,0,0.7-0.4,0.9-0.9c0.1-0.1,0.2-0.3,0.3-0.5h9.5v17.7H27.2V239.6z M211.9,221.6
 	v172.2l-172-172.2H211.9L211.9,221.6z M39.9,393.8h172l-172-172.2V393.8z M27.2,220.4v83.3L3.1,220.4H27.2L27.2,220.4z M3.1,303.7
 	h24.1L3.1,220.4V303.7z"/>
-<path data-apartment-token="b2_s1_a1p-3" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="40,43" data-apartment-price="1 700 000" data-apartment-price="3 320 000" fill-rule="evenodd" fill="#B0ACD5" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="22.9256" d="M336.3,26.9v0.8
+<path data-apartment-token="b2_s1_a1p-3" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="40,43" data-apartment-price="1 700 000" fill-rule="evenodd" fill="#B0ACD5" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="22.9256" d="M336.3,26.9v0.8
 	c-0.6,0-1,0.3-1.2,0.7c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.4,0.3,0.7,0.8,0.9c0.1,0.1,0.3,0.2,0.5,0.3v9.5H319V26.9H336.3z M352.7,39.6
 	v149.8L216.3,39.6H352.7L352.7,39.6z M216.3,189.4h136.3L216.3,39.6V189.4z M363.6,2.8v24.1L289.9,2.8H363.6L363.6,2.8z M289.9,26.9
 	h73.7L289.9,2.8V26.9z"/>

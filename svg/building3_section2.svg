@@ -1,33 +1,33 @@
 <svg class="svg-floor-map" version="1.2" baseProfile="tiny"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 846.6 570.8"
 	 xml:space="preserve">
-<path data-apartment-token="b3_s2_a1s-2" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" data-apartment-room="1" data-apartment-area="29,26" data-apartment-price="1 300 000" fill-rule="evenodd" fill="#ABE1FA" stroke="#ABE1FA" stroke-width="0.216" stroke-miterlimit="10" d="M420.1,521.3h-92V303.8
+<path data-apartment-token="b3_s2_a1s-2" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" data-apartment-room="1" data-apartment-area="29,26" data-apartment-price="1 300 000" fill="#ABE1FA" stroke="#ABE1FA" stroke-width="0.216" stroke-miterlimit="10" d="M420.1,521.3h-92V303.8
 	L420.1,521.3z M384.8,521.3H364v10.1c0.2,0,0.4,0.1,0.6,0.1c0.1,0,0.2,0,0.2,0.1c0.6,0.2,1,0.4,1,0.8l0,0v0c0,0.6-1,1-1.9,0.8v3.1
 	h20.9V521.3z M421.2,567.5v-31.2h-90.5L421.2,567.5z M330.7,536.3l18,31.2h72.5L330.7,536.3z M420.1,521.3V303.8h-92L420.1,521.3z"
 	/>
-<path data-apartment-token="b3_s2_a1s-1" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" data-apartment-room="1" data-apartment-area="29,26" data-apartment-price="1 350 000" fill-rule="evenodd" fill="#ABE1FA" d="M481.6,536.4h-20.9v-15.1h20.9v10.4c-0.6,0-1.2,0.2-1.5,0.6c-0.3,0.3-0.4,0.4-0.4,0.8
+<path data-apartment-token="b3_s2_a1s-1" fill-rule="evenodd" fill="#ABE1FA" class="map-floor__apartment-1s map-floor__apartment" data-apartment-type="1s" data-apartment-room="1" data-apartment-area="29,26" data-apartment-price="1 350 000" fill="#ABE1FA" d="M481.6,536.4h-20.9v-15.1h20.9v10.4c-0.6,0-1.2,0.2-1.5,0.6c-0.3,0.3-0.4,0.4-0.4,0.8
 	c0,0.7,1,1.1,1.9,0.9V536.4z M496.8,567.5l18-31.1h-90.5L496.8,567.5z M424.3,536.4v31.1h72.5L424.3,536.4z M517.4,521.3V303.8h-92
 	L517.4,521.3z M425.4,303.8v217.6h92L425.4,303.8z"/>
-<path data-apartment-token="b3_s2_a1p-1" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="38,20" data-apartment-price="2 100 000" fill-rule="evenodd" fill="#B0ACD5" d="M522.6,303.8h156.6v169.6L522.6,303.8z M585.7,486.1c-0.9,0.2-1.9-0.2-1.9-0.9
+<path data-apartment-token="b3_s2_a1p-1" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="38,20" data-apartment-price="2 100 000" fill="#B0ACD5" d="M522.6,303.8h156.6v169.6L522.6,303.8z M585.7,486.1c-0.9,0.2-1.9-0.2-1.9-0.9
 	c0-0.3,0.2-0.7,0.5-0.9c0.2-0.2,0.4-0.3,0.7-0.4c0.2-0.1,0.4-0.2,0.7-0.3v-10.3h-20.9v14.9h20.9V486.1z M615.4,519.5v-31.3h-83
 	L615.4,519.5z M532.3,488.2v31.3h83L532.3,488.2z M522.6,303.8v169.6h156.6L522.6,303.8z"/>
-<path data-apartment-token="b3_s2_a3p-1" fill-rule="evenodd" fill="#FBF394" class="map-floor__apartment-3p map-floor__apartment" data-apartment-type="3p" data-apartment-room="3" data-apartment-area="77,67" data-apartment-price="8 679 000" fill-rule="evenodd" fill="#FBF394" d="M161,452H4.7V301.7L161,452z M135.1,85.7h-20.9v14.8h20.9V90.3
+<path data-apartment-token="b3_s2_a3p-1" fill-rule="evenodd" fill="#FBF394" class="map-floor__apartment-3p map-floor__apartment" data-apartment-type="3p" data-apartment-room="3" data-apartment-area="77,67" data-apartment-price="8 679 000" fill="#FBF394" d="M161,452H4.7V301.7L161,452z M135.1,85.7h-20.9v14.8h20.9V90.3
 	c-0.3-0.1-0.5-0.1-0.7-0.3c-0.3-0.1-0.5-0.2-0.7-0.4c-0.3-0.2-0.5-0.6-0.5-0.9c0-0.7,1-1.1,1.9-0.9V85.7z M4.7,301.7H161V452
 	L4.7,301.7z M4.7,243.8h156.2v58L4.7,243.8z M160.9,301.7H4.7v-58L160.9,301.7z M4.7,100.5h145.4v143.3L4.7,100.5z M150.1,243.8H4.7
 	V100.5L150.1,243.8z M80,54.4h60.4v31.3L80,54.4z M140.4,85.7H80V54.4L140.4,85.7z M88.2,498.2v-31.3H3.6L88.2,498.2z M3.6,466.8
 	v31.3h84.6L3.6,466.8z"/>
-<path data-apartment-token="b3_s2_a1p-2" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="38,20" data-apartment-price="1 800 000" fill-rule="evenodd" fill="#B0ACD5" d="M259.7,486.2c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
+<path data-apartment-token="b3_s2_a1p-2" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="38,20" data-apartment-price="1 800 000" fill="#B0ACD5" d="M259.7,486.2c0.9,0.2,1.9-0.2,1.9-0.9c0-0.3-0.2-0.7-0.5-0.9c-0.2-0.2-0.4-0.3-0.7-0.4
 	c-0.2-0.1-0.4-0.2-0.7-0.3v-10.4h20.9v15h-20.9V486.2z M313.2,519.5v-31.2H230L313.2,519.5z M230,488.3v31.2h83.2L230,488.3z
 	 M322.8,473.3V303.8H166.3L322.8,473.3z M166.3,303.8v169.6h156.5L166.3,303.8z"/>
-<path data-apartment-token="b3_s2_a3-1" fill-rule="evenodd" fill="#DEB9D8" stroke="#DEB9D8" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" data-apartment-room="3" data-apartment-area="77,72" data-apartment-price="6 800 000" fill-rule="evenodd" fill="#DEB9D8" d="M712.9,100.7h-21V89.1h0.5c0.8,0,1.4-0.4,1.4-0.9c0-0.3-0.1-0.6-0.5-0.8
+<path data-apartment-token="b3_s2_a3-1" fill-rule="evenodd" fill="#DEB9D8" stroke="#DEB9D8" class="map-floor__apartment-3 map-floor__apartment" data-apartment-type="3" data-apartment-room="3" data-apartment-area="77,72" data-apartment-price="6 800 000" fill="#DEB9D8" d="M712.9,100.7h-21V89.1h0.5c0.8,0,1.4-0.4,1.4-0.9c0-0.3-0.1-0.6-0.5-0.8
 	c-0.3-0.3-0.9-0.4-1.4-0.3v-1.4h21V100.7z M768.8,85.7V54.4h-82.1L768.8,85.7z M686.8,54.4v31.3h82.1L686.8,54.4z M684.4,298.6V452
 	h148.4L684.4,298.6z M684.4,298.6h148.4V452L684.4,298.6z M684.4,238.6h148.4v59.9L684.4,238.6z M832.8,298.5H684.4v-59.9
 	L832.8,298.5z M677,100.7h155.8v137.9L677,100.7z M832.8,238.6H677.2L677,100.7L832.8,238.6z M757.1,466.8H843v31.3L757.1,466.8z
 	 M757,498.2h85.9 M843,498.2h-85.9v-31.3L843,498.2z"/>
-<path data-apartment-token="b3_s2_a1p-4" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="41,46" data-apartment-price="2 100 000" fill-rule="evenodd" fill="#B0ACD5" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="10" d="M671.9,238.6H499.7V75
+<path data-apartment-token="b3_s2_a1p-4" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="41,46" data-apartment-price="2 100 000" fill="#B0ACD5" stroke="#B0ACD5" stroke-width="0.216" stroke-miterlimit="10" d="M671.9,238.6H499.7V75
 	L671.9,238.6z M511.8,62.3c0.9-0.2,1.9,0.2,1.9,0.9c0,0.3-0.2,0.7-0.5,0.9c-0.2,0.2-0.4,0.3-0.7,0.4c-0.2,0.1-0.4,0.2-0.7,0.3V75
 	h20.9V60.2h-20.9V62.3z M671.9,238.6V75H499.7L671.9,238.6z M587.6,60.2V3.3h-78.2L587.6,60.2z M509.4,3.3v56.9h78.2L509.4,3.3z"/>
-<path data-apartment-token="b3_s2_a1p-3" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="41,46" data-apartment-price="2 100 000" fill-rule="evenodd" fill="#B0ACD5" d="M314.9,62.3c-0.9-0.2-1.9,0.2-1.9,0.9c0,0.3,0.2,0.7,0.5,0.9c0.2,0.2,0.4,0.3,0.7,0.4
+<path data-apartment-token="b3_s2_a1p-3" fill-rule="evenodd" fill="#B0ACD5" class="map-floor__apartment-1p map-floor__apartment" data-apartment-type="1p" data-apartment-room="1" data-apartment-area="41,46" data-apartment-price="2 100 000" fill="#B0ACD5" d="M314.9,62.3c-0.9-0.2-1.9,0.2-1.9,0.9c0,0.3,0.2,0.7,0.5,0.9c0.2,0.2,0.4,0.3,0.7,0.4
 	c0.2,0.1,0.4,0.2,0.7,0.3V75H294V60.2h20.9V62.3z M327.5,238.6V75H155.3L327.5,238.6z M155.3,75v163.6h172.2L155.3,75z M317.9,60.2
 	V3.3h-79.4L317.9,60.2z M238.4,3.3v56.9h79.4L238.4,3.3z"/>
 </svg>
