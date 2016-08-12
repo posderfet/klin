@@ -76,6 +76,10 @@
   }
 }
 
+.popup-anim-start {
+  animation: popup_open 250ms ease-out;
+}
+
 .popup-window__close-button {
   position: absolute;
   width: 2rem;
@@ -418,7 +422,7 @@
     opacity: .4;
     transition: 250ms ease-out;
     cursor: pointer;
-    stroke-width: 0;
+    stroke-width: 1;
   }
 }
 

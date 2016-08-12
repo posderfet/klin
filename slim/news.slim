@@ -1,0 +1,79 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1080" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
+    script type="text/javascript" src="js/vendor/mobile-detect.js"
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    /! news page scripts
+    script type="text/javascript" src="js/vendor/slick.min.js"
+    script type="text/javascript" src="js/vendor/jquery.dotdotdot.js"
+    script type="text/javascript" src="js/vendor/perfect-scrollbar.js"
+    script type="text/javascript" src="js/news.js"
+
+  body
+    .house-page-wrapper.news-page-wrapper
+      == render "layouts/site_header"
+      .main-container
+        .info-page-content.news-content
+          == render "components/breadcrumbs"
+          h1.info-page-header Новости
+          /! news slider
+          .mews-slider-wrapper
+            .news-slider__prev-button.slide-prev
+              span.slide__top
+              span.slide__bottom
+            .news-slider__next-button.slide-next
+              span.slide__top
+              span.slide__bottom
+            section.news-slider
+              - 3.times do
+                .news-slider__item-wrapper
+                  article.news-slider__item
+                    .news-slider__item-image-block.open-this-news
+                      img.news-slider__item-image src="images/news_prev.png" data-src="images/news_full_image.jpg" alt="описание картинки"
+                      time.news-slider__item-time 20 августа 2016
+                    h2.news-slider__item-header.truncate.open-this-news title="Это очень длинный заголово новости, ну прям вообще длинный" Это очень длинный заголово новости, ну прям вообще длинный
+                    .news-slider__item-button.open-this-news
+                      span.news-slider__item-button-title Подробнее
+                      span.news-slider__item-button-ico.image-block
+                        /! svg(svg/ico_more.svg)
+                        == inline_svg "ico_more.svg"
+                    .news-slider__full-text
+                      p Уважаемые покупатели ГП-1. Сегодня состоялась итоговая выездная проверка Министерства строительного комплекса. Цель проверки: зафиксировать со стороны Министерства фактическое наличие и состояние объекта капитального строительства, а также соответствие объекта проектно-технической документации. Нарушений не выявлено, что подтверждается Актом (прилагается). Документальная проверка также успешно завершена. Разрешение на ввод дома в эксплуатацию сегодня должно быть передано на подпись ответственному должностному лицу.
+                      p Рассчитываем получить готовый документ 27-28 июня После получения данного документа мы приступаем к процедуре выдачи ключей.
+                      p Уважаемые покупатели ГП-1. Сегодня состоялась итоговая выездная проверка Министерства строительного комплекса. Цель проверки: зафиксировать со стороны Министерства фактическое наличие и состояние объекта капитального строительства, а также соответствие объекта проектно-технической документации. Нарушений не выявлено, что подтверждается Актом (прилагается). Документальная проверка также успешно завершена. Разрешение на ввод дома в эксплуатацию сегодня должно быть передано на подпись ответственному должностному лицу.
+                      p Рассчитываем получить готовый документ 27-28 июня После получения данного документа мы приступаем к процедуре выдачи ключей.
+                .news-slider__item-wrapper
+                  article.news-slider__item.swiper-slide
+                    .news-slider__item-image-block.open-this-news
+                      img.news-slider__item-image src="images/news_prev.png" data-src="" alt="описание картинки"
+                      time.news-slider__item-time 20 августа 2016
+                    h2.news-slider__item-header.truncate.open-this-news title="Это корткий заголовок" Это короткий заголовок
+                    .news-slider__item-button.open-this-news
+                      span.news-slider__item-button-title Подробнее
+                      span.news-slider__item-button-ico.image-block
+                        /! svg(svg/ico_more.svg)
+                        == inline_svg "ico_more.svg"
+                    .news-slider__full-text
+                      p Уважаемые покупатели ГП-1. Сегодня состоялась итоговая выездная проверка Министерства строительного комплекса. Цель проверки: зафиксировать со стороны Министерства фактическое наличие и состояние.
+          /! news popup
+          .news-popup
+            .popup-window__close-button.close-news-popup title="Закрыть новость"
+              .popup-window__close-ico.image-block
+                /! svg(svg/ico_close.svg)
+                == inline_svg "ico_close.svg"
+            .news-popup__image-block
+            .news-popup__content
+              .news-popup__content-header
+              .news-popup__content-body.popup__scroll-block
+              .news-popup__content-time
+      == render "layouts/site_footer"
+    == render "components/landscape_error"

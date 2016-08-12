@@ -1,0 +1,143 @@
+/***************************
+        About Us Page
+****************************/
+
+
+
+.house-page-wrapper.uboutus-page-wrapper {
+  background: url("../images/aboutus-background.jpg");
+  background-size: cover;
+  min-height: 53.4375rem;
+
+  .header-risen {
+    display: none;
+  }
+}
+
+.aboutus-content {
+  background: rgba($white-base, .95);
+  width: 34.6875rem;
+  position: relative;
+}
+
+.aboutus-content__body {
+  padding: 5rem;
+  font-size: $font-size-small;
+  color: #636363;
+
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+}
+
+.aboutus-badge-wrapper {
+  position: absolute;
+  width: 18rem;
+  right: -19.5rem;
+  height: 100%;
+  top: 0;
+}
+
+.aboutus-badge {
+  color: $white-base;
+  padding-left: .8125rem;
+  padding-right: .3rem;
+  padding-top: .55rem;
+  padding-bottom: .45rem;
+  margin-bottom: .8rem;
+  display: table;
+  position: relative;
+
+  &.np {
+    padding-right: 0;
+  }
+
+  &.room {
+    background: #F7941E;
+    width: 13.125rem;
+
+    .aboutus-badge__count {
+      font-size: 4.375rem;
+      font-weight: 300;
+
+      sup {
+        position: absolute;
+        top: 1rem;
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  &.mart {
+    background: #59A044;
+
+    .aboutus-badge__count {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.e-area {
+    background: #C49E2D;
+
+    .aboutus-badge__count {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.p-area {
+    background: #0E5533;
+
+    .aboutus-badge__count {
+      font-size: 2.375rem;
+    }
+  }
+
+  &.parking {
+    background: #F7941E;
+
+    .aboutus-badge__count {
+      font-size: 1.875rem;
+    }
+  }
+
+  &.people {
+    background: #0E5533;
+    width: 14.375rem;
+
+    .aboutus-badge__count {
+      font-size: 4.375rem;
+
+      sup {
+        position: absolute;
+        top: 1rem;
+        font-size: 2.25rem;
+      }
+    }
+  }
+}
+
+.aboutus-badge__count {
+  line-height: .8;
+
+  span {
+    font-size: $font-size-small;
+  }
+}
+
+.aboutus-badge__lable {
+  font-size: $font-size-small;
+  margin-top: .65rem;
+  line-height: .8;
+}
+
+.aboutus-badge-legend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.aboutus-badge-legend-item {
+  font-size: $font-size-small;
+  color: $white-base;
+}

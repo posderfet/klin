@@ -1,0 +1,54 @@
+/***************************
+      Breadcrumbs Style
+****************************/
+
+
+
+.breadcrombs-block {
+  width: 100%;
+  height: 2.5rem;
+  background: #f7f7f7;
+}
+
+.breadcrumbs-list {
+  height: 100%;
+  padding-left: 1.25rem;
+  line-height: 2.3rem;
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+  margin-right: .7rem;
+  position: relative;
+  line-height: .8;
+
+  &:after {
+    display: inline-block;
+    content: '/';
+    position: absolute;
+    bottom: 0;
+    right: -.6rem;
+    color: $breadcrumbs-color;
+    font-size: .8rem;
+    cursor: default;
+  }
+
+  &:last-of-type {
+    cursor: default;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.breadcrumbs-item-link {
+  font-size: $font-size-breadcrumbs;
+  color: $breadcrumbs-color;
+  text-decoration: none;
+  transition: 250ms ease-out;
+
+  &:hover {
+    color: $gray-base;
+  }
+}

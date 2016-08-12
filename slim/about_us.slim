@@ -1,0 +1,75 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1080" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
+    script type="text/javascript" src="js/vendor/mobile-detect.js"
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+
+  body
+    .house-page-wrapper.uboutus-page-wrapper
+      == render "layouts/site_header"
+      .main-container
+        .info-page-content.aboutus-content
+          == render "components/breadcrumbs"
+          .aboutus-content__body
+            p Новый Клин — это целый микрогород, уютный и безопасный.
+            p Внутренняя структура микрорайона очень разнообразна и включает в себя все необходимое для максимально комфортной ежедневной жизни. Одна из ключевых особенностей микрорайона — отсутствие движения транспорта внутри. Движение машин предусмотрено вдоль внешней границы застройки по кольцу. И от этой кольцевой дороги организован проезд к жилым домам по тупиковой системе. Таким образом, внутри микрорайона находится безопасная пешеходная зона для прогулок с детьми.
+          .aboutus-badge-wrapper
+            .aboutus-badge.np.room
+              .aboutus-badge__count
+                |2 684
+                sup
+                  |*
+              .aboutus-badge__lable квартир
+            .aboutus-badge.mart
+              .aboutus-badge__count
+                |20 000 
+                span
+                  |м
+                  sup 2
+              .aboutus-badge__lable торговый центр
+            .aboutus-badge.e-area
+              .aboutus-badge__count
+                |7 200 
+                span
+                  |м
+                  sup 2
+              .aboutus-badge__lable торгово-офисных площадей
+            .aboutus-badge.p-area
+              .aboutus-badge__count
+                |22 750 
+                span
+                  |м
+                  sup 2
+              .aboutus-badge__lable прогулочной зоны
+            .aboutus-badge.parking
+              .aboutus-badge__count
+                |1 220
+              .aboutus-badge__lable парковочных мест
+            .aboutus-badge.np.people
+              .aboutus-badge__count
+                |4 066
+                sup
+                  |**
+              .aboutus-badge__lable человек
+            .aboutus-badge-legend
+              .aboutus-badge-legend-item
+                sup
+                  |* 
+                span
+                |- общее количество квартир
+              .aboutus-badge-legend-item
+                sup
+                  |** 
+                span
+                |- расчётная численность населения
+      == render "layouts/site_footer"
+    == render "components/landscape_error"
