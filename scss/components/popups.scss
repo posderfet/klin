@@ -175,6 +175,7 @@
   margin: auto;
   width: 4.375rem;
   height: 9.375rem;
+  z-index: 200;
   background: $blue-base;
 }
 
@@ -187,6 +188,12 @@
   height: 25%;
   z-index: 20;
   cursor: pointer;
+  transition: 250ms ease-out;
+
+  &.floor-slider-disable {
+    transform: scale(0);
+    opacity: 0;
+  }
 
   .floor-slider__left,
   .floor-slider__right {
