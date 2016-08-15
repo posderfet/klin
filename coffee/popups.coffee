@@ -218,8 +218,8 @@ jQuery ->
       if FLOOR == MAX_FLOOR
         $(@).addClass("floor-slider-disable")
       if parent_popup.hasClass("popup-apartment")
-        parent_popup.hidePop()
         floor_slider_check()
+        parent_popup.hidePop()
 
 
   $("html").on "click", ".popup-floor-slider__down", ->
@@ -227,10 +227,6 @@ jQuery ->
     floor_el = $(@).parent().find(".popup-floor-slider__count-number")
     floor = parseInt(floor_el.html(), 10)
     parent_popup = $(@).parents(".popup-window")
-    if parent_popup.hasClass("popup-apartment")
-      FLOOR = floor - 1
-      parent_popup.hidePop()
-      floor_slider_check()
     if floor == 2
       return
     else
@@ -240,6 +236,10 @@ jQuery ->
       $(@).parents(".popup-floor").attr("data-floor-section", FLOOR)
       if FLOOR == 2
         $(@).addClass("floor-slider-disable")
+      if parent_popup.hasClass("popup-apartment")
+        floor_slider_check()
+        parent_popup.hidePop()
+        
 
 
   # apartment tooltip

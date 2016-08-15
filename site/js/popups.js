@@ -299,8 +299,8 @@ jQuery(function() {
         $(this).addClass("floor-slider-disable");
       }
       if (parent_popup.hasClass("popup-apartment")) {
-        parent_popup.hidePop();
-        return floor_slider_check();
+        floor_slider_check();
+        return parent_popup.hidePop();
       }
     }
   });
@@ -310,11 +310,6 @@ jQuery(function() {
     floor_el = $(this).parent().find(".popup-floor-slider__count-number");
     floor = parseInt(floor_el.html(), 10);
     parent_popup = $(this).parents(".popup-window");
-    if (parent_popup.hasClass("popup-apartment")) {
-      FLOOR = floor - 1;
-      parent_popup.hidePop();
-      floor_slider_check();
-    }
     if (floor === 2) {
 
     } else {
@@ -323,7 +318,11 @@ jQuery(function() {
       $(this).parents(".popup-apartment").attr("data-floor-apartment", FLOOR);
       $(this).parents(".popup-floor").attr("data-floor-section", FLOOR);
       if (FLOOR === 2) {
-        return $(this).addClass("floor-slider-disable");
+        $(this).addClass("floor-slider-disable");
+      }
+      if (parent_popup.hasClass("popup-apartment")) {
+        floor_slider_check();
+        return parent_popup.hidePop();
       }
     }
   });
