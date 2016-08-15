@@ -200,14 +200,14 @@ jQuery ->
     if count == 2
       slider.find(".popup-floor-slider__down").addClass("floor-slider-disable")
       slider.find(".popup-floor-slider__up").removeClass("floor-slider-disable")
+    if FLOOR != null
+      slider.find(".popup-floor-slider__count-number").html(FLOOR)
 
   $("html").on "click", ".popup-floor-slider__up", ->
     $(".popup-floor-slider__down").removeClass("floor-slider-disable")
     floor_el = $(@).parent().find(".popup-floor-slider__count-number")
     floor = parseInt(floor_el.html(), 10)
     parent_popup = $(@).parents(".popup-window")
-    if parent_popup.hasClass("popup-apartment")
-      console.log "123"
     if floor == MAX_FLOOR
       return
     else
@@ -217,12 +217,20 @@ jQuery ->
       $(@).parents(".popup-floor").attr("data-floor-section", FLOOR)
       if FLOOR == MAX_FLOOR
         $(@).addClass("floor-slider-disable")
+      if parent_popup.hasClass("popup-apartment")
+        parent_popup.hidePop()
+        floor_slider_check()
+
 
   $("html").on "click", ".popup-floor-slider__down", ->
     $(".popup-floor-slider__up").removeClass("floor-slider-disable")
     floor_el = $(@).parent().find(".popup-floor-slider__count-number")
     floor = parseInt(floor_el.html(), 10)
     parent_popup = $(@).parents(".popup-window")
+    if parent_popup.hasClass("popup-apartment")
+      FLOOR = floor - 1
+      parent_popup.hidePop()
+      floor_slider_check()
     if floor == 2
       return
     else
