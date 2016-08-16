@@ -1,0 +1,16 @@
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+/! choice house cut (site/sections/choice_house_cut.html)
+.choice-house-section
+  /! choice apartment button
+  button#choice-house-button.choice-house__apartment
+    .choice-house__ico.slider-ico
+      .slider-ico__left
+        .slider-ico__circle
+      .slider-ico__center
+        .slider-ico__circle
+      .slider-ico__right
+        .slider-ico__circle
+    .choice-house__lable
+      |подбор
+      br
+      |квартиры

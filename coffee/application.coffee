@@ -26,7 +26,6 @@ jQuery ->
   md = new MobileDetect(window.navigator.userAgent)
   if md.mobile()
     $("html").addClass("mobile")
-    # alert "я мобильный телефон"
 
 
   #input placeholder

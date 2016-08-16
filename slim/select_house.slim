@@ -12,19 +12,134 @@ html lang="ru"
     script type="text/javascript" src="js/vendor/mobile-detect.js"
     script type="text/javascript" src="js/jquery.min.js"
     script type="text/javascript" src="js/application.js"
-    /! building pages scripts
+    /! select house pages scripts
     script type="text/javascript" src="js/vendor/modernizr.js"
     script type="text/javascript" src="js/house_pages.js"
+    script type="text/javascript" src="js/popups.js"
+    script type="text/javascript" src="js/vendor/perfect-scrollbar.js"
+    script type="text/javascript" src="js/vendor/nouislider.js"
+    script type="text/javascript" src="js/vendor/wnumb.js"
+    script type="text/javascript" src="js/select_house.js"
 
   body
-    .house-page-wrapper.page-wrapper
+    .house-page-wrapper.page-wrapper.select-house-page-wrapper
       == render "layouts/site_header"
+      == render "sections/choice_house_cut"
       /! house canvas wrapper
       .house-canvas-wrapper style="display: none"
         /! house canvas background image, data-max-left - максимальное смещение картики в лево, data-max-top - вверх
-        img.house-canvas__background-image src="images/bg-select-house.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="2" data-max-top="2"
+        img.house-canvas__background-image src="images/bg-select-house-tmp.jpg" alt="" style="width:100%;height:100%" onload="window.onresize()" data-max-left="1" data-max-top="10"
         .select-house-wrapper
           /! select house svg(svg/select_house.svg)
           == inline_svg "select_house.svg"
+          /! select house building info
+          /! gp1 info
+          a.select-house__info-building.select-house__info-gp1 href="building-1.html"
+            .select-house__info-marker
+              span ГП 1
+            .select-house__info-quarter
+              span
+                |дом
+                br
+                |сдан
+            .select-house__info-apartment
+              span.line-one Доступно
+              span.line-two 40
+              span.line-three квартир
+          /! gp2 info
+          a.select-house__info-building.select-house__info-gp2 href="building-2.html"
+            .select-house__info-marker
+              span ГП 2
+            .select-house__info-quarter
+              span
+                |iii кв
+                br
+                |сдан
+            .select-house__info-apartment
+              span.line-one Доступно
+              span.line-two 40
+              span.line-three квартир
+          /! gp3 info
+          a.select-house__info-building.select-house__info-gp3 href="building-3.html"
+            .select-house__info-marker
+              span ГП 3
+            .select-house__info-quarter
+              span
+                |ii кв
+                br
+                |сдан
+            .select-house__info-apartment
+              span.line-one Доступно
+              span.line-two 40
+              span.line-three квартир
+          /! select house badge parking
+          .select-house__badge.parking-badge
+            .select-house__badge-ico
+              == inline_svg "ico_parking.svg"
+            .select-house__badge-title
+              span Паркинг для жителей
+              br
+              span микрорайона
+          /! select house badge football
+          .select-house__badge.football-badge
+            .select-house__badge-ico
+              == inline_svg "ico_football.svg"
+            .select-house__badge-title
+              span Минифутбольное
+              br
+              span поле
+          /! select house badge mart
+          .select-house__badge.mart-badge
+            .select-house__badge-ico
+              == inline_svg "ico_mart.svg"
+            .select-house__badge-title
+              span Торговый
+              br
+              span центр
+          /! select house badge school
+          .select-house__badge.school-badge
+            .select-house__badge-ico
+              == inline_svg "ico_school.svg"
+            .select-house__badge-title
+              span Учреждения
+              br
+              span дополнительного
+              br
+              span образования
+          /! select house badge tour
+          .select-house__badge.tour-badge
+            .select-house__badge-ico
+              == inline_svg "ico_tour.svg"
+            .select-house__badge-title
+              span Бульвар для
+              br
+              span прогулок
+          /! select house badge fitnes
+          .select-house__badge.fitnes-badge
+            .select-house__badge-ico
+              == inline_svg "ico_fitnes.svg"
+            .select-house__badge-title
+              span Фитнес - центр
+          /! select house badge playground
+          .select-house__badge.playground-badge
+            .select-house__badge-ico
+              == inline_svg "ico_playground.svg"
+            .select-house__badge-title
+              span Детские
+              br
+              span площадки
+          /! select house badge road
+          .select-house__badge.road-badge
+            .select-house__badge-ico
+              == inline_svg "ico_road.svg"
+            .select-house__badge-title
+              span Отдельный
+              br
+              span въезд
       == render "layouts/site_footer"
+    == render 'layouts/popups'
+    / в блок .static_popups кладутся попапы подгружаемые не асинхронно а сразу со всей страницей
+    .static_popups style="display: none"
+      == render "popups/choice_apartment"
+    .popup-stack style="display: none"
     == render "components/landscape_error"
