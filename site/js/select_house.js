@@ -48,17 +48,13 @@ jQuery(function() {
       return $(this).removeClass("bind-hover");
     }
   });
-  $("html").on("click", ".select-house__badge", function() {
-    $(".select-house__badge").removeClass("bind-hover");
+  $("html").on("click touchstart", ".select-house__badge-ico", function() {
     if ($("html").hasClass("touchevents")) {
-      return $(this).addClass("bind-hover");
+      $(".select-house__badge").removeClass("bind-hover");
+      return $(this).parents(".select-house__badge").addClass("bind-hover");
     }
   });
-  $("html").on("click", ".select-house__badge-ico", function() {
-    if ($("html").hasClass("touchevents")) {
-      return alert("Меня кликнули");
-    }
-  });
+  $("html").on("click touchstart", ".select-house__badge-title", function() {});
   $("html").on("click", ".select-house__building-hover", function() {
     if ($("html").hasClass("touchevents")) {
       $(".select-house__info-building").removeClass("bind-event");

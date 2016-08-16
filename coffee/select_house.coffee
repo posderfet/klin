@@ -1,4 +1,5 @@
 jQuery ->
+
   $("html").on "mouseover", ".select-house__building-hover", ->
     if $("html").hasClass("no-touchevents")
       if $(@).hasClass("select-house__building-gp1")
@@ -39,14 +40,12 @@ jQuery ->
       $(@).removeClass("bind-hover")
 
   # mobile exp
-  $("html").on "click", ".select-house__badge", ->
-    $(".select-house__badge").removeClass("bind-hover")
+  $("html").on "click touchstart", ".select-house__badge-ico", ->
     if $("html").hasClass("touchevents")
-      $(@).addClass("bind-hover")
+      $(".select-house__badge").removeClass("bind-hover")
+      $(@).parents(".select-house__badge").addClass("bind-hover")
 
-  $("html").on "click", ".select-house__badge-ico", ->
-    if $("html").hasClass("touchevents")
-      alert "Меня кликнули"
+  $("html").on "click touchstart", ".select-house__badge-title", ->
 
 
   $("html").on "click", ".select-house__building-hover", ->

@@ -14,8 +14,9 @@ html lang="ru"
     script type="text/javascript" src="js/application.js"
 
   body
-    .house-page-wrapper.uboutus-page-wrapper style="background: url('images/aboutus-background.jpg')"
+    .house-page-wrapper.uboutus-page-wrapper
       == render "layouts/site_header"
+      .aboutus-background-image style="background-image: url(images/aboutus-background.jpg)"
       .main-container
         .info-page-content.aboutus-content
           == render "components/breadcrumbs"

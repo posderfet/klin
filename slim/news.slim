@@ -21,6 +21,8 @@ html lang="ru"
   body
     .house-page-wrapper.news-page-wrapper
       == render "layouts/site_header"
+      /! news background image
+      .news-background-image style="background-image: url(images/blur-background.jpg)"
       .main-container
         .info-page-content.news-content
           == render "components/breadcrumbs"
