@@ -58,8 +58,8 @@
   z-index: 55;
 
   &.parking-badge {
-    left: 52.2%;
-    bottom: 17%;
+    left: 53.2%;
+    bottom: 15.5%;
   }
 
   &.football-badge {
@@ -68,13 +68,13 @@
   }
 
   &.mart-badge {
-    right: 21.75%;
-    bottom: 30%;
+    right: 26.8%;
+    bottom: 26.5%;
   }
 
   &.school-badge {
-    right: 18.5%;
-    bottom: 66%;
+    right: 29.2%;
+    bottom: 53.5%;
 
     .select-house__badge-title {
       padding: .05rem .5rem;
@@ -82,13 +82,13 @@
   }
 
   &.tour-badge {
-    right: 32%;
-    bottom: 53%;
+    right: 35.8%;
+    bottom: 46.3%;
   }
 
   &.fitnes-badge {
-    left: 56.3%;
-    bottom: 73.5%;
+    left: 60.3%;
+    bottom: 60%;
 
     .select-house__badge-title {
       padding: 1rem .5rem;
@@ -107,6 +107,7 @@
 }
 
 .select-house__badge.bind-hover {
+  z-index: 60;
 
   .select-house__badge-title {
     display: block;
