@@ -1,0 +1,94 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1080" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
+    script type="text/javascript" src="js/vendor/mobile-detect.js"
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    /! news page scripts
+    script type="text/javascript" src="js/vendor/slick.min.js"
+    script type="text/javascript" src="js/progress_page.js"
+
+  body
+    .house-page-wrapper.progress-page-wrapper
+      == render "layouts/site_header"
+      /! news background image
+      .news-background-image style="background-image: url(images/blur-background.jpg)"
+      .main-container
+        .info-page-content.progress-content
+          == render "components/breadcrumbs_progress"
+          a.webcam-button href="#"
+            span.webcam-button__ico-block
+              == inline_svg "ico_webcam_2.svg"
+            span.webcam-button__title
+              |веб
+              br
+              |камеры
+          .progress-info-wrapper
+            .progress-info__date 14 марта 2016 года
+            h1.progress-info__header Детская площадка
+            .progress-info__description
+              |Одна из ключевых особенностей микрорайона — отсутствие движения транспорта внутри. Движение машин предусмотрено вдоль внешней границы застройки по кольцу. И от этой кольцевой дороги организован проезд к жилым домам по тупиковой системе. Таким образом, внутри микрорайона находится безопасная пешеходная зона для прогулок с детьми.
+            .progress-slider-wrapper
+              .progreass-head-slider-wrapper
+                .progress-head-slide__prev-button.image-block
+                  /! svg(svg/ico_slide_prev.svg)
+                  == inline_svg "ico_slide_prev.svg"
+                .progress-head-slide__next-button.image-block
+                  /! svg(svg/ico_slide_next.svg)
+                  == inline_svg "ico_slide_next.svg"
+                .progreass-head-slider
+                  /! image size 750px X 440px
+                  - 4.times do
+                    .progreass-head-slide__image-block.image-block
+                      img.progreass-head-slide__image src="images/test_image_1.jpg" alt="описание картинки"
+                    .progreass-head-slide__image-block.image-block
+                      img.progreass-head-slide__image src="images/test_image_2.jpg" alt="описание картинки"
+                    .progreass-head-slide__image-block.image-block
+                      img.progreass-head-slide__image src="images/test_image_3.jpg" alt="описание картинки"
+              .progress-prev-slide-wrapper
+                .progress-slide__prev-button
+                  /! svg(svg/ico_slide_prev.svg)
+                  == inline_svg "ico_slide_prev.svg"
+                .progress-slide__next-button
+                  /! svg(svg/ico_slide_next.svg)
+                  == inline_svg "ico_slide_next.svg"
+                .progress-slider
+                  /! image size 225px X 150px
+                  - 4.times do
+                    .progress-slider__item
+                      .progress-slider__image-block
+                        img.progreass-slider__image src="images/test_image_1_prev.jpg" alt="описание картинки"
+                        .progress-slider__image-ico.image-block
+                          == inline_svg "ico_zoom_search.svg"
+                      .progress-slider__date 14 марта 2016 года
+                      .progress-slider__header Детская площадка
+                      .progress-slider__description
+                        |Одна из ключевых особенностей микрорайона — отсутствие движения транспорта внутри. Движение машин предусмотрено вдоль внешней границы застройки по кольцу. И от этой кольцевой дороги организован проезд к жилым домам по тупиковой системе. Таким образом, внутри микрорайона находится безопасная пешеходная зона для прогулок с детьми.
+                    .progress-slider__item
+                      .progress-slider__image-block
+                        img.progreass-slider__image src="images/test_image_2_prev.jpg" alt="описание картинки"
+                        .progress-slider__image-ico.image-block
+                          == inline_svg "ico_zoom_search.svg"
+                      .progress-slider__date 18 апреля 2016 года
+                      .progress-slider__header Тоже какой-то заголовок
+                      .progress-slider__description
+                        |Одна из ключевых особенностей микрорайона — отсутствие движения транспорта внутри. Движение машин предусмотрено вдоль внешней границы застройки по кольцу. И от этой кольцевой дороги организован проезд к жилым домам по тупиковой системе. Таким образом, внутри микрорайона находится безопасная пешеходная зона для прогулок с детьми. пиковой системе. Таким образом, внутри микрорайона находится безопасная пешеходная зона для прогулок с детьми.
+                    .progress-slider__item
+                      .progress-slider__image-block
+                        img.progreass-slider__image src="images/test_image_3_prev.jpg" alt="описание картинки"
+                        .progress-slider__image-ico.image-block
+                          == inline_svg "ico_zoom_search.svg"
+                      .progress-slider__date 22 января 2016 года
+                      .progress-slider__header Я заголовок
+                      .progress-slider__description
+                        |Одна из ключевых особенностей микрорайона — отсутствие движения транспорта внутри. Движение машин предусмотрено вдоль внешней границы
+      == render "layouts/site_footer"
+    == render "components/landscape_error"

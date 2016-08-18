@@ -1,18 +1,9 @@
 jQuery ->
 
-  # ytqs truncate header
+  # news truncate header
   $(".truncate").dotdotdot()
 
-  # news slider init
-  # swiper = new Swiper('.news-slider',
-  #   nextButton: '.news-slider__next-button'
-  #   prevButton: '.news-slider__prev-button'
-  #   slidesPerView: 3
-  #   freeMode: true
-  #   offsetPxAfter: 50
-
-  #   speed: 800)
-
+  # news slider inint
   $(".news-slider").slick
     infinite: false
     slidesToShow: 3

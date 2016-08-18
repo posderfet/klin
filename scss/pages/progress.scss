@@ -1,0 +1,381 @@
+/***************************
+     Progress Page Style
+****************************/
+
+
+
+.house-page-wrapper.progress-page-wrapper {
+  min-height: 80rem;
+
+  .header-risen {
+    display: none;
+  }
+
+  .main-container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+
+// select progess page
+.progress-select-wrapper {
+  height: 100%;
+  float: right;
+  font-size: 0;
+}
+
+.progress-select {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  z-index: 60;
+}
+
+.progress-select-building {
+  width: 6.25rem;
+  background: $yellow-base;
+  color: #fff32e;
+
+  .progress-select__dropdown {
+    background: $yellow-base;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten($yellow-base, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select-years {
+  width: 6.25rem;
+  background: #4dbc2c;
+  color: #7eff58;
+
+  .progress-select__dropdown {
+    background: #4dbc2c;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten(#4dbc2c, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select-month {
+  width: 8.125rem;
+  background: $green-base;
+  color: #20ce81;
+
+  .progress-select__dropdown {
+    background: $green-base;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten($green-base, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select__ico {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.1875rem;
+  width: .65rem;
+  height: .65rem;
+  margin: auto;
+  transition: 120ms ease-out;
+
+  path {
+    fill: $white-base;
+  }
+}
+
+.progress-select__picked {
+  display: block;
+  position: relative;
+  top: 0;
+  height: 100%;
+  line-height: 2.5rem;
+  color: $white-base;
+  z-index: 5;
+  font-size: $font-size-small;
+  padding-left: 1.1875rem;
+
+  &:active {
+
+    .progress-select__ico {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.state-open .progress-select__dropdown {
+  display: block;
+}
+
+.progress-select__dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
+
+.progress-select__dropdown-item {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding-left: 1.1875rem;
+  font-size: $font-size-small;
+}
+
+
+// webcam button
+.webcam-button {
+  display: block;
+  width: 9.375rem;
+  height: 2.5rem;
+  background: transparent;
+  position: absolute;
+  left: -9.375rem;
+  top: .625rem;
+  font-size: 0;
+  transition: 250ms ease-out;
+}
+
+.webcam-button__ico-block,
+.webcam-button__title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.webcam-button__ico-block {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #00aef2;
+  position: relative;
+
+  svg {
+    width: 1.5rem;
+    height: 1.65rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  path {
+    fill: $white-base;
+  }
+}
+
+.webcam-button__title {
+  height: 100%;
+  font-size: $font-size-small;
+  color: $white-base;
+  font-weight: bold;
+  // line-height: 1.2;
+  text-transform: uppercase;
+  padding-left: .5rem;
+}
+
+
+// progress content block
+.info-page-content.progress-content {
+  position: relative;
+}
+
+.progress-info-wrapper {
+  padding: 4.25rem 6.0625rem;
+  text-align: center;
+}
+
+.progress-info__date {
+  font-size: .75rem;
+  color: #acacac;
+}
+
+.progress-info__header {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.progress-info__description {
+  font-size: .75rem;
+  color: #acacac;
+  margin-top: 1rem;
+  line-height: 2;
+  height: 4.8rem;
+  overflow: hidden;
+}
+
+
+
+// progress slider
+.progress-slider-wrapper {
+  margin-top: 1.5rem;
+}
+
+.progreass-head-slider-wrapper {
+  position: relative;
+}
+
+.progreass-head-slide__image-block {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &.slick-slide:focus {
+    outline: none;
+  }
+}
+
+.progress-head-slide__prev-button,
+.progress-head-slide__next-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 2rem;
+  height: 3rem;
+  cursor: pointer;
+
+  path {
+    fill: #636363;
+    stroke-width: 6;
+    stroke: #636363;
+  }
+
+  &.slick-disabled {
+    opacity: .3;
+    cursor: default;
+  }
+}
+
+.progress-head-slide__prev-button {
+  left: -3.5rem;
+}
+
+.progress-head-slide__next-button {
+  right: -3.5rem;
+}
+
+.progress-prev-slide-wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.progress-slider {
+  width: 100%;
+}
+
+.progress-slider__item {
+  width: 7.8125rem;
+  padding-right: .3125rem;
+
+  &.slick-slide:focus {
+    outline: none;
+  }
+
+  .progress-slider__date,
+  .progress-slider__header,
+  .progress-slider__description {
+    display: none;
+  }
+}
+
+.progress-slider__image-block {
+  width: 100%;
+  height: 8.4375rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 200ms ease-out;
+}
+
+.progreass-slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+}
+
+.progress-slider__image-ico {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 50;
+  transform: scale(0);
+  transition: 250ms ease-out;
+
+  path {
+    fill: rgba($green-accent, .8);
+    stroke-width: 3;
+    stroke: $green-accent;
+  }
+}
+
+.progress-slider__image-block:hover .progress-slider__image-ico {
+  transform: scale(1);
+}
+
+.progress-slide__prev-button,
+.progress-slide__next-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: $green-accent;
+  transition: 250ms ease-out;
+  cursor: pointer;
+  z-index: 50;
+
+  &:hover {
+    background: $yellow-base;
+  }
+
+  svg {
+    width: .8rem;
+    height: .8rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    path {
+      fill: $white-base;
+      stroke-width: 10;
+      stroke: $white-base;
+    }
+  }
+}
+
+.progress-slide__prev-button {
+  left: -1.25rem;
+}
+
+.progress-slide__next-button {
+  right: -1.25rem;
+}
