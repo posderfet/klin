@@ -1,0 +1,122 @@
+/***************************
+      Progress Selects
+****************************/
+
+
+
+.progress-select-wrapper {
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  z-index: 10;
+}
+
+.progress-select {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  z-index: 60;
+}
+
+.progress-select-building {
+  width: 6.25rem;
+  background: $yellow-base;
+  color: #fff32e;
+
+  .progress-select__dropdown {
+    background: $yellow-base;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten($yellow-base, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select-years {
+  width: 6.25rem;
+  background: #4dbc2c;
+  color: #7eff58;
+
+  .progress-select__dropdown {
+    background: #4dbc2c;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten(#4dbc2c, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select-month {
+  width: 8.125rem;
+  background: $green-base;
+  color: #20ce81;
+
+  .progress-select__dropdown {
+    background: $green-base;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten($green-base, 10%);
+    color: $white-base;
+  }
+}
+
+.progress-select__ico {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.1875rem;
+  width: .65rem;
+  height: .65rem;
+  margin: auto;
+  transition: 120ms ease-out;
+
+  path {
+    fill: $white-base;
+  }
+}
+
+.progress-select__picked {
+  display: block;
+  position: relative;
+  top: 0;
+  height: 100%;
+  line-height: 2.5rem;
+  color: $white-base;
+  z-index: 5;
+  font-size: $font-size-small;
+  padding-left: 1.1875rem;
+
+  &:active {
+
+    .progress-select__ico {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.state-open .progress-select__dropdown {
+  display: block;
+}
+
+.progress-select__dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
+
+.progress-select__dropdown-item {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding-left: 1.1875rem;
+  font-size: $font-size-small;
+}
