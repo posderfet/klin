@@ -68,6 +68,21 @@
   }
 }
 
+.progress-select-docs {
+  width: 7rem;
+  background: $yellow-base;
+  color: #fff32e;
+
+  .progress-select__dropdown {
+    background: $yellow-base;
+  }
+
+  .progress-select__dropdown-item:hover {
+    background: lighten($yellow-base, 10%);
+    color: $white-base;
+  }
+}
+
 .progress-select__ico {
   position: absolute;
   top: 0;

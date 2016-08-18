@@ -1,0 +1,71 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1080" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
+    script type="text/javascript" src="js/vendor/mobile-detect.js"
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    /! news page scripts
+    script type="text/javascript" src="js/docs.js"
+    script type="text/javascript" src="js/progress_select.js"
+
+  body
+    .house-page-wrapper.docs-page-wrapper
+      == render "layouts/site_header"
+      /! docs background image
+      .news-background-image style="background-image: url(images/blur_2-background.jpg)"
+      .main-container
+        .info-page-content.docs-content
+          == render "components/breadcrumbs_progress"
+          .progress-select-wrapper
+            .progress-select.progress-select-docs
+              input#progress_select_docs.progress-select__input type="hidden"
+              .progress-select__picked
+                span.progress-select__picked-lable Все
+                span.progress-select__ico.image-block
+                  == inline_svg "ico_drop_arrow.svg"
+              ul.progress-select__dropdown
+                li.progress-select__dropdown-item data-value="all" все
+                li.progress-select__dropdown-item data-value="general" общие
+                li.progress-select__dropdown-item data-value="gp1" гп 1
+                li.progress-select__dropdown-item data-value="gp2" гп 2
+                li.progress-select__dropdown-item data-value="gp3" гп 3
+          section.docs-section data-section="gp1"
+            h2.docs-header Документы дома ГП-1
+            ul.docs-list
+              - 12.times do
+                li.docs-item
+                  a.docs-item__link href="/" Ссылка на документ
+          section.docs-section  data-section="gp2"
+            h2.docs-header Документы дома ГП-2
+            ul.docs-list
+              - 12.times do
+                li.docs-item
+                  a.docs-item__link href="/" Ссылка на документ
+          section.docs-section  data-section="gp3"
+            h2.docs-header Документы дома ГП-3
+            ul.docs-list
+              - 14.times do
+                li.docs-item
+                  a.docs-item__link href="/" Ссылка на документ
+          section.docs-section  data-section="general"
+            h2.docs-header Какие-то общие документы
+            ul.docs-list
+              - 5.times do
+                li.docs-item
+                  a.docs-item__link href="/" Ссылка на документ
+          section.docs-section  data-section="general"
+            h2.docs-header Ещё какие-то общие
+            ul.docs-list
+              - 8.times do
+                li.docs-item
+                  a.docs-item__link href="/" Ссылка на документ
+      == render "layouts/site_footer"
+    == render "components/landscape_error"

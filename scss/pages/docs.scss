@@ -1,0 +1,104 @@
+/***************************
+         Docs Page
+****************************/
+
+
+
+.house-page-wrapper.docs-page-wrapper {
+  // min-height: 100rem;
+  // position: relative;
+  height: auto;
+
+  .header-risen {
+    display: none;
+  }
+
+  .main-container {
+    position: relative;
+    z-index: 2;
+    height: auto;
+  }
+}
+
+.info-page-content.docs-content {
+  padding-bottom: 4.69rem;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.docs-section {
+  width: 100%;
+  margin-top: 4.69rem;
+}
+
+.docs-header {
+  padding-left: 6rem;
+  font-size: 1.5rem;
+  color: #636363;
+  font-weight: 400;
+}
+
+.docs-list {
+  margin-top: 2.25rem;
+}
+
+.docs-item {
+  height: 2.5rem;
+  padding-left: 6rem;
+  position: relative;
+  counter-increment: step-counter;
+  padding-top: .5rem;
+
+  &:before {
+    content: counter(step-counter);
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $white-base;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-top: .47rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: 250ms ease-out;
+  }
+
+  &:nth-of-type(5n+1):before {
+    background: #ff8b00;
+  }
+
+  &:nth-of-type(5n+2):before {
+    background: #e4ab00;
+  }
+
+  &:nth-of-type(5n+3):before {
+    background: #50bb32;
+  }
+
+  &:nth-of-type(5n+4):before {
+    background: #007c34;
+  }
+
+  &:nth-of-type(5n+5):before {
+    background: #0d5a38;
+  }
+
+  &.state-hover:before {
+    left: 2.5rem;
+  }
+}
+
+.docs-item__link {
+  display: inline-block;
+  color: #636363;
+  font-size: $font-size-small;
+  text-decoration: none;
+  border-bottom: 1px dashed #c2c2c2;
+  transition: 250ms ease-out;
+
+  &:hover {
+    border: none;
+  }
+}
