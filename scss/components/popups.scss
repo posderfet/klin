@@ -113,6 +113,7 @@
   left: 2.5%;
   z-index: -1;
 }
+
 .popup-window__header {
   padding: 1.25rem;
 
@@ -122,6 +123,43 @@
     .popup-window__header-title {
       font-size: 1.5rem;
       text-align: center;
+    }
+  }
+}
+
+.popup-window__outer-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: #c2c2c2;
+  transition: 250ms ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $gray-lighten-1;
+  }
+
+  .popup-window__close-ico {
+    width: 45%;
+    height: 45%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    path {
+      fill: $white-base;
+      stroke-width: 2;
+      stroke: $white-base;
     }
   }
 }
@@ -1175,4 +1213,16 @@
 .popup-success__body {
   font-size: $font-size-large;
   text-align: center;
+}
+
+
+
+// commercial request popup
+.commercial-request-popup {
+  width: 24.6875rem;
+  padding: 4rem 0;
+
+  .commercial-request__header {
+    color: #636363;
+  }
 }

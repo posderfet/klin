@@ -48,20 +48,33 @@
   }
 }
 
-// .noUi-pips {
-//   padding: .55rem .2rem;
+.commercial-request__slider-block {
 
-//   .noUi-marker {
-//     display: none;
-//   }
 
-//   .noUi-value {
-//     transform: translate3d(0, 0, 0px);
-//     font-size: $font-size-small;
-//     color: $night-blue;
+  .noUi-handle {
+    width: .625rem;
+    height: .625rem;
+    top: -.25rem;
+    left: -.3175rem;
+  }
 
-//     &:last-of-type {
-//       transform: translate3d(-100%, 0, 0px);
-//     }
-//   }
-// }
+  .noUi-target {
+    background: $color-form-border;
+  }
+
+  .noUi-tooltip {
+    position: absolute;
+    font-size: $font-size-extra-small;
+    color: #3c3c3c;
+    top: 120%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200%;
+    text-align: center;
+
+    span {
+      margin-left: .15rem;
+    }
+  }
+}

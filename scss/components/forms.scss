@@ -50,7 +50,8 @@
 
 
 // form error
-.text-input.error+label.error {
+.text-input.error+label.error,
+.provoking-input.error+label.error {
   display: block;
   font-size: $font-size-extra-small;
   // position: absolute;
@@ -61,13 +62,18 @@
   line-height: .9;
   animation: popup_open 200ms ease-out;
   z-index: 500;
-  background: $white-base;
   margin-top: .125rem;
+  background: transparent;
 }
 
-.text-input.error {
+.text-input.error,
+.provoking-input.error {
   border-color: $error-color;
   box-shadow: 0 0 3px rgba($error-color, 5);
+
+  &:focus {
+    border-color: $error-color;
+  }
 }
 
 
@@ -113,6 +119,25 @@
 
   &:focus {
     border-color: $orange-base;
+  }
+}
+
+
+
+// provoking input
+.provoking-input {
+  width: 100%;
+  display: inline-block;
+  height: 2.5rem;
+  border: 1px solid #c8c8c8;
+  font-size: .8125rem;
+  text-align: center;
+  color: #3c3c3c;
+  background: transparent;
+  transition: 250ms ease-out;
+
+  &:focus {
+    border-color: $green-accent;
   }
 }
 

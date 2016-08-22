@@ -1,0 +1,168 @@
+- def render(path) Slim::Template.new("slim/#{path}.slim").render end
+- def inline_svg(path, kargs={}) attrs=kargs.map {|k,v| "#{k.to_s}=\"#{v.to_s}\""}*' '; File.open("svg/#{path}").read.sub( /\<\s*svg/i, "<svg #{attrs}") end
+doctype html
+html lang="ru"
+  head
+    meta charset="utf-8"
+    title Клин
+    meta content="width=1080" name="viewport"
+    link href='css/application.css' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'
+    /! all pages scripts
+    script type="text/javascript" src="js/vendor/mobile-detect.js"
+    script type="text/javascript" src="js/jquery.min.js"
+    script type="text/javascript" src="js/application.js"
+    /! news page scripts
+    script type="text/javascript" src="js/vendor/slick.min.js"
+    script type="text/javascript" src="js/vendor/jquery.validate.js"
+    script type="text/javascript" src="js/vendor/messages_ru.js"
+    script type="text/javascript" src="js/vendor/jquery.maskedinput.js"
+    script type="text/javascript" src="js/vendor/nouislider.js"
+    script type="text/javascript" src="js/vendor/wnumb.js"
+    script type="text/javascript" src="js/popups.js"
+    script type="text/javascript" src="js/vendor/perfect-scrollbar.js"
+    script type="text/javascript" src="js/commercial_page.js"
+
+  body
+    .house-page-wrapper.commercial-page-wrapper
+      == render "layouts/site_header"
+      /! commercial background image
+      .commercial-background-image
+        .cpage-background-image style="background-image: url(images/blur_3-background.jpg)"
+      .main-container
+        .info-page-content.commercial-content
+          == render "components/breadcrumbs_progress"
+          .commercial-content-main
+            == render "components/commercial_tab"
+            h1.commecial-header data-header-1="Аренда и продажа коммерческих помещений в доме ГП-1" data-header-2="Аренда и продажа коммерческих помещений в доме ГП-2"
+              |Аренда и продажа коммерческих помещений в доме ГП-1
+            /! advantages list
+            ul.commercial-advant__list
+              li.commercial-advant__item
+                .commercial-advant__ico.ico-item-one.image-block
+                  /! svg(svg/ico_advant_1.svg)
+                  == inline_svg "ico_advant_1.svg"
+                .commercial-advant__title
+                  |Скидка на первые
+                  br
+                  |3 месяца аренды
+              li.commercial-advant__item
+                .commercial-advant__ico.ico-item-two.image-block
+                  /! svg(svg/ico_advant_2.svg)
+                  == inline_svg "ico_advant_2.svg"
+                .commercial-advant__title
+                  |Ремонт под
+                  br
+                  |арендатора
+              li.commercial-advant__item
+                .commercial-advant__ico.ico-item-three.image-block
+                  /! svg(svg/ico_advant_3.svg)
+                  == inline_svg "ico_advant_3.svg"
+                .commercial-advant__title
+                  |Первая линия
+                  br
+                  |домов
+              li.commercial-advant__item
+                .commercial-advant__ico.ico-item-four.image-block
+                  /! svg(svg/ico_advant_4.svg)
+                  == inline_svg "ico_advant_4.svg"
+                .commercial-advant__title
+                  |Любая площадь от
+                  br
+                  |30 до 300м
+                  sup 2
+            /! popup button
+            .commercial-popup-button-wrapper
+              button.commercial-popup-button data-building="1" Арендовать помещение
+            /! scheme wrapper
+            .commercial-scheme-wrapper
+              /!scheme legend block
+              .commercial-scheme-legend
+                .commercial-legend__left-side
+                  h2.commercial-second-header Доступные площади
+                  ul.commercial-legend__state-list
+                    li.commercial-legend__state-item.item-busy data-state="busy"
+                      .commercial-legend__state-marker.state-busy
+                      .commercial-legend__state-lable Помещение занято
+                    li.commercial-legend__state-item.item-freely data-state="freely"
+                      .commercial-legend__state-marker.state-freely
+                      .commercial-legend__state-lable Помещение свободно
+                .commercial-legend__right-side
+                  .commercial-legend__image-block.image-block
+                    img.commercial-legend__image src="images/commercial_legend_image.png" alt="расположение домов"
+                    /! svg(svg/commercial_legend_svg.svg)
+                    == inline_svg "commercial_legend_svg.svg"
+              /! commercial building scheme block
+              .commercial-building-scheme-wrapper
+                .commercial-building-scroll__fade
+                .commercial-building-scheme-scroll
+                  /! building scheme gp1
+                  .commercial-building-scheme style="width: 1135.92px;" data-building="1"
+                    img.commercial-image-map.gp1 src="images/commercial_gp1_map.png" alt="Схема строения 1"
+                    /! svg(svg/commercial_gp1_map_svg.svg)
+                    == inline_svg "commercial_gp1_map_svg.svg"
+                  /! building scheme gp2
+                  .commercial-building-scheme  style="width: 1151.87px;" data-building="2"
+                    img.commercial-image-map.gp2 src="images/commercial_gp2_map.png" alt="Схема строения 2"
+                    /! svg(svg/commercial_gp2_map_svg.svg)
+                    == inline_svg "commercial_gp2_map_svg.svg"
+            /! commercial message
+            .commercial-message
+              .commercial-message__ico.image-block
+                == inline_svg "ico_scissors.svg"
+              .commercial-message__title Возможно дробление помещений на более мелкие площади.
+            /! commercial carousel
+            .commercial-carousel-wrapper
+              .commercial-second-header Галерея
+              .commercial-carousel__prev-button
+                /! svg(svg/ico_slide_prev.svg)
+                == inline_svg "ico_slide_prev.svg"
+              .commercial-carousel__next-button
+                /! svg(svg/ico_slide_next.svg)
+                == inline_svg "ico_slide_next.svg"
+              .commercial-carousel data-building="1"
+                - 3.times do
+                  .commercial-carousel__item-wrapper data-building="1"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/test_image_1_prev.jpg" alt="описание картинки"
+                  .commercial-carousel__item-wrapper data-building="1"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/test_image_2_prev.jpg" alt="описание картинки"
+                  .commercial-carousel__item-wrapper data-building="1"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/test_image_3_prev.jpg" alt="описание картинки"
+              .commercial-carousel data-building="2"
+                - 3.times do
+                  .commercial-carousel__item-wrapper data-building="2"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/news_prev.png" alt="описание картинки"
+                  .commercial-carousel__item-wrapper data-building="2"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/news_prev.png" alt="описание картинки"
+                  .commercial-carousel__item-wrapper data-building="2"
+                    .commercial-carousel__item.image-block
+                      img.commercial-carousel__image src="images/news_prev.png" alt="описание картинки"
+          /! commercial request
+          .commercial-request-wrapper
+            .commercial-reqwest-block
+              .commercial-request__header Оставьте заявку на аренду:
+              form#commercial-request-form.commercial-request__form method=""
+                input.commercial-input-hidden type="hidden" name="building" value="1"
+                .input-field.commercial-request__input-field
+                  input.provoking-input.commercial-input-name name="name" placeholder="Имя"
+                .input-field.commercial-request__input-field
+                  input.provoking-input.commercial-input-phone name="phone" placeholder="Телефон"
+                .commercial-request__slider-block
+                  .commercial-request__slider-lable
+                    |Интересующая площадь
+                  #cr-slider
+                  .input-field.commercial-request__input-field.cr-input-field
+                    input#cr-input.provoking-input type="text" value=""
+                input.commercial-request__submit type="submit" value="Отправить"
+      == render "layouts/site_footer"
+    == render 'layouts/popups'
+    / в блок .static_popups кладутся попапы подгружаемые не асинхронно а сразу со всей страницей
+    .static_popups style="display: none"
+      == render "popups/commercial_request"
+    .popup-stack style="display: none"
+    == render "components/landscape_error"

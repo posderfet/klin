@@ -42,3 +42,30 @@
     background-color: transparent;
     opacity: 0.9;
 }
+
+
+.ps-container.ps-theme-yellow-scroll {
+
+  &>.ps-scrollbar-x-rail {
+    opacity: 1 !important;
+    height: 4px !important;
+    background: #f7f7f7;
+  }
+
+  &:hover>.ps-scrollbar-x-rail {
+    opacity: 1 !important;
+    background: #f7f7f7;
+  }
+
+  &>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+    height: 4px !important;
+    background: $yellow-base;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  &:hover>.ps-scrollbar-x-rail>.ps-scrollbar-x,
+  &.ps-in-scrolling>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+    background: $yellow-base;
+  }
+}
